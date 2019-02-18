@@ -1,0 +1,313 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* PAGE
+----------------------------------------------------------------*/
+.blog-grid {
+  margin: 0 -0.625rem;
+}
+
+.blog-sizer,
+.blog-item { 
+  width: 100%; 
+}
+
+.blog-item { 
+  margin-bottom: 40px;
+}
+
+.blog-item.width-quadruple { width: 100%; }
+
+.blog-item > .inner {
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding-top: 1.25rem;
+}
+
+.blog-item.without-image > .inner {
+  border-width: 1px;
+  border-style: solid;
+  padding: 1.25rem;
+}
+
+@media screen and (min-width: 40em) {
+  .blog-sizer,
+  .blog-item { 
+    width: 50%; 
+    padding: 0 20px;
+  } 
+
+  .blog-item > .inner {
+    padding-top: 1.875rem;
+  }
+
+  .blog-item.without-image > .inner {
+    padding: 1.875rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .blog-sizer,
+  .blog-item { 
+    width: 33.33333%; 
+  }
+
+  .blog-item.width-double { width: 66.66666%; }
+  .blog-item.width-triple { width: 100%; }
+}
+
+@media screen and (min-width: 75em) {
+  .blog-sizer,
+  .blog-item { 
+    width: 25%; 
+  }
+
+  .blog-item.width-double { width: 50%; }
+  .blog-item.width-triple { width: 75%; }
+}
+
+.page-blog #content-title {
+  display: none;
+}
+
+.view.page-blog {
+  padding: 2.5rem 1.875rem;
+}
+
+.view.page-blog .group-title {
+  width: 150px;
+  margin-bottom: 2.5rem;
+  margin-left: -2.5rem;
+}
+
+.view.page-blog .group-title h2 {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0.3125rem 0.625rem;
+  margin-bottom: 0;
+}
+
+.view.page-blog .group-title h2 .month {
+  font-size: 2.125rem;
+}
+
+.view.page-blog.group .meta .month {
+  display: none;
+}
+
+/* TEASER
+----------------------------------------------------------------*/
+.blog.teaser h2 {
+  font-size: 1.5rem;  
+  font-weight: 900;
+  margin-bottom: 0.625rem;
+}
+
+.blog.teaser .image-default img {
+  width: 100%;
+}
+
+.blog.teaser .content p {
+  margin-bottom: 0;
+}
+
+.blog.teaser .meta.submit .suffix {
+  text-transform: lowercase;
+}
+
+.blog.teaser .day {
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* FULL
+----------------------------------------------------------------*/
+.node-type-blog #main-middle {
+  padding-bottom: 3.75rem;
+}
+
+.blog.full > .image-default {
+  margin-bottom: 0;
+}
+
+.blog.full > .image-default img {
+  width: 100%;
+}
+
+.blog-header {
+  margin-bottom: 3.75rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid; 
+}
+
+.blog-header .title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0.9375rem;
+}
+
+.blog-header .summary {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-bottom: 1.875rem;
+}
+
+.blog-header .share {
+  margin-bottom: -1.125rem;
+}
+
+.blog-header .share a {
+  margin: 0 0.3125rem;
+}
+
+.blog-body {
+  position: relative;
+  padding: 5rem 1.25rem 2.5rem 1.25rem;
+  margin-bottom: 1.875rem;
+}
+
+.blog-body .body-left {
+  margin-bottom: 2.5rem;
+}
+
+#blog-content > .inner {
+  padding: 0 1.25rem;
+  margin-bottom: 3.75rem;
+}
+
+#blog-content > .inner p {
+  margin-bottom: 2.5rem;
+}
+
+#blog-content .meta {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#blog-content .meta .date {
+  display: inline-block;
+  padding: 1.875rem;
+}
+
+#blog-content .meta .month {
+  display: inline-block;
+  font-size: 0.625rem;
+  line-height: 1rem;
+  letter-spacing: 0.03125rem;
+}
+
+#blog-content .links {  
+  position: relative;
+  padding: 1.875rem;
+  margin: 1.875rem 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+#blog-content .links .title {  
+  position: absolute;
+  left: 1.875rem;
+  top: -0.625rem;
+}
+
+#blog-content .links .title h3 {  
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  padding: 0 1.25rem;
+}
+
+#blog-content .links li {
+  display: inline-block;
+  padding: 0.3125rem 0.625rem;
+  margin: 0.15625rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+#blog-content .links a {
+  line-height: 1.6;
+  padding: 0 0.3125rem;
+}
+
+#blog-content #author {
+  padding: 0 1.875rem;
+  margin-left: -2.5rem;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  .blog-body {
+    padding: 5rem 2.5rem 2.5rem 2.5rem;
+  }
+
+  #blog-content {
+    padding-right: 2.5rem;
+  }
+
+  #blog-content > .inner {
+    font-size: 1.125rem;
+    padding: 0 3.125rem;
+  }
+
+  .blog-header .title {
+    font-size: 3rem;
+  }
+
+  .blog-header .summary {
+    font-size: 1.375rem;
+  }
+
+  #blog-content .meta .day {
+    font-size: 1.25rem;
+    font-weight: 900;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .blog-header .title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  #blog-content .meta {
+    top: 0;
+    left: -90px;
+  }
+
+  #blog-content .meta .date {
+    width: 90px;
+    height: 90px;
+    padding: 0.875rem;
+  }
+
+  #blog-content .meta .day {
+    font-size: 2.125rem;
+    line-height: 2.5rem;
+  }
+
+  #blog-content .meta .month {
+    display: block;
+  }
+}

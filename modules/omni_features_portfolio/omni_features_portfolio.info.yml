@@ -1,0 +1,29 @@
+name: Portfolio
+description: 'Provides Portfolio content type and related configuration. Custom portfolio posts.'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - block_content
+  - comment
+  - contact
+  - field
+  - field_group
+  - file
+  - image
+  - inline_entity_form
+  - link
+  - menu_ui
+  - node
+  - options
+  - path
+  - search
+  - social_media_links
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - views_infinite_scroll
+version: 8.x-1.0
+package: 'Omni Features'

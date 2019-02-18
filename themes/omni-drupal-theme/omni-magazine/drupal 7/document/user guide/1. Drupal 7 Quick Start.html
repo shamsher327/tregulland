@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Drupal Quick Start</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/typography.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="page">
+    <div id="main">
+	  <h1>1. Drupal Quick Start</h1> 
+
+<!-- INTRO REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	  
+<div class="content clearfix">
+  <h2>Introduction</h2>
+  <p>If you are new to Drupal, the amount of information you can get from <a href="http://www.drupal.org" target="_blank">Drupal.org</a> can be overwhelming. This is a <span class="pink-raspberry"><i>10 minutes beginner guide</i></span>. It explain the very basic and give you a quick start on Drupal 7.x. If you are familiar with Drupal, you can <a href='2. Omni 7.x Basic Setup.html'>skip to Omni Basic Setup</a> user guide.</p>		  
+</div>
+      
+<!-- ENDREGION
+---------------------------------------------------------------->
+      
+<!-- TABLE OF CONTENT REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	 
+<div class="content clearfix">
+  <h2>Table of Content</h1>
+  <div>
+    <ul>
+      <li><a href="#drupal-install">Installation</a></li>
+      <li><a href="#drupal-basic">Drupal Basic</a></li>
+      <li><a href="#drupal-reading">Further Reading</a></li>
+    </ul>
+  </div>  
+</div>
+  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- INSTALLATION REGION 
+---------------------------------------------------------------->
+<div class="divider"></div>
+<div class="content clearfix">  
+<h2>Installation</h2>
+  <div id="drupal-install" class="section">
+    <div class="section">
+      <h3>1. Drupal core</h3>
+      <p>You can get the latest Drupal core files <a href="http://drupal.org/project/drupal" target="_blank">here</a>. Drupal installation process is very similar to other CMS (Content Management System) like Wordpress and Joomla.</p>
+      <p>Requirements:
+        <ul class="typo-checklist">
+        <li>Host ready</li>
+        <li>Database created</li>
+        <li>Admin username & password for the database</li>
+        <li>Drupal core file uploaded & uncompressed to the desire directory</li>
+      </ul>
+      </p>
+      <p>Key in your site base URL into browser, follow the steps process and you will have Drupal 7 installed. For more detailed documents on Drupal installation, you can check out <a href="http://drupal.org/documentation/install" target="_blank">here</a>.</p>
+    </div>
+    <div class="section">
+      <h3>2. Drupal modules & themes</h3>
+      <p>Drupal module serve the same purpose as Wordpress plug-in or Joomla extensions. Basically it extend the core functions so you can have features like showcase, tabbed blocks etc.</p>
+      <p>Before install Drupal modules & themes, you need to complete the Drupal core installation. Drupal 7.x directories structure as below:
+      <ul class="typo-arrow-alter">
+        <li>includes</li>
+      <li>misc</li>
+      <li>modules</li>
+      <li>profiles</li>
+      <li>scripts</li>
+      <li>sites</li>
+      <li>themes</li>
+      </ul>
+      Directory <b>modules</b> & <b>themes</b> is for the system, you shouldn't install your modules & themes there. Instead you need to go into <b>sites</b> directory and create a directory call <b>all</b> if there isn't one. Create a directory call <b>modules</b>, upload all your modules to this directory. Create a directory call <b>themes</b>, upload your theme files to this directory.</p>
+      <p>Result:
+      <ul class="typo-arrow-alter">
+        <li>...</li>
+      <li>sites/all/modules/...</li>
+      <li>sites/all/themes/...</li>
+      <li>...</li>
+      </ul>
+      You can go to Home > Administration > Modules, to enable those modules and go to Home > Administration > Appearance, enable and set default theme. You can also find alternative documentation on this subject at <a href="http://drupal.org/documentation/install/modules-themes" target="_blank">here</a>.</p>
+    </div>
+    <div class="typo-alert"><b>Please don't enable any modules & theme just yet, you need to do it at the <a href='2. Omni 7.x Basic Setup.html'>Omni Basic Setup</a></b></div>
+  </div>
+</div>
+
+<!-- Drupal Basic
+------------------------------------------------------------>
+<div class="divider"></div>
+<div class="content clearfix">  
+  <h2>Drupal Basic</h2>
+  <div id="drupal-basic" class="section">
+  
+    <div class="section">
+      <h3>1. What is what?</h3>
+      <p><img src="images/pic_1.jpg" class="framed">
+        <ul class="typo-square">
+          <li><b>Dashboard</b> - Gathering overall information. Can be customized. </li>
+        <li><b>Content</b> - List all the nodes ( node is a Drupal term for post or article ) you have created. </li>
+        <li><b>Structure</b> - Site Structure. Including important units of Blocks, Content types, Menus, Taxonomy & Views.</li>
+        <li><b>Appearance</b> - Themes & theme settings.</li>
+        <li><b>People</b> - Users & permissions.</li>
+        <li><b>Modules</b> - Core function extension union.</li>
+      <li><b>Configuration</b> - Site Configuration. Including important units of Text formats, Image styles, Site information, Backup and Migrate, Cron, Performance etc.</li>
+      <li><b>Report</b> - Site log, status, updates info.</li>
+      <li><b>Add content</b> - Create a new node.</li>
+      </ul>
+      </p>
+      </div>
+    <div class="section">
+      <h3>2. Find your way</h3>
+      <p>
+        <ul class="typo-arrow-alter">
+          <li><b>Create a new post</b>: Click on <b>Add content</b>. You will have options of Article, Basic page, Blog entry (Blog module need to be enabled) & Showcase (custom content type for Omni theme) etc. For a regular post select Article content type.</li>
+          <li><b>Create a new menu item</b>: Click on <b>Structure</b> then <b>Menus</b>. <b>Main menu</b> is primary menu. Click on <b>list links</b> for existing menu items. Click on <b>add link</b> to add a new menu items. If a menu item has submenu items, that menu item need to be edited and enabled the <b>Show as expanded</b> option.</li>
+      <li><b>Create a new block</b>: Click on <b>Structure</b> then <b>Blocks</b>. Click on <b>Add Block</b> link to add a new block.</li>
+      </ul>
+      </p>
+      </div>
+    <div class="section clearfix">
+      <h3>3. Have to know - Block</h3>	
+      <p>You have to know how block works because from content aspect, everything build by blocks. <b>Change blocks setting can change the page layout.</b></p> 
+    <p>By click on <b>Structure</b> then <b>Blocks</b>, you should see all the block regions available to you. Some block regions is being reserved. For example:</p>
+      <ul class="typo-arrow-alter">
+          <li>Help region - For system help block only</li>
+        <li>Content region - For main page content block only</li>
+      </ul>
+    <p>You can drag & drop or edit the block to publish it to a particular region. Some region can handle more than one blocks, for example <b>left sidebar</b> and <b>right sidebar</b>. Some region can only have one block, for example <b>closure</b> region.</p>
+    <p>By click on configure link, you can also tell a block when/who to appear. At visibility settings section, you have options of <b>All pages except those listed</b> or <b>Only the listed pages</b>. This is important because it can help you change your page layout. For example, if you set all your left sidebar blocks with <b>All pages except those listed</b> option on a particular page then on that page it will only show right sidebar's blocks. This way you will have a different layout.</b>
+    </p>
+      </div>
+    <div class="section">
+      <h3>4. Have to know - Content types</h3>
+      <p>You have to know about content type because it help you understand node appearance. By click on <b>Structure</b> > <b>Content types</b>, you should see a list of your content types.</p>
+    <p><img src="images/pic_3.jpg" class="framed"></p>
+    <p><b>Manage fields</b> help you create new field and manage fields order when node being created. If you click on manage fields for Article, you should see four fields Title, Tags, Body and Image. If you click on manage fields for Blog entry, you should only see two fields Title & Body. If you like Blog entry content type to have Tags & Images fields as well as Article content type, you can use <b>Add existing field</b> function. Rearrange the fields will change the fields order when you are creating the node.</p>
+    <p><img src="images/pic_12.jpg" class="framed"></p>
+    <p><img src="images/pic_4.jpg" class="framed"></p>
+    <p><b>Manage display</b> help you control what end user will be seeing. Change order of the fields will change display order to the user. You can also manage your Image field here. For example set difference size of image to <b>default</b> or <b>teaser</b> viewing.</p>
+      </div>
+    <div class="section">
+      <h3>5. Have to know - Image styles</h3>
+      <p>There are three default image styles(size), thumbnail, medium & large. It is being used mostly by content type for teaser and full article display. Find it at <b>Configuration</b> > <b>Media</b>.</p>
+      </div>
+    <div class="section">
+      <h3>6. Have to know - Views</h3>
+      <p>You have to know about Views module because if Drupal is a superhero then Views is his superpower. He hide it under the <b>Structure</b>. That is all you need to know for now. We will explain it in more detail in <a href="3. Omni 7.x Feature Setup.html">Omni Feature Setup</a>.</p>
+      </div>
+    <div class="section">
+      <h3>7. Have to know - Site Information</h3>
+      <p>This is where you set your site name, front page number of posts & default path etc. Find it at <b>Configuration</b> > <b>System</b>.</p>
+      </div>
+    <div class="section">
+      <h3>8. Have to know - Performance</h3>
+      <p>Performance is where you set/clear your site Cache. There are also optimization options for your CSS & JavaScript files. Find it at <b>Configuration</b>.</p>
+    </div>
+    <div id="drupal-reading" class="section">
+      <h3>Further Reading</h3>
+      <p>If you want to know more about Drupal, there are plenty documents & tutorials available online. Here is a <a href="http://drupal.org/documentation" target="_blank">good starting point</a>.</p>		  
+    </div>
+  </div>	
+</div>
+
+<!-- COPYRIGHT REGION 
+---------------------------------------------------------------->
+
+<div class="divider"></div>
+<div class="content clearfix">
+<h2>Copyright</h2>
+  <p>The content of this document is copyrighted by ESORS.com. &copy; 2008-2012 All rights reserved. No portion of the content may be directly or indirectly copied, published, reproduced, modified, performed, displayed, sold, transmitted, broadcast, rewritten for broadcast or publication or redistributed in any medium.</p> 
+</div>
+<div class="divider"></div>
+
+<!-- ENDREGION
+---------------------------------------------------------------->	  
+    </div>
+  </div>
+</body>
+</html>

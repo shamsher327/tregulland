@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_block_pattern
+field_name: field_block_pattern
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: pattern-1
+      label: Subscription
+    -
+      value: pattern-2
+      label: 'Team Member'
+    -
+      value: pattern-3
+      label: 'Blog Showcase'
+    -
+      value: pattern-5
+      label: Statistic
+    -
+      value: pattern-6
+      label: Testimonial
+    -
+      value: pattern-8
+      label: Tabs
+    -
+      value: pattern-9
+      label: 'Stack on Small (auto image)'
+    -
+      value: pattern-4
+      label: 'Stack on Medium (auto image on small)'
+    -
+      value: pattern-7
+      label: 'Stack on Medium (100% image on small)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

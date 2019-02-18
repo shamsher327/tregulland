@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_merging_col_width
+id: block_content.custom_block.field_merging_col_width
+field_name: field_merging_col_width
+entity_type: block_content
+bundle: custom_block
+label: 'Equal Width'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'even width columns'
+  off_label: 'Off'
+field_type: boolean

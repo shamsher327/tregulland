@@ -1,0 +1,485 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMON
+----------------------------------------------------------------*/
+.slick-slider {
+  margin-bottom: 0;  
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.slick-slide .slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.showcase {
+  visibility: hidden;
+}
+
+.showcase picture {
+  display: none;
+}
+
+.showcase.slick-initialized {
+  visibility: visible;
+}
+
+.showcase .with-filter::before {
+  opacity: 0.5;
+}
+
+/* Pager
+---------------------------------*/
+ul.slick-dots {
+  left: 0;
+  bottom: 0.3125rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.slick-dots li {
+  margin: 0.3125rem;
+}
+
+.slick-dots li button:before {
+  font-size: 2rem;
+}
+
+.slick-prev,
+.slick-next {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-top: -1.5625rem;  
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all .3s ease-in-out;
+}
+
+.slick-prev {
+  left: 0; 
+  border-radius: 0 25px 25px 0;
+} 
+
+.slick-next {
+  right: 0;
+  border-radius: 25px 0 0 25px;
+}
+
+.slick-prev:before, 
+.slick-next:before {
+  display: inline-block;
+  font-family: FontAwesome; 
+  font-size: 1rem; 
+  line-height: 30px; 
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all .3s ease-in-out;
+}
+
+.slick-prev:before { content: "\f0d9"; }
+.slick-next:before { content: "\f0da"; }
+
+.slick-prev:hover,
+.slick-next:hover {
+  width: 3.4375rem;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.slick-prev:hover:before, 
+.slick-next:hover:before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 40em) {
+  .slick-dots {
+    left: 4.25rem;
+  }
+}
+
+/* SHOWCASE BASIC
+----------------------------------------------------------------*/
+.showcase-basic .slide .inner {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.showcase-basic .slide-title,
+.showcase-basic .slide-content {
+  display: none;  
+}
+
+.showcase-basic a {
+  color: inherit;
+  outline: none;
+}
+
+/* Pager
+---------------------------------*/
+.showcase-basic .slick-dots {
+  width: auto;
+  left: 2.5rem;
+  bottom: 2rem;
+  margin: 0;
+  line-height: 1;
+  counter-reset: dots-number;
+}
+
+.showcase-basic .slick-dots li {
+  height: 30px;
+  margin: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.showcase-basic .slick-dots li.slick-active {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;  
+}
+
+.showcase-basic .slick-dots li button:before,
+.showcase-basic .slick-dots li.slick-active button:before {
+  font-family: 'Lato', Arial, Helvetica, Sans-Serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  content: counter(dots-number)' .';
+  counter-increment: dots-number;
+  opacity: 1;
+}
+
+.showcase-basic .slick-dots li::after {
+  content: "";
+  display: block;
+  height: 10px;
+  border: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;  
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  transition: transform 0.35s ease-in-out;
+}
+
+.showcase-basic .slick-dots li:hover::after {
+  transform: scaleX(1);
+}
+
+@media screen and (min-width: 40em) {
+  .showcase-basic .slick-dots {
+    left: 4.375rem;
+  }
+}
+
+/* SHOWCASE MAIN STYLE
+----------------------------------------------------------------*/
+.style-main .slide {
+  height: 400px;
+}
+
+.style-main .slide .wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;  
+  padding: 5rem 3rem;
+  max-width: 75rem;
+}
+
+.style-main .slide-title,
+.style-main .slide-content {
+  margin-bottom: 1.875rem; 
+}
+
+.style-main .slide-title h3 {
+  font-size: 1.5rem; 
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.style-main .slide-content {
+  font-size: 0.875rem;
+  padding-left: 1.875rem;
+  margin-bottom: 0;
+  border-left-width: 5px;
+  border-left-style: solid;  
+}
+
+@media screen and (min-width: 40em) {
+  .style-main .slide {
+    height: 500px;
+  }
+
+  .style-main .slide .wrapper {
+    padding: 5rem;
+  }
+
+  .style-main .slide-title h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 63.9375em) {
+  .style-main .slide-content {
+    display: none !important;  
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .style-main .slide {
+    height: calc(100vh - 60px);
+  }
+
+  .style-main .slide-title h3 {
+    font-size: 3.5rem;
+  }
+
+  .style-main .slide-content {
+    font-size: 1rem;
+    padding-right: 10rem;
+  }
+}
+
+/* SHOWCASE HEADING STYLE
+----------------------------------------------------------------*/
+.style-heading .slide {
+  height: 300px;
+}
+
+.style-heading .slide .wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;  
+  padding: 2rem 3rem;
+  max-width: 75rem;
+}
+
+.style-heading h3 {
+  font-weight: 300;
+  font-size: 4rem;
+  text-transform: none;
+}
+
+.style-heading .slick-dots,
+.style-heading .slick-prev,
+.style-heading .slick-next,
+.style-heading .slide-content {
+  display: none !important;  
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  .style-heading .slide {
+    height: 400px;
+  }
+
+  .style-heading .slide .wrapper {
+    padding: 2rem 5rem;
+  }
+
+  .style-heading h3 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .style-heading h3 {
+    font-size: 8rem;
+  }
+}
+
+/* SHOWCASE HEADING ALTERNATIVE STYLE
+----------------------------------------------------------------*/
+.style-heading-alter .slide {
+  height: 550px;
+}
+
+.style-heading-alter .slide .inner {
+  height: 400px;
+}
+
+.style-heading-alter .content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 150px;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  z-index: 2;
+}
+
+.style-heading-alter h3 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+}
+
+.style-heading-alter .slide-category {
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  margin-bottom: 0.9375rem;
+}
+
+.style-heading-alter .slide-category a {
+  padding-bottom: 0.3125rem;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;  
+}
+
+.style-heading-alter .slide-category a:hover {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;  
+}
+
+.style-heading-alter .slide-content p {
+  font-style: italic;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+}
+
+/* SHOWCASE BLOG
+----------------------------------------------------------------*/
+.block-views.views-block-blog-featured > .inner {
+  padding: 0;
+}
+
+.showcase-blog .slide {
+  height: 300px;
+}
+
+.showcase-blog .slide .inner {
+  width: 100%;
+  height: 100%;
+  padding: 1.875rem 1.25rem 1.25rem 1.25rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.showcase-blog .element {
+  display: none;  
+}
+
+.showcase-blog .slide-title {
+  margin-bottom: 1.875rem;
+}
+
+.showcase-blog .slide-title h3 {
+  font-size: 1.5rem; 
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.showcase-blog .slide-title h3:after {
+  content: "";
+  display: block;
+  width: 8.75rem;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-color: inherit;
+  margin-top: 0.5rem;
+}
+
+.showcase-blog .slide-title .subtitle {
+  display: none;
+}
+
+.showcase-blog .meta.term {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.showcase-blog .slide-button .button {
+  font-weight: 900;
+  padding: 0.9375rem 1.875rem;
+}
+
+.showcase-blog .slick-dots {
+  display: none !important;  
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  .showcase-blog .slide {
+    height: 400px;
+  }
+
+  .showcase-blog .slide .inner {
+    padding: 6.25rem 1.875rem 1.875rem 1.875rem;
+  }
+
+  .showcase-blog .slide-title h3 {
+    font-size: 2.5rem;
+  }
+
+  .showcase-blog .slide-title .subtitle {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .showcase-blog .slide {
+    height: 550px;
+  }
+
+  .showcase-blog .slide .inner {
+    padding: 10rem 6.25rem 1.875rem 6.25rem;
+  }
+
+  .showcase-blog .slide-title h3 {
+    font-size: 3rem;
+  }
+}
+
+/* SHOWCASE PORTFOLIO
+----------------------------------------------------------------*/
+.block.views-block-portfolio-featured > .inner {
+  padding: 0;
+}
+
+.showcase-portfolio .portfolio-item.height-double > .inner {
+  height: 350px;
+}
+
+.showcase-portfolio .portfolio-item  {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+/* SHOWCASE MERGING
+----------------------------------------------------------------*/
+.showcase-merging .slick-dots li.slick-active button:before {
+  opacity: 1;
+}

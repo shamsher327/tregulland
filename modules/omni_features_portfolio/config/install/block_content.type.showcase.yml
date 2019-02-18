@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: showcase
+label: Showcase
+revision: 0
+description: 'Omni showcase block.'

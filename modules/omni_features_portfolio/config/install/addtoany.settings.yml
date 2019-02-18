@@ -1,0 +1,15 @@
+buttons_size: 16
+additional_html: "<a class=\"a2a_button_facebook\"><span class=\"fa fa-facebook\"></span></a>\r\n<a class=\"a2a_button_twitter\"><span class=\"fa fa-twitter\"></span></a>\r\n<a class=\"a2a_button_google_plus\"><span class=\"fa fa-google-plus\"></span></a>\r\n<a class=\"a2a_button_pinterest\"><span class=\"fa fa-pinterest-p\"></span></a>\r\n<a class=\"a2a_button_linkedin\"><span class=\"fa fa-linkedin\"></span></a>"
+additional_css: ''
+additional_js: ''
+nodetypes:
+  - portfolio
+  - article
+  - blog
+display_in_teasers: true
+display_in_nodecont: true
+display_weight: 10
+universal_button: none
+custom_universal_button: ''
+universal_button_placement: before
+no_3p: false

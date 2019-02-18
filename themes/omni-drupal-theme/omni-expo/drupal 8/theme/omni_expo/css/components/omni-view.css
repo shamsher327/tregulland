@@ -1,0 +1,362 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMON
+----------------------------------------------------------------*/
+.block-views .title {
+  text-transform: uppercase;
+}
+
+/* LATEST, MOST READ, HIGHLIGHT
+----------------------------------------------------------------*/
+.block-post-latest li,
+.block-post-most li,
+.block-post-highlight li {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;  
+}
+
+.block-post-latest li:last-child,
+.block-post-most li:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.block-post-latest li .image-default,
+.block-post-most li .image-default {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.block-post-latest li .image-default a::after,
+.block-post-most li .image-default a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.block-post-latest li .image-default a:hover::after,
+.block-post-most li .image-default a:hover::after {
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+}
+
+.block-post-latest li h4,
+.block-post-most li h4,
+.block-post-highlight li h4 {
+  font-size: 1.125rem;
+}
+
+.block-post-latest .post.teaser {
+  padding-top: 0;
+  text-align: left;
+}
+
+.block-post-latest .post.teaser .term a {
+  top: 1.875rem;
+}
+
+.block-post-latest .post.teaser .content {
+  display: none;
+}
+
+.block-post-highlight li .meta,
+.block-post-highlight li h4 {
+  margin-left: 2.5rem;
+}
+
+.block-post-highlight ul {
+  counter-reset: section; 
+}
+
+.block-post-highlight ul li {
+  position: relative;
+}
+
+.block-post-highlight ul li:before {
+  position: absolute;
+  left: 0;
+  top: 1.25rem;
+  font-family: 'Playfair Display', Georgia, Serif;  
+  font-size: 2.55rem;
+  text-align: center;
+  line-height: 28px;
+  counter-increment: section;
+  content: counter(section)'.';
+}
+
+.views-block-post-most .inner {
+  border-width: 1px;
+  border-style: solid;
+}
+
+@media screen and (min-width: 75em) {
+  .block-post-highlight ul li:first-child:before {
+    top: 2.5rem;
+  }
+
+  .block-post-highlight ul li:first-child h4 {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+}
+
+/* RELATED
+----------------------------------------------------------------*/
+.block-post-related {
+  text-align: center;
+}
+
+.block-post-related ul.no-bullet {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.block-post-related li {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  margin-bottom: 1.875rem;
+}
+
+.block-post-related li:last-child {
+  margin-bottom: 0;
+}
+
+.block-post-related li h4 a {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100px;
+  padding: 0.9375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.block-post-related li:hover h4 a {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  aside .views-block-post-related > .inner {
+    padding: 1.875rem 0 0 0;
+  }
+
+  .block-post-related li {
+    float: left;
+    margin-right: 1.875rem;
+  }
+
+  .block-post-related li:last-child {
+    margin-right: 0;
+  }
+}
+
+/* FEATURED
+----------------------------------------------------------------*/
+.block-post-feature .row .column:first-child,
+.block-post-feature .row .column:nth-of-type(2) {  
+  margin-bottom: 1.875rem;
+}
+
+.block-post-feature .row .column .inner {
+  position: relative;
+}
+
+.block-post-feature .image-default {
+  position: relative;
+  height: 200px;
+  margin: 0;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.block-post-feature .image-default.with-filter:hover::before {
+  opacity: 0.3;
+}
+
+.block-post-feature .image-default:hover {
+  background-position: 45% 45%;
+}
+
+.block-post-feature .image-default a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+}
+
+.block-post-feature .term a {
+  position: absolute;
+  left: 0;
+  top: 1.875rem;
+  padding: 0.5rem 0.9375rem;
+  border-radius: 0 18px 18px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.block-post-feature .term a:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+} 
+
+.block-post-feature .content {
+  text-align: center;
+  padding: 1.875rem 0;
+}
+
+.block-post-feature .content h4 {
+  font-weight: 900;
+  font-size: 1.9375rem;
+}
+
+@media screen and (min-width: 40em) {
+  .block-post-feature .row .column {  
+    width: 50%;
+  }
+
+  .block-post-feature .row .column:first-child {
+    width: 100%;
+  }
+
+  .block-post-feature .row .column:nth-of-type(2),
+  .block-post-feature .row .column:nth-of-type(4) {  
+    clear: both;
+  }
+
+  .block-post-feature .column:first-child .image-default {
+    width: 100%;
+    height: 100%;
+  }
+
+  .block-post-feature .column:first-child .content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .block-post-feature .row .column {  
+    width: 33.33333%;
+  }
+
+  .block-post-feature .row .column:first-child {
+    width: 66.66666%;
+  }
+
+  .block-post-feature .row .column:nth-of-type(2),
+  .block-post-feature .row .column:nth-of-type(4) {  
+    clear: none;
+  }
+
+  .block-post-feature .row .column:nth-of-type(3) {  
+    clear: both;
+  }
+}
+
+/* CATEGORY
+----------------------------------------------------------------*/
+.block-category li {
+  display: inline-block;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;    
+  padding: 0.5rem 0.9375rem;
+  margin-bottom: 1.25rem;
+  border-radius: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+.block-category li:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.block-category li .count {
+  padding-left: 0.625rem;
+  transition: all 0.5s ease-in-out;
+}
+
+/* ABOUT AUTHOR
+----------------------------------------------------------------*/
+#author {
+  position: relative;
+  margin-bottom: 1.875rem;
+}
+
+#author:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -300%;
+  width: 300%;
+  height: 100%;
+}
+
+#author:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -300%;
+  width: 300%;
+  height: 100%;
+}
+
+.block-about-author .user-picture img {
+  width: 80px !important;
+  height: 80px;
+}
+
+.block-about-author .media-object-section > div {
+  margin-bottom: 0;
+}
+
+.block-about-author .user-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.block-about-author .user-title {
+  font-size: 0.6875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+
+.block-about-author .user-profile {
+  font-size: 0.9375rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 0.625rem;
+}

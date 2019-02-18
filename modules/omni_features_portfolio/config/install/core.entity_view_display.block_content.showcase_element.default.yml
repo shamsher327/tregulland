@@ -1,0 +1,81 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.showcase_element
+    - field.field.block_content.showcase_element.body
+    - field.field.block_content.showcase_element.field_background_filter
+    - field.field.block_content.showcase_element.field_background_image
+    - field.field.block_content.showcase_element.field_category
+    - field.field.block_content.showcase_element.field_link
+    - field.field.block_content.showcase_element.field_showcase_pattern
+    - field.field.block_content.showcase_element.field_showcase_type
+    - field.field.block_content.showcase_element.field_title
+  module:
+    - image
+    - link
+    - options
+    - text
+id: block_content.showcase_element.default
+targetEntityType: block_content
+bundle: showcase_element
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  field_background_filter:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_background_image:
+    type: image
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_category:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_showcase_pattern:
+    type: list_default
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_showcase_type:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden: {  }

@@ -1,0 +1,16 @@
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  logo: false
+  name: true
+  node_user_picture: true
+  slogan: true
+omni_header_sticky: 1
+omni_menu_reveal: 1
+logo:
+  use_default: true
+favicon:
+  use_default: true
+omni_header_login: 1
+omni_header_register: 1

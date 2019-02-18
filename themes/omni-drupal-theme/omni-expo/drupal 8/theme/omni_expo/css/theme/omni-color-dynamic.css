@@ -1,0 +1,268 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* BASE COLOR 
+----------------------------------------------------------------*/
+/* Text
+---------------------------------*/
+body { 
+  color: #0a0a0a;
+}
+
+/* Title
+---------------------------------*/
+h1, h2, h3, h4, h5, h6 { 
+  color: #333333;
+}
+
+/* Link
+---------------------------------*/
+a {
+  color: #c7a462;
+}
+
+/* Link Active
+---------------------------------*/
+a:focus, a:hover {
+  color: #a37e3a;
+}
+
+/* Meta
+---------------------------------*/
+.meta {
+  color: #999999;
+}
+
+/* Border
+---------------------------------*/
+.pager  {
+  border-color: #eeeeee;
+}
+
+/* Background
+---------------------------------*/
+body { 
+  background-color: #ffffff; 
+} 
+
+/* Foreground
+---------------------------------*/
+#page {
+  background-color: #f9f9f9; 
+}
+
+/* Header Link
+---------------------------------*/
+#header a {
+  color: #666666;
+}
+
+/* MATCHING COLOR
+----------------------------------------------------------------*/
+/* Text
+---------------------------------*/
+p.drop-cap:first-letter {
+  color: #0a0a0a; 
+}
+
+/* Title
+---------------------------------*/
+.article.teaser .title a,
+.post.teaser .title a {
+  color: #333333;
+}
+
+/* Link
+---------------------------------*/
+.button:hover, .button:focus {
+  color: #c7a462;
+}
+
+.button,
+#content-tab li a {
+  background-color: #c7a462;
+}
+
+/* Link Active
+---------------------------------*/
+.article.teaser .title a:hover,
+.post.teaser .title a:hover,
+.post.teaser .term a:hover,
+.post.full > header a:hover,
+.post.full.with-image > header a:hover,
+#header a:hover {
+  color: #a37e3a;
+}
+
+#content-tab li a:hover {
+  background-color: #a37e3a;
+}
+
+.pager ul a:hover,
+.pager ul .current a {
+  border-color: #a37e3a;
+}
+
+/* Meta
+---------------------------------*/
+.term a,
+label {
+  color: #999999;
+}
+
+/* Border
+---------------------------------*/
+.article.teaser,
+.article.full > header,
+#comment-post,
+#comment-box,
+#content-main .links,
+#content-main .tags,
+.pager,
+.search-result ol li,
+.addtoany_list,
+.addtoany_list a {
+  border-color: #eeeeee;
+}
+
+/* Background
+---------------------------------*/
+#header > .inner,
+.off-canvas-content,
+#page-bottom {
+  background-color: #ffffff;
+}
+
+/* Foreground
+---------------------------------*/
+#content-main .links .title h3,
+#content-main .tags .title h3 {  
+  background-color: #f9f9f9;
+}
+
+/* Others
+---------------------------------*/
+.addtoany_list a:hover {
+  background-color: #c7a462;
+}
+
+/* Menu
+---------------------------------*/
+#menu-primary .submenu,
+#menu-primary .submenu a,
+.is-dropdown-submenu .is-dropdown-submenu,
+.mega-menu .menu li,
+.block-mega-menu .media-object-section .meta,
+#menu-mobile > nav > ul,
+#menu-mobile > nav ul li,
+#menu-mobile .button,
+#menu-mobile .is-accordion-submenu-parent[aria-expanded=true]>a,
+#menu-mobile .is-accordion-submenu-parent>a:after,
+#offCanvas .close-button {
+  border-color: #eeeeee !important;
+}
+
+#menu-mobile-button:hover {
+  border-color: #a37e3a;
+}
+
+#menu-mobile-button:hover::before {
+  background-color: #a37e3a;
+}
+
+#menu-primary .submenu,
+.mega-menu {
+  background-color: #f9f9f9;
+}
+
+#header .block-mega-menu .meta a {
+  color: #999999;
+}
+
+#header .block-mega-menu .meta a:hover,
+#menu-mobile .button:hover,
+#menu-mobile > nav ul li a:hover,
+#offCanvas .close-button:hover {
+  color: #a37e3a;
+}
+
+#menu-mobile > nav ul li a {
+  color: #666666;
+}
+
+/* Showcase
+---------------------------------*/
+.showcase-1 .slide a:hover {
+  color: #c7a462;
+}
+
+.showcase-pager .slide,
+.showcase-pager .slide h4,
+.showcase-pager .slide .term a {
+  color: #666666;
+}
+
+.showcase-pager .slide::before {
+  background-color: #666666;
+}
+
+.showcase-pager .slide:hover::before,
+.showcase-pager .slick-current .slide::before {
+  background-color: #c7a462;
+}
+
+/* View
+---------------------------------*/
+.block-post-latest li,
+.block-post-most li,
+.block-post-highlight li,
+.views-block-post-most .inner {
+  border-color: #eeeeee;
+}
+
+.block-post-latest li h4 a,
+.block-post-most li h4 a,
+.block-post-highlight li h4 a,
+.block-post-highlight ul li:before,
+.block-post-feature .content h4 a {
+  color: #333333;
+}
+
+.block-social-media-links .fa-lg {
+  background-color: #c7a462;
+}
+
+.block-social-media-links .fa-lg:hover {
+  background-color: #a37e3a;
+}
+
+.block-post-latest li h4 a:hover,
+.block-post-most li h4 a:hover,
+.block-post-highlight li h4 a:hover,
+.block-post-feature .term a:hover,
+.block-post-feature .content h4 a:hover,
+.block-category li a:hover {
+  color: #a37e3a;
+}
+
+@media screen and (min-width: 40em) {
+  .block-post-feature .column:first-child h4 a:hover {
+    color: #a37e3a;
+  }
+}
+
+.block-about-author .user-title {
+  color: #999999;
+}

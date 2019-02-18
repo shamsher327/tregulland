@@ -1,0 +1,13 @@
+omni_custom.forms:
+   version: VERSION
+   css:
+     theme:
+       css/omni_custom.css: {}
+
+omni_custom.enable:
+  version: VERSION
+  js:
+    js/omni_custom.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

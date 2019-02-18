@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.showcase
+    - field.field.block_content.showcase.field_showcase_autoplay
+    - field.field.block_content.showcase.field_showcase_fade
+    - field.field.block_content.showcase.field_showcase_slide
+    - field.field.block_content.showcase.field_showcase_speed
+    - field.field.block_content.showcase.field_showcase_type
+  module:
+    - field_group
+    - inline_entity_form
+third_party_settings:
+  field_group:
+    group_slide:
+      children:
+        - field_showcase_slide
+      parent_name: ''
+      weight: 2
+      label: 'Adding Slide'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_general_setting:
+      children:
+        - field_showcase_type
+        - group_effect
+      parent_name: ''
+      weight: 1
+      label: 'General Setting'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_effect:
+      children:
+        - field_showcase_fade
+        - field_showcase_autoplay
+        - field_showcase_speed
+      parent_name: group_general_setting
+      weight: 7
+      label: Effect
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+id: block_content.showcase.default
+targetEntityType: block_content
+bundle: showcase
+mode: default
+content:
+  field_showcase_autoplay:
+    weight: 6
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_showcase_fade:
+    weight: 5
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_showcase_slide:
+    weight: 4
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+  field_showcase_speed:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_showcase_type:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

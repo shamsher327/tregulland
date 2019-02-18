@@ -1,0 +1,51 @@
+.menu-item
+{
+  padding:0 !important;
+}
+
+.mobile-nav-icon
+{
+  width:100%;
+  height:100px;
+  background-size:100% 100%;
+}
+
+.mobile-nav-fa-icon
+{
+  margin:1.25rem;
+}
+
+.mobile-nav-icon-tre-co
+{
+  background-image:url(../../images/treg-and-co.svg);
+}
+
+.mobile-nav-icon-tre
+{
+  background-image:url(../../images/tregulland.svg);
+}
+
+.mobile-nav-icon-bar
+{
+  background-image:url(../../images/barford.svg);
+}
+
+.mobile-nav-icon-pen
+{
+  background-image:url(../../images/pentire.svg);
+}
+
+.mobile-nav-icon-air
+{
+  background-image:url(../../images/airstream.svg);
+}
+
+.mobile-nav-icon-clo
+{
+  background-image:url(../../images/clouded-yellow.svg);
+}
+
+.mobile-nav-icon-con
+{
+  background-image:url(../../images/contact.svg);
+}

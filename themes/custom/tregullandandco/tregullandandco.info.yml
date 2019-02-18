@@ -1,0 +1,13 @@
+name: tregullandandco
+type: theme
+description: 'A Subtheme of Bootstrap'
+version: VERSION
+core: 8.x
+base theme: bootstrap
+stylesheets:
+  all:
+    - css/style.css
+
+libraries:
+  - tregullandandco/base
+  - tregullandandco/fonts

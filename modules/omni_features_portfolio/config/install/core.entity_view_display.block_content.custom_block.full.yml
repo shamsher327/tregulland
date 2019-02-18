@@ -1,0 +1,153 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.custom_block.body
+    - field.field.block_content.custom_block.field_background_color
+    - field.field.block_content.custom_block.field_background_filter
+    - field.field.block_content.custom_block.field_background_image
+    - field.field.block_content.custom_block.field_block_attachment
+    - field.field.block_content.custom_block.field_block_display
+    - field.field.block_content.custom_block.field_block_margin
+    - field.field.block_content.custom_block.field_block_padding
+    - field.field.block_content.custom_block.field_block_pattern
+    - field.field.block_content.custom_block.field_block_reveal
+    - field.field.block_content.custom_block.field_block_reveal_delay
+    - field.field.block_content.custom_block.field_block_reveal_distance
+    - field.field.block_content.custom_block.field_block_reveal_origin
+    - field.field.block_content.custom_block.field_block_reveal_reset
+    - field.field.block_content.custom_block.field_block_reveal_speed
+    - field.field.block_content.custom_block.field_body_text_color
+    - field.field.block_content.custom_block.field_button
+    - field.field.block_content.custom_block.field_button_align
+    - field.field.block_content.custom_block.field_icon
+    - field.field.block_content.custom_block.field_icon_background_color
+    - field.field.block_content.custom_block.field_icon_border
+    - field.field.block_content.custom_block.field_icon_color
+    - field.field.block_content.custom_block.field_icon_rounded
+    - field.field.block_content.custom_block.field_icon_size
+    - field.field.block_content.custom_block.field_image
+    - field.field.block_content.custom_block.field_image_filter
+    - field.field.block_content.custom_block.field_image_padding
+    - field.field.block_content.custom_block.field_image_width
+    - field.field.block_content.custom_block.field_link
+    - field.field.block_content.custom_block.field_link_target_blank
+    - field.field.block_content.custom_block.field_media_float
+    - field.field.block_content.custom_block.field_media_position_horizontal
+    - field.field.block_content.custom_block.field_media_position_vertical
+    - field.field.block_content.custom_block.field_merging_col_1
+    - field.field.block_content.custom_block.field_merging_col_2
+    - field.field.block_content.custom_block.field_merging_col_3
+    - field.field.block_content.custom_block.field_merging_col_4
+    - field.field.block_content.custom_block.field_merging_col_5
+    - field.field.block_content.custom_block.field_merging_col_6
+    - field.field.block_content.custom_block.field_merging_col_height
+    - field.field.block_content.custom_block.field_merging_col_size_l_1
+    - field.field.block_content.custom_block.field_merging_col_size_l_2
+    - field.field.block_content.custom_block.field_merging_col_size_l_3
+    - field.field.block_content.custom_block.field_merging_col_size_l_4
+    - field.field.block_content.custom_block.field_merging_col_size_m_1
+    - field.field.block_content.custom_block.field_merging_col_size_m_2
+    - field.field.block_content.custom_block.field_merging_col_size_m_3
+    - field.field.block_content.custom_block.field_merging_col_size_m_4
+    - field.field.block_content.custom_block.field_merging_col_width
+    - field.field.block_content.custom_block.field_merging_collapse
+    - field.field.block_content.custom_block.field_merging_slider
+    - field.field.block_content.custom_block.field_merging_tab
+    - field.field.block_content.custom_block.field_merging_type
+    - field.field.block_content.custom_block.field_merging_width
+    - field.field.block_content.custom_block.field_subtitle
+    - field.field.block_content.custom_block.field_title
+    - field.field.block_content.custom_block.field_title_align
+    - field.field.block_content.custom_block.field_title_border
+    - field.field.block_content.custom_block.field_title_color
+    - field.field.block_content.custom_block.field_title_size
+  module:
+    - image
+    - options
+    - text
+id: block_content.custom_block.full
+targetEntityType: block_content
+bundle: custom_block
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_merging_type:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+hidden:
+  field_background_color: true
+  field_background_filter: true
+  field_background_image: true
+  field_block_attachment: true
+  field_block_display: true
+  field_block_margin: true
+  field_block_padding: true
+  field_block_pattern: true
+  field_block_reveal: true
+  field_block_reveal_delay: true
+  field_block_reveal_distance: true
+  field_block_reveal_origin: true
+  field_block_reveal_reset: true
+  field_block_reveal_speed: true
+  field_body_text_color: true
+  field_button: true
+  field_button_align: true
+  field_icon: true
+  field_icon_background_color: true
+  field_icon_border: true
+  field_icon_color: true
+  field_icon_rounded: true
+  field_icon_size: true
+  field_image_filter: true
+  field_image_padding: true
+  field_image_width: true
+  field_link: true
+  field_link_target_blank: true
+  field_media_float: true
+  field_media_position_horizontal: true
+  field_media_position_vertical: true
+  field_merging_col_1: true
+  field_merging_col_2: true
+  field_merging_col_3: true
+  field_merging_col_4: true
+  field_merging_col_5: true
+  field_merging_col_6: true
+  field_merging_col_height: true
+  field_merging_col_size_l_1: true
+  field_merging_col_size_l_2: true
+  field_merging_col_size_l_3: true
+  field_merging_col_size_l_4: true
+  field_merging_col_size_m_1: true
+  field_merging_col_size_m_2: true
+  field_merging_col_size_m_3: true
+  field_merging_col_size_m_4: true
+  field_merging_col_width: true
+  field_merging_collapse: true
+  field_merging_slider: true
+  field_merging_tab: true
+  field_merging_width: true
+  field_subtitle: true
+  field_title: true
+  field_title_align: true
+  field_title_border: true
+  field_title_color: true
+  field_title_size: true

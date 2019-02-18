@@ -1,0 +1,530 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* GENERAL
+----------------------------------------------------------------*/
+.article-header .lowercase,
+.blog.teaser .lowercase,
+.blog-header .term .lowercase,
+.blog-header .author .lowercase {
+  color: #bbb;
+}
+
+.article-header .term .inner:before,
+.article-header .term .inner:after,
+.share a,
+.block ul.tabs li a .fa,
+.block-tags li a {
+  background-color: #dfdfdf;
+}
+
+.comment .content .arrow::before {
+  color: #eee;
+}
+
+.comment .content {
+  background-color: #eee;
+}
+
+#menu-secondary .column:first-child li::after {
+  background-color: #999;
+}
+
+#user-pass p,
+form .description {
+  color: #aaa;
+}
+
+/* Preloader
+---------------------------------*/
+#preloader {
+  background-color: #3E4E56;
+}
+
+/* Showcase
+---------------------------------*/
+.showcase-blog .slide-button .button {
+  background-color: #000;
+}
+
+.slick-prev:before, 
+.slick-next:before,
+.button.view-more a { 
+  color: #fff;
+}
+
+/* Search
+---------------------------------*/
+#reveal-search input[type="submit"] {
+  color: #8a8a8a;
+}
+
+#reveal-search input::-webkit-input-placeholder {
+  color: #8a8a8a; 
+}
+
+#reveal-search input::-moz-placeholder {
+  color: #8a8a8a; 
+}
+
+#reveal-search input:-ms-input-placeholder {
+  color: #8a8a8a; 
+}
+
+#reveal-search input::placeholder {
+  color: #8a8a8a; 
+}
+
+/* BUILT-IN COLOR
+----------------------------------------------------------------*/
+.button.link.primary {
+  color: #2199e8; 
+}
+
+.button.link.primary:hover, .button.link.primary:focus {
+  color: #147cc0;
+}
+
+.button.link.secondary {
+  color: #777; 
+}
+
+.button.link.secondary:hover, .button.link.secondary:focus {
+  color: #5f5f5f;
+}
+
+.button.link.success {
+  color: #3adb76; 
+}
+
+.button.link.success:hover, .button.link.success:focus {
+  color: #22bb5b;
+}
+
+.button.link.alert {
+  color: #ec5840; 
+}
+
+.button.link.alert:hover, .button.link.alert:focus {
+  color: #da3116;
+}
+
+.button.link.warning {
+  color: #ffae00; 
+}
+
+.button.link.warning:hover, .button.link.warning:focus {
+  color: #cc8b00;
+}
+
+.button.link.ghost {
+  color: #fff; 
+}
+
+.button.link.ghost:hover, .button.link.ghost:focus {
+  color: #ccc;
+}
+
+.button.hollow.ghost {
+  color: #fff; 
+  border: 2px solid #fff;
+}
+
+.button.hollow.ghost:hover, .button.hollow.ghost:focus {
+  color: #ccc; 
+  border-color: #ccc;
+}
+
+.red-alizarin { 
+  background-color: #e74c3c;
+}
+
+.red-pomegranate {
+  background-color: #c0392b;
+}
+
+.pink-red {
+  background-color: #F62459;
+}
+
+.pink-raspberry {
+  background-color: #DB0A5B;
+}
+
+.purple-amethyst {
+  background-color: #9b59b6;
+}
+
+.purple-wisteria {
+  background-color: #8e44ad;
+}
+
+.blue-sky {
+  background-color: #3498db;
+}
+
+.blue-royal {
+  background-color: #2980b9;
+}
+
+.blue-ocean {
+  background-color: #0c2058;
+}
+
+.blue-ink {
+  background-color: #08153a;
+}
+
+.cyan-turquoise {
+  background-color: #1abc9c;
+}
+
+.cyan-sea {
+  background-color: #16a085;
+}
+
+.green-emerald {
+  background-color: #2ecc71;
+}
+
+.green-jade {
+  background-color: #27ae60;
+}
+
+.yellow-can {
+  background-color: #F5D76E;
+}
+
+.yellow-sunflower {
+  background-color: #f1c40f;
+}
+
+.orange-orange {
+  background-color: #f39c12;
+}
+
+.orange-carrot {
+  background-color: #e67e22;
+}
+
+.gray-smoke {
+  background-color: #888888;
+}
+
+.gray-silver {
+  background-color: #666666;
+}
+
+.black-midnight {
+  background-color: #222222;
+}
+
+.black-eclipse {
+  background-color: #000000;
+}
+
+.gradient-rose-water::before {
+  background: #E55D87; 
+  background: -webkit-linear-gradient(to left, #E55D87 , #5FC3E4);
+  background: linear-gradient(to left, #E55D87 , #5FC3E4);
+}
+
+.gradient-lemon-twist::before {
+  background: #3CA55C;
+  background: -webkit-linear-gradient(to left, #3CA55C , #B5AC49);
+  background: linear-gradient(to left, #3CA55C , #B5AC49);        
+}
+
+.gradient-pinky::before {
+  background: #DD5E89;
+  background: -webkit-linear-gradient(to left, #DD5E89 , #F7BB97);
+  background: linear-gradient(to left, #DD5E89 , #F7BB97);         
+}
+
+.gradient-aqua-marine::before {
+  background: #1A2980; 
+  background: -webkit-linear-gradient(to left, #1A2980 , #26D0CE); 
+  background: linear-gradient(to left, #1A2980 , #26D0CE); 
+}
+
+.gradient-bora-bora::before {
+  background: #2BC0E4;
+  background: -webkit-linear-gradient(to left, #2BC0E4 , #EAECC6);
+  background: linear-gradient(to left, #2BC0E4 , #EAECC6);         
+}
+
+.gradient-peach::before {
+  background: #ED4264; 
+  background: -webkit-linear-gradient(to left, #ED4264 , #FFEDBC);
+  background: linear-gradient(to left, #ED4264 , #FFEDBC);        
+}
+
+.gradient-moonrise::before {
+  background: #DAE2F8;
+  background: -webkit-linear-gradient(to left, #DAE2F8 , #D6A4A4); 
+  background: linear-gradient(to left, #DAE2F8 , #D6A4A4);         
+}
+
+.gradient-blurry-beach::before {
+  background: #d53369; 
+  background: -webkit-linear-gradient(to left, #d53369 , #cbad6d); 
+  background: linear-gradient(to left, #d53369 , #cbad6d);                 
+}
+
+.gradient-miaka::before {
+  background: #FC354C; 
+  background: -webkit-linear-gradient(to left, #FC354C , #0ABFBC); 
+  background: linear-gradient(to left, #FC354C , #0ABFBC);                
+}
+
+.gradient-almost::before {
+  background: #ddd6f3;
+  background: -webkit-linear-gradient(to left, #ddd6f3 , #faaca8);
+  background: linear-gradient(to left, #ddd6f3 , #faaca8);               
+}
+
+.gradient-virgin::before {
+  background: #C9FFBF; 
+  background: -webkit-linear-gradient(to left, #C9FFBF , #FFAFBD); 
+  background: linear-gradient(to left, #C9FFBF , #FFAFBD);                       
+}
+
+.gradient-shore::before {
+  background: #70e1f5;
+  background: -webkit-linear-gradient(to left, #70e1f5 , #ffd194); 
+  background: linear-gradient(to left, #70e1f5 , #ffd194);               
+}
+
+.gradient-endless-river::before {
+  background: #43cea2;
+  background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); 
+  background: linear-gradient(to left, #43cea2 , #185a9d);                        
+}
+
+.gradient-back-to-earth::before {
+  background: #00C9FF; 
+  background: -webkit-linear-gradient(to left, #00C9FF , #92FE9D);
+  background: linear-gradient(to left, #00C9FF , #92FE9D);                       
+}
+
+.gradient-green-and-blue::before {
+  background: #c2e59c; 
+  background: -webkit-linear-gradient(to left, #c2e59c , #64b3f4);
+  background: linear-gradient(to left, #c2e59c , #64b3f4);                               
+}
+
+.gradient-tranquil::before {
+  background: #EECDA3; 
+  background: -webkit-linear-gradient(to left, #EECDA3 , #EF629F); 
+  background: linear-gradient(to left, #EECDA3 , #EF629F);                       
+}
+
+.gradient-sweet-morning::before {
+  background: #FF5F6D; 
+  background: -webkit-linear-gradient(to left, #FF5F6D , #FFC371); 
+  background: linear-gradient(to left, #FF5F6D , #FFC371);                                 
+}
+
+/*---custom-css--*/
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0 auto;
+  padding: 1% 0;
+  text-align: center;
+  text-transform:uppercase;
+}
+#block-aboutusbottom > div.inner.with-padding.without-collapse {
+  display: none;
+}
+#block-socialmedialinks div {
+  margin: 0;
+}
+#block-footersocialmediatitle > div {
+  padding-bottom: 0;
+}
+
+#block-propertyrow1-2 .column .inner {
+  background: #fff none repeat scroll 0 0;
+}
+
+#block-propertyrow2-2 .column .inner {
+  background: #fff none repeat scroll 0 0;
+}
+
+.property-inner .term {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1;
+	color:#2199e8;
+	text-transform:uppercase;
+}
+.property-inner .meta {
+  margin-top: -1.875rem;
+}
+
+.property-inner .image-default{
+  margin:0 -1.875rem 1.875rem;
+}
+
+.property-inner h4 {
+    font-weight: 300;
+}
+.property-inner h4  a{
+   color: #2199e8;
+}
+
+.property-inner .content {
+  margin-bottom: 1.875rem;
+}
+
+.property-inner .button.hollow:hover{
+	color: #ffffff;
+}
+#block-title .inner {
+  padding-bottom: 0;
+}
+
+.property-inner .button.hollow {
+  border-color: #2199e8;
+  color: #2199e8;
+  overflow: hidden;
+  position: relative;
+}
+
+.property-inner  .button.hollow::before {
+  content: "";
+  display: block;
+  font-family: FontAwesome;
+  font-size: 1rem;
+  height: 100%;
+  line-height: 34px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  width: 0;
+  z-index: 1;
+}
+
+.property-inner  .button.hollow::before {
+  background-color: #2199e8;
+}
+.property-inner  .button.hollow:hover::before {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+#block-propertyrow2-2 > .inner {
+  padding-top: 0;
+}
+#block-propertyrow2-2 > .inner > div {
+  padding-top: 0;
+}
+
+
+#block-newsletterimage .inner > div {
+  margin: 0;
+}
+
+#block-simplenewssubscription .inner > div {
+  margin: 0;
+}
+#block-footertop > .inner > div {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+#block-footertop > .inner > .unexpended {
+  padding-bottom: 0;
+}
+
+#block-testimonial-2 {
+  margin: 0 auto;
+  max-width: 75rem;
+}
+#block-testimonial-2 blockquote {
+  min-height: 106px;
+}
+#block-testimonial-2 .title {
+  margin-bottom: 30px !important;
+}
+#block-propertytitle .inner {
+  padding-bottom: 0;
+}
+#block-contactformtitle2 .inner {
+  padding-bottom: 0;
+}
+#block-contactblock-2 .inner {
+  margin: 0 auto;
+  max-width: 75rem;
+  padding-top: 0;
+}
+
+#block-contactblock-2 .inner >div{
+	margin-top:0;
+	margin-bottom:0;
+}
+#block-contactblock-2 #edit-preview {
+  display: none;
+}
+#block-propertyrow1-2 .unexpended {
+  padding-top: 0;
+}
+
+#status {
+  height: 79px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 256px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  margin:0;
+}
+.ball-grid-pulse {
+  background: rgba(0, 0, 0, 0) url("http://tregullandandco.co.uk/sites/default/files/treg-co-logo-v3_2.png") repeat scroll 0 0;
+  height: 83px;
+  text-align: center;
+  width: 256px;
+}
+.ball-grid-pulse > div {
+float:none;
+
+}
+
+#edit-preview--2 {
+  display: none;
+}
+
+#menu-secondary a {
+  padding: 1.125rem 1rem !important;
+}
+.slick-dots {
+  display: none !important;
+}
+
+@media (max-width:767px){
+	.property-inner .image-default {
+     margin: 0;
+    }
+.site-logo img {
+  max-width: 160px;
+}
+#reveal-menu #reveal-menu-sub {
+  display: none;
+}
+
+}

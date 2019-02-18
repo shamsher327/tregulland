@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_image_filter
+field_name: field_image_filter
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: red-alizarin
+      label: 'red alizarin'
+    -
+      value: red-pomegranate
+      label: 'red pomegranate'
+    -
+      value: purple-amethyst
+      label: 'purple amethyst'
+    -
+      value: purple-wisteria
+      label: 'purple wisteria'
+    -
+      value: blue-sky
+      label: 'blue sky'
+    -
+      value: blue-royal
+      label: 'blue royal'
+    -
+      value: green-emerald
+      label: 'green emerald'
+    -
+      value: green-jade
+      label: 'green jade'
+    -
+      value: orange-orange
+      label: 'orange orange'
+    -
+      value: orange-carrot
+      label: 'orange carrot'
+    -
+      value: gray-smoke
+      label: 'gray smoke'
+    -
+      value: gray-silver
+      label: 'gray silver'
+    -
+      value: black-midnight
+      label: 'black midnight'
+    -
+      value: black-eclipse
+      label: 'black eclipse'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

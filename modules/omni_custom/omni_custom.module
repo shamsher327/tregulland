@@ -1,0 +1,109 @@
+<?php
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                            
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/   
+/**
+* @file
+* Code for the omni custom module.
+*/
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
+
+function omni_custom_block_content_presave(EntityInterface $entity) {  
+
+  if ($entity->type->target_id =='custom_block_element') {
+    
+    if (empty($entity->get('info')->value)) {
+
+      if (!empty($entity->field_custom_block)) {
+        $custom_block = entity_load('block', $entity->field_custom_block->target_id);
+
+        $entity->set('info', $custom_block->label());
+        $entity->save(); 
+      }
+
+      if (!empty($entity->field_custom_block_non)) {
+        $custom_block_non = entity_load('block', $entity->field_custom_block_non->target_id);
+
+        $entity->set('info', $custom_block_non->label());
+        $entity->save();
+      }       
+    }    
+  } 
+
+  if ($entity->type->target_id =='showcase') {
+    
+    $showcase_type = $entity->get('field_showcase_type')->value;
+    $showcase_slide = $entity->field_showcase_slide;        
+    
+    foreach ($showcase_slide as $slice) {
+
+      $update_slice = entity_load('block_content', $slice->target_id);
+
+      if ($update_slice->get('field_showcase_type')->value != $showcase_type) {
+        $update_slice->set('field_showcase_type', $showcase_type);
+        $update_slice->save();      
+      }
+    }       
+  }  
+}
+
+function omni_custom_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+    
+  /**
+   * Apply the form_alter to a specific form #id
+   * the form #id can be found through inspecting the markup
+   */
+  if($form['#id'] == 'views-exposed-form-omni-library-page-page-portfolio') {
+
+  /**
+   * Include a js and css, which was defined in omni_custom.libraries.yml
+   */
+  $form['#attached']['library'][] = 'omni_custom/omni_custom.enable'; 
+  $form['#attached']['library'][] = 'omni_custom/omni_custom.forms';
+  $form['field_category_target_id']['#options']['All'] = t('All');
+  /**
+   * Extract the options from the Views Exposed Filter <select>-list 
+   */
+  $links = $form['field_category_target_id']['#options'];
+
+  /**
+   * Iterate over the options ($links) to build an array ($pop_array) of links
+   */
+  $i = 0; // Initiate counter/index
+  $pop_array = array();
+  foreach ($links as $tid => $term_name) {
+    if ($tid == 'All') {
+      $pop_array[$i]['#markup'] = '<span class="filter-tab"><a href="" class="active" id="' .$tid . '">' . $term_name . '</a></span>';
+    }
+    else {
+      $pop_array[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '">' . $term_name . '</a></span>';
+    }
+    $i++; // Increase counter/index
+  } 
+
+  /**
+   * Create the item-list the form should render
+   */
+    $form['links'] = [
+      '#theme' => 'item_list',
+      '#items' => $pop_array,
+      '#attributes' => array('class' => array('category-list')),
+    ]; 
+  }
+  
+  else {
+    //nothing...
+  } 
+}

@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Omni Expo theme.
+
+omni_expo.settings:
+  type: theme_settings
+  label: 'Omni settings'

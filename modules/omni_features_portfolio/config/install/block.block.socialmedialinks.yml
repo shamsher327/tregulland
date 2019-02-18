@@ -1,0 +1,76 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - omni_portfolio
+id: socialmedialinks
+theme: omni_portfolio
+region: social_media
+weight: -9
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    contact:
+      value: ''
+      weight: '-10'
+    drupal:
+      value: ''
+      weight: '-9'
+    email:
+      value: ''
+      weight: '-8'
+    facebook:
+      value: 'https://www.facebook.com/example'
+      weight: '-7'
+    googleplus:
+      value: 'https://plus.google.com/example'
+      weight: '-6'
+    instagram:
+      value: ''
+      weight: '-5'
+    linkedin:
+      value: 'http://www.linkedin.com/example'
+      weight: '-4'
+    pinterest:
+      value: 'http://www.pinterest.com/example'
+      weight: '-3'
+    rss:
+      value: ''
+      weight: '-2'
+    slideshare:
+      value: ''
+      weight: '-1'
+    tumblr:
+      value: ''
+      weight: '0'
+    twitter:
+      value: 'https://www.twitter.com/example'
+      weight: '1'
+    vimeo:
+      value: ''
+      weight: '2'
+    youtube:
+      value: ''
+      weight: '3'
+    youtube_channel:
+      value: ''
+      weight: '4'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:lg'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

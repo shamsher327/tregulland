@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_title_case
+id: block_content.custom_block.field_title_case
+field_name: field_title_case
+entity_type: block_content
+bundle: custom_block
+label: 'Title Case'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: uppercase
+  off_label: 'Off'
+field_type: boolean

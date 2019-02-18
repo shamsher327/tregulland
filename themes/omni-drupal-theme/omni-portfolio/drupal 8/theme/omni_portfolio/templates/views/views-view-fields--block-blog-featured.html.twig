@@ -1,0 +1,43 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+
+{% set image %}{{ fields['field_image_thumbnail'].content|raw }}{% endset %}
+{% set filter %}{{ fields['field_filter'].content }}{% endset %}
+
+{% if 'no result' not in filter|render  %}      
+  {% set filter %} with-filter {{ filter }}{% endset %}
+{% else %}
+  {% set filter %} without-filter{% endset %}
+{% endif %}
+<div>
+  <div class="slide"> 
+    <div class="inner{{ filter }}" style="{{ background_image(image) }}">
+      <div class="row text-center">
+      	<div class="slide-content element">
+      	  <div class="meta term">{{ fields['field_tags'].content }}</div>
+	      </div>
+	      <div class="slide-title element">
+	        <h3 class="title">{{ fields['title'].content }}</h3>
+          <div class="subtitle">{{ fields['body'].content }}</div>
+	      </div>
+        <div class="slide-button element">
+          {{ fields['view_node'].content }}
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>

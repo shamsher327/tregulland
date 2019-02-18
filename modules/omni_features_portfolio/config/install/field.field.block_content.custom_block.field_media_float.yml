@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_media_float
+id: block_content.custom_block.field_media_float
+field_name: field_media_float
+entity_type: block_content
+bundle: custom_block
+label: Float
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: float
+  off_label: 'Off'
+field_type: boolean

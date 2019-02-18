@@ -1,0 +1,357 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* PAGE
+----------------------------------------------------------------*/
+.view-page-post .row {
+  padding: 0 0.9375rem;
+}
+
+/* TEASER
+----------------------------------------------------------------*/
+.post.teaser {
+  position: relative;
+  padding: 1.875rem 0;
+}
+
+.post.teaser .title {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.post.teaser .term a {
+  position: absolute;
+  left: 0;
+  top: 3.75rem;
+  padding: 0.5rem 0.9375rem;
+  border-radius: 0 18px 18px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+.post.teaser .term a:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+} 
+
+.post.teaser .content {
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+
+.post.teaser .image-default {
+  position: relative;
+}
+
+.post.teaser .image-default a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.post.teaser .image-default a:hover::after {
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+}
+
+.post.teaser .image-default img {
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .post.teaser .title {
+    font-size: 1.9375rem;
+  }
+}
+
+/* FULL
+----------------------------------------------------------------*/
+/* Header
+--------------------------------*/
+.node-type-post #main-middle {
+  position: relative;
+  padding-top: 0;
+}
+
+.node-type-post #content-tab {
+  position: absolute;
+  top: 1.875rem;
+  width: 100%;
+  z-index: 1;
+}
+
+.post.full > header > .inner {
+  background-size: cover;
+  background-position: center center;
+}
+
+.post.full > header > .inner,
+.post.full > header > .inner.with-filter::before  {
+  height: 250px;
+}
+
+.post.full.with-image > header > .inner,
+.post.full.with-image > header > .inner.with-filter::before  {
+  height: 350px;
+}
+
+/* Header Top
+--------------------------------*/
+.post.full .header-top .column {
+  position: relative;
+  height: 180px;
+}
+
+.post.full.with-image .header-top .column {
+  height: 280px;
+}
+
+.post.full .header-top .inner {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  padding: 1.875rem;
+}
+
+.post.full .header-top .title {
+  position: relative;
+  font-weight: 900;
+}
+
+.post.full .header-top .summary {
+  font-weight: 300;
+  letter-spacing: 0.03125rem;
+  margin-bottom: 1.875rem;
+}
+
+.post.full .header-top .term {
+  position: relative;
+  display: inline-block;
+  font-size: 0.9375rem;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  padding-left: 130px;
+
+}
+
+.post.full .header-top .term::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 40em) {
+  .post.full > header > .inner,
+  .post.full > header > .inner.with-filter::before  {
+    height: 350px;
+  }
+
+  .post.full.with-image > header > .inner,
+  .post.full.with-image > header > .inner.with-filter::before  {
+    height: 450px;
+  }
+
+  .post.full .header-top .column {    
+    height: 280px;
+  }
+
+  .post.full.with-image .header-top .column {
+    height: 380px;
+  }
+
+  .post.full .header-top .title {
+    font-size: 3rem;
+  }
+
+  .post.full .header-top .term {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .post.full > header > .inner,
+  .post.full > header > .inner.with-filter::before  {
+    height: 450px;
+  }
+
+  .post.full.with-image > header > .inner,
+  .post.full.with-image > header > .inner.with-filter::before  {
+    height: 550px;
+  }
+
+  .post.full .header-top .column {    
+    height: 380px;
+  }
+
+  .post.full.with-image .header-top .column {
+    height: 480px;
+  }
+
+  .post.full .header-top .title {
+    font-size: 4rem;
+  }
+
+  .post.full .header-top .summary,
+  .post.full .header-top .term {
+    font-size: 1.125rem;
+  }
+
+  .post.full .header-top .term::before {
+    top: 15px;
+  }
+}
+
+/* Header Bottom
+--------------------------------*/
+.post.full .header-bottom {
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 1.875rem;
+}
+
+.post.full.with-image .header-bottom {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.post.full .header-bottom .prev,
+.post.full .header-bottom .next {
+  position: absolute;
+  top: 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.post.full .header-bottom .prev {
+  left: 0;
+}
+
+.post.full .header-bottom .next {
+  right: 0;
+}
+
+.post.full .header-bottom .prev span.nav,
+.post.full .header-bottom .next span.nav {
+  display: none;
+}
+
+.post.full .header-bottom .prev span.fa,
+.post.full .header-bottom .next span.fa {
+  width: 30px;
+  height: 70px;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 70px;
+}
+
+.post.full .header-bottom .prev span.fa {
+  margin-right: 1.875rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.post.full .header-bottom .next span.fa {
+  margin-left: 1.875rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.post.full.with-image .header-bottom .prev span.fa,
+.post.full.with-image .header-bottom .next span.fa {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.post.full .header-bottom .user-picture {
+  display: none;
+  padding: 0.9375rem 1.875rem 0.9375rem 0;
+}
+
+.post.full .header-bottom .user-picture img {
+  width: 40px;
+  height: 40px;
+}
+
+.post.full .header-bottom .meta.submit {
+  padding: 1.25rem;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .post.full .header-bottom .prev span.fa,
+  .post.full .header-bottom .next span.fa {
+    width: 70px;
+  }
+  .post.full .header-bottom .user-picture {
+    display: inline-block;
+  }
+  .post.full .header-bottom .meta.submit {
+    padding: 0 1.875rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .post.full .header-bottom .prev span.nav,
+  .post.full .header-bottom .next span.nav {
+    display: inline-block;
+  }
+}
+
+/* Content
+--------------------------------*/
+.post.full > .content {
+  padding-top: 1.25rem;
+}
+
+.post.full > .content > .column > .inner {
+  padding: 1.25rem;
+}
+
+.post.full > .content > .column > .inner#content-body {
+  padding-top: 0;
+}
+
+.post.full > .content > .column > aside.inner {
+  width: 100%;
+  padding: 1.25rem;  
+}
+
+@media screen and (min-width: 40em) {
+  .post.full > .content {
+    padding-top: 1.875rem;
+  }
+
+  .post.full > .content > .column > .inner {
+    padding: 1.875rem;
+  }
+
+  .post.full > .content > .column > aside.inner {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .post.full > .content > .column > .inner#content-body {
+    padding-top: 1.875rem;
+  }
+
+  .post.full > .content > .column > aside.inner {
+    width: 150px;
+    padding: 1.875rem 0;
+    margin: 0 auto;
+  }
+}

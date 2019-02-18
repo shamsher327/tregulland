@@ -1,0 +1,216 @@
+#page
+{
+	max-width: 1280px;
+    margin: auto;
+    position:relative;
+}
+
+iframe{ border: none; }]
+
+@media screen and (min-width: 40em) {
+  .block > .inner {
+    padding: 1.875rem;
+  }
+
+  .block > .inner.with-margin,
+  .block > .inner > div,
+  .block > .inner > .column.row > div {
+    margin-bottom: 0;
+  }
+
+	.title
+	{
+		margin-bottom:0;
+	}
+
+  .merging-horizontal > .with-padding.without-collapse  {
+    padding-top:0;
+  }
+
+  .merging-horizontal .uncollapse {
+    padding-top:0;
+  }
+}
+
+#menu-mobile .ghost
+{
+    color:black;
+    border-color:black;
+    outline: none !important;
+}
+
+#header a
+{
+  color:black !important;
+}
+#social-media .fa-lg::after 
+{
+  background-color:black !important;
+}
+
+@media screen and (min-width: 64em)
+{
+  .style-main .slide {
+      height: 618px;
+  }
+}
+
+@media screen and (min-width : 1200px)
+{
+   #showcase
+   {
+    width:1122px;
+    margin:auto;
+   }
+}
+
+#block-landing-contactformtitle2 .with-padding
+{
+  padding-bottom:0;
+}
+
+#site-info img
+{
+    max-height: 100px;
+    margin-top: -7px;
+}
+
+@media screen and (max-width: 1023px)
+{
+  #site-info img
+  {
+      max-height: 70px;
+      margin-top: -15px;
+  }
+}
+
+@media screen and (max-width: 639px)
+{
+  #site-info img
+  {
+      max-height: 70px;
+      margin-top: -5px;
+  }
+}
+
+footer
+{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+#block-landing-testimonial-1 .showcase.slick-slider, #block-landing-testimonial-2 .showcase.slick-slider, #block-pentire-testimonial-1 .showcase.slick-slider, #block-pentire-testimonial-2 .showcase.slick-slider, #block-barford-testimonial-1 .showcase.slick-slider, #block-barford-testimonial-2 .showcase.slick-slider
+{
+  background-color:black;
+}
+
+#block-landing-testimonial-2 .slick-dots, #block-landing-testimonial-2 .slick-dots, #block-pentire-testimonial-2 .slick-dots, #block-pentire-testimonial-2 .slick-dots, #block-barford-testimonial-2 .slick-dots, #block-barford-testimonial-2 .slick-dots
+{
+  display:block !important;
+}
+
+#block-landing-testimonial-1 .title, #block-landing-testimonial-2 .title, #block-pentire-testimonial-1 .title, #block-pentire-testimonial-2 .title, #block-barford-testimonial-1 .title, #block-barford-testimonial-2 .title
+{
+  margin-bottom:40px;
+}
+
+#block-landing-testimonial-1 p, #block-landing-testimonial-2 p, #block-pentire-testimonial-1 p, #block-pentire-testimonial-2 p, #block-barford-testimonial-1 p, #block-barford-testimonial-2 p
+{
+  text-align:center;
+}
+
+#block-footersocialmediatitle
+{
+  text-align:center;
+}
+
+#block-socialmedialinks
+{
+  text-align:center;
+}
+
+#block-socialmedialinks .platforms
+{
+  width:233px;
+  margin-top:30px;
+  display:inline-block;
+}
+
+#block-landing-footerbottom .inner.without-padding
+{
+    background-size: auto 90% !important;
+    background-position: 100% 0 !important;
+}
+
+@media screen and (max-width:639px) {
+  #block-landing-footerbottom .inner.without-padding
+  {
+      background-size: auto 80% !important;
+      background-position: 85% 0 !important;
+  }
+}
+
+#block-landing-testimonial-1 .inner, #block-landing-testimonial-2 .inner, #block-pentire-testimonial-1 .inner, #block-pentire-testimonial-2 .inner, #block-barford-testimonial-1 .inner, #block-barford-testimonial-2 .inner
+{
+  padding-bottom:0;
+}
+
+@media screen and (max-width: 1199px)
+{
+  #footer
+  {
+    padding-left:0;
+    padding-right:0;
+  }
+
+  #block-landing-testimonial-1 .inner, #block-landing-testimonial-2 .inner, #block-pentire-testimonial-1 .inner, #block-pentire-testimonial-2 .inner, #block-barford-testimonial-1 .inner, #block-barford-testimonial-2 .inner
+  {
+    padding-left:0;
+    padding-right:0;
+  }
+}
+
+#block-footercontactdetail
+{
+  font-weight:100;
+}
+
+#block-footercontactdetail, #block-footerlinkinternational
+{
+  text-align:center;
+}
+
+#block-footercontactdetail div.inner, #block-footerlinkinternational div.inner
+{
+  display:inline-block;
+  text-align:center;
+}
+
+#main-middle
+{
+  padding:0;
+}
+
+#content-title
+{
+  margin:0;
+}
+
+@media (min-width : 1200px) {
+  #block-testimonial
+  {
+    padding-left:30px;
+    padding-right:30px;
+  }
+}
+
+.ball-grid-pulse
+{
+  padding-top:5px;
+}
+
+@media screen and (max-width: 768px) {
+  #site-info {
+      text-align: center;
+  }
+}

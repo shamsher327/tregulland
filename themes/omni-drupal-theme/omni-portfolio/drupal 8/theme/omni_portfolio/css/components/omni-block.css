@@ -1,0 +1,98 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* BLOCK SOCIAL MEDIA
+----------------------------------------------------------------*/
+.block.block-social-media-links > .inner {
+  text-align: center;
+  padding: 0;
+}
+
+.block-social-media-links ul {
+  margin: 0;
+}
+
+.block-social-media-links .horizontal li {
+  padding: .2em;
+}
+
+.block-social-media-links .fa-lg {
+  display: inline-block;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+/* BLOCK SUBSCRIPTION
+----------------------------------------------------------------*/
+.block-simplenews .inner {
+  position: relative;
+}
+
+.block-simplenews .title,
+.block-simplenews label,
+.block-simplenews .description {
+  display: none;
+}
+
+.block-simplenews .form-item-message {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.block-simplenews [type=email] {
+  color: inherit;
+  height: 3rem;
+  padding: 1.25rem;
+  border-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  background-color: rgba(225, 225, 225, 0.1);
+  box-shadow: none;
+}
+
+.block-simplenews [type=email]:focus {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.block-simplenews .form-actions {
+  position: absolute;
+  right: 24px;
+  bottom: 8px;
+}
+
+.user-logged-in .block-simplenews .form-actions {
+  position: static;
+}
+
+.block-simplenews input[type=submit] {
+  height: 40px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 40em) {
+  .block-simplenews .form-item-message {
+    font-size: 2rem;
+  }
+
+  .block-simplenews .form-actions {
+    right: 34px;
+    bottom: 18px;
+  }
+}

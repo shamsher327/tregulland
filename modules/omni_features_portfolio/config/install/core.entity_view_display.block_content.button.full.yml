@@ -1,0 +1,43 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.button
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.button.field_button_color
+    - field.field.block_content.button.field_button_link
+    - field.field.block_content.button.field_button_size
+    - field.field.block_content.button.field_button_style
+  module:
+    - link
+    - options
+id: block_content.button.full
+targetEntityType: block_content
+bundle: button
+mode: full
+content:
+  field_button_link:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_button_size:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_button_style:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+hidden:
+  field_button_color: true

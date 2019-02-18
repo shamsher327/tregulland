@@ -1,0 +1,16 @@
+------------------------------------------------------------------	
+2016/3/25
+------------------------------------------------------------------	
+Changed
+  - file: omni_magazine.theme (remove licence info in the header section which is causing issue when user log out and unable to log back in.
+------------------------------------------------------------------
+2016/3/27
+------------------------------------------------------------------	
+Changed
+  - file: omni/omni_magazine/templates/views/views-view-unformatted--block-category.html.twig (adding limitation when over 9 nodes)
+  - file: omni/omni_magazine/templates/views/views-view-unformatted--block-category-grid.html.twig (adding limitation to 5 nodes)
+  - file: omni/omni_magazine/templates/views/views-view-unformatted--page-category.html.twig (adding limitation when over 9 nodes)
+  - file: omni/omni_magazine/templates/views/views-view-unformatted--page-category-grid.html.twig (adding limitation to 5 nodes)
+Adding
+  - file: document/sample content/views backup.zip
+  - file: document/sample content/views backup README.txt

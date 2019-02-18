@@ -1,0 +1,364 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                          
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMON
+----------------------------------------------------------------*/
+.menu-arrow::before,
+.menu-arrow::after {
+  position: absolute;
+  right: 50%;
+  top: -24px;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-family: FontAwesome; 
+  font-size: 1.5rem;
+  content: '\f0d8';
+  text-align: center;
+  margin-right: -0.625rem;
+}
+
+.menu-arrow::after {
+  top: -19px;
+  font-size: 1.25rem;
+}
+
+/* MENU PRIMARY
+----------------------------------------------------------------*/
+#menu-primary a {
+  text-transform: uppercase;
+  padding: 1.375rem 1rem;
+}
+
+#menu-primary .submenu {  
+  border: none;
+  border-top-width: 1px;
+  border-top-style: solid;
+  min-width: 250px;
+}
+
+#menu-primary .submenu a {
+  font-size: 0.8125rem;
+  padding: 1.25rem 1rem;
+}
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a:after,
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right>a:after {
+  content: '+';
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 0;
+  margin-top: -0.75rem;
+  right: 0.75rem;
+}
+
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right>a:after {
+  margin-top: -0.5rem;
+  right: 1.25rem;
+}
+
+.dropdown.menu>li.is-dropdown-submenu-parent.is-active>a:after,
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right.is-active>a:after {
+  content: '';
+}
+
+#menu-primary .submenu.first-sub {
+  top: 70px;
+}
+
+.is-stuck #menu-primary .submenu.first-sub {
+  top: 100%;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  #menu-primary .menu-arrow::before,
+  #menu-primary .menu-arrow::after {
+    left: 1.25rem;
+    margin: 0;
+  }
+}
+
+/* MENU SECONDARY
+----------------------------------------------------------------*/
+#menu-secondary {
+  padding: 0.5rem;
+}
+
+#menu-secondary ul {
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+#menu-secondary a {
+  padding: 0.3125rem 1rem;
+}
+
+/* MENU MOBILE
+----------------------------------------------------------------*/
+#menu-reveal {
+  top: 0 !important;
+  padding: 0;
+}
+
+#menu-reveal .close-button {
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+#site-info-alter {
+  padding: 1.25rem;
+  text-align: center;
+}
+
+#menu-reveal #menu-mobile {
+  position: relative;
+  padding: 1.875rem 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+#menu-mobile {
+  padding-bottom: 1.875rem;
+}
+
+#menu-mobile ul {
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#menu-mobile ul ul {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+#menu-mobile li {
+  position: relative;
+}
+
+#menu-mobile li a {
+  padding: 1.25rem 1.25rem 1.375rem 1.25rem;
+}
+
+#menu-mobile .is-accordion-submenu-parent[aria-expanded=true]> a {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+#menu-mobile .divider {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: inline-block;
+  width: 6.25rem;
+  height: 0.125rem;
+  margin-left: -3.25rem;
+}
+
+#menu-mobile .is-accordion-submenu-parent[aria-expanded=true]> .divider {
+  left: 0;
+  width: 100%;
+  margin-left: 0;
+}
+
+#menu-mobile .is-accordion-submenu-parent:after {
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  font-size: 0.875rem;
+  content: '+'; 
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+}
+
+#menu-mobile .is-accordion-submenu-parent[aria-expanded=true]:after {
+  content: '-';
+}
+
+#menu-mobile .is-accordion-submenu-parent>a:after {
+  content: '';
+  border: 0;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  #menu-reveal #menu-mobile ul {
+    font-size: 2.5rem;
+  }
+
+  #menu-reveal #menu-mobile ul ul {
+    font-size: 1.5625rem;
+  }
+}
+
+/* MENU SUB
+----------------------------------------------------------------*/
+#menu-sub {
+  position: relative;
+  text-align: center;
+}
+
+#menu-sub .sub-item {
+  display: inline-block;
+  text-align: left;
+}
+
+.sub-item .dropdown-pane {
+  left: 0;
+  width: 100%;
+  border: 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding: 0;
+}
+
+.is-stuck .sub-item .dropdown-pane {
+  top: 60px !important;
+}
+
+.sub-item .block > .inner > div {
+  margin-bottom: 0;
+}
+
+.sub-item button {
+  font-family: FontAwesome; 
+  font-size: 1rem;
+  width: 3rem;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  outline: 0;
+  text-align: center;
+}
+
+.sub-item button::after {
+  display: none;
+  position: absolute;
+  content: '|';
+  left: auto;
+  right: -3px;
+  top: -2px;
+}
+
+.icon-nav::before {
+  content: '\f0c9';
+}
+
+.icon-social::before {
+  content: '\f1d8';
+}
+
+.icon-login::before {
+  content: '\f007';
+}
+
+.icon-search::before {
+  content: '\f002';
+}
+
+.sub-item label {
+  color: inherit;
+}
+
+#item-social .inner {
+  text-align: center;
+  padding: 1.25rem 0;
+}
+
+#item-social .inner > div,
+#item-social li {
+  padding: 0 0.625rem;
+}
+
+#item-login input[type="text"],
+#item-login input[type="password"],
+#item-search input[type="search"]  {
+  border: 0;
+  box-shadow: none;
+}
+
+#item-login ul {
+  margin: 0;
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+#item-login ul li:first-child {
+  margin-bottom: 0.3125rem;
+}
+
+#item-login .form-item,
+#item-login .form-actions,
+#item-search .form-item,
+#item-search .form-actions,
+#item-search input[type="submit"]  {
+  margin: 0;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  #menu-sub .sub-item {
+    position: relative;
+  }
+
+  .sub-item .dropdown-pane {
+    top: 70px !important;
+    left: auto !important;
+    right: 0;
+    width: 300px;
+  }
+
+  .sub-item button::after {
+    display: block;
+  }
+
+  .sub-item:last-child button::after {
+    display: none;
+  }
+
+  #menu-sub .menu-arrow::before,
+  #menu-sub .menu-arrow::after {
+    right: 15px;
+    margin: 0;
+  }
+
+  #item-social.dropdown-pane {
+    width: auto;
+  }
+
+  #item-social.dropdown-pane ul {
+    display: table;
+  }
+
+  #item-social.dropdown-pane li {
+    display: table-cell;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  #menu-sub {
+    text-align: right;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 64em)  {
+  #menu-sub {
+    text-align: left;
+  }
+}

@@ -1,0 +1,139 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#} 
+<div class="off-canvas-wrapper">
+  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+    <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+      <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+      {% if page.primary_menu_mobile %}
+        <div id="menu-mobile"> 
+          <div class="text-center">
+            <a class="button hollow pill login" href="{{ base_path }}user">Login</a>
+            <a class="button hollow pill register" href="{{ base_path }}user/register">Register</a>
+            <a class="button hollow pill search" data-toggle="reveal-search">search</a>
+          </div>         
+          {{ page.primary_menu_mobile }}
+          <div id="social-media">
+            {{ page.social_media }}
+          </div>
+        </div>
+      {% endif %} 
+    </div>
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div id="page">
+        <header id="header" data-sticky-container>
+          <div class="inner" data-sticky data-sticky-on="medium" data-margin-top="0" data-top-anchor="1" data-btm-anchor="main:bottom">
+            <div class="expanded row collapse">
+              <div id="site-info" class="medium-6 large-3 column">
+                <button type="button" id="menu-mobile-button" data-toggle="offCanvas"></button>
+                <div>
+                  {% if page.site_info %}          
+                    {{ page.site_info }}
+                  {% endif %}
+                </div>
+              </div>
+              {% if page.primary_menu and page.primary_menu_mega == false %}
+                <div id="menu-primary" class="large-7 column show-for-large text-center">
+                  {{ page.primary_menu }}
+                </div>
+              {% endif %}
+              {% if page.primary_menu_mega %}
+                <div id="menu-mega" class="large-7 column show-for-large text-center">
+                  {{ page.primary_menu_mega }}
+                </div>
+              {% endif %} 
+              <div id="site-search" class="medium-6 large-2 column show-for-medium text-center">  
+                {{ page.search }}              
+              </div>
+            </div>
+            <div class="large reveal fast" id="reveal-search" data-reveal data-close-on-click="true" data-animation-in="scale-in-up" data-animation-out="scale-out-down">
+              <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              {{ page.search }}
+            </div>
+          </div>  
+        </header>        
+        {% if page.showcase %}
+          <div id="showcase">
+            {{ page.showcase }}
+          </div>
+        {% endif %}        
+        <div id="main">
+          {% if page.main_top %}
+            <div id="main-top">
+              {{ page.main_top }}    
+            </div> 
+          {% endif %}
+          {% if page.content %}
+            <div id="main-middle">
+              <div class="row">
+                <div id="primary" class="{{primary_width}}column">
+                  {% if page.breadcrumb %}
+                    {{ page.breadcrumb }}
+                  {% endif %}
+                  {% if page.highlighted %}            
+                    <div id="highlight">
+                      {{ page.highlighted }}
+                    </div>
+                  {% endif %}
+                  <div id="content" class="clearfix">
+                    {{ page.content }}
+                  </div>                
+                </div>                        
+                {% if page.sidebar_secondary %}
+                  <div id="secondary" class="large-4 xxlarge-3 column sidebar">
+                    <div class="inner" data-sticky-container>
+                      <div class="sticky" data-sticky data-margin-top="5" data-sticky-on="large" data-anchor="content">
+                        {{ page.sidebar_secondary }}
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+          {% if page.main_bottom %}
+            <div id="main-bottom">
+              {{ page.main_bottom }}         
+            </div> 
+          {% endif %}    
+        </div>   
+        {% if page.footer or page.closure %}
+          <footer id="footer">
+            {{ page.footer }}  
+            <div id="closure">
+              <div class="row column">
+                <div id="site-info-alter" class="text-center">
+                  {% if page.site_info %}          
+                    {{ page.site_info }}
+                  {% endif %}
+                </div>                
+                {{ page.closure }}
+                <div class="design-by show-for-large">
+                  <a href="http://www.esors.com" title="Drupal theme">Drupal theme by esors</a>
+                </div>
+              </div>
+            </div>  
+          </footer>
+        {% endif %}  
+      </div>
+      <div id="page-bottom"></div>
+    </div>
+  </div>
+</div>

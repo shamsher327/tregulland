@@ -1,0 +1,523 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                            
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* BLOCK
+----------------------------------------------------------------*/
+.block > .inner {
+  position: relative;
+  padding: 1.25rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.block > .inner.without-padding {
+  padding: 0;
+}
+
+.block > .inner.with-margin,
+.block > .inner > div {
+  margin-bottom: 1.25rem;
+}
+
+.block > .inner > div:last-child {
+  margin-bottom: 0;
+}
+
+.block .title h3 {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+}
+
+.block .content p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .block > .inner {
+    padding: 1.875rem;
+  }
+
+  .block > .inner.with-margin,
+  .block > .inner > div {
+    margin-bottom: 1.875rem;
+  }
+}
+
+/* BLOCK CUSTOM
+----------------------------------------------------------------*/
+/* General
+---------------------------------*/
+.block-custom > .inner {
+  transition: all .5s ease-in-out;
+}
+
+.block-custom > .inner:hover {
+  background-position: 40% 40%;
+}
+
+.block-custom > .inner.with-filter:hover::before {
+  opacity: 0.3;
+}
+
+/* Title
+---------------------------------*/
+.block-custom .title h3.small {
+  font-size: 1rem;
+}
+
+.block-custom .title h3.large {
+  font-size: 1.25rem;
+}
+
+.block-custom .title h3.xlarge, .block-custom .title h3.xxlarge  {
+  font-size: 1.5rem;
+}
+
+.block-custom .title h3.with-border:after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: inherit;
+  margin-top: 0.5rem;
+}
+
+.block-custom .title h3.text-center.with-border:after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block-custom .title h3.text-right.with-border:after {
+  margin-left:auto; 
+  margin-right:0;
+}
+
+.block-custom .title h3.xlarge.with-border:after,
+.block-custom .title h3.xxlarge.with-border:after  {
+  width: 5rem;
+  border-bottom-width: 2px;
+}
+
+@media screen and (min-width: 40em) {
+  .block-custom .title h3 {
+    font-size: 1.25rem;
+  }
+
+  .block-custom .title h3.large {
+    font-size: 1.9375rem;
+  }
+
+  .block-custom .title h3.xlarge {
+    font-size: 2.5rem;
+  }
+
+  .block-custom .title h3.xxlarge {
+    font-size: 3rem;
+  }
+}
+
+/* Media
+---------------------------------*/
+.media-object-section > div {
+  margin-bottom: 1.25rem;
+}
+
+.media-object-section > div:last-child {
+  margin-bottom: 0;
+}
+
+.media-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.media-image.without-padding {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+}
+
+.media-object-section .media-image.without-padding {
+  margin: 0;
+}
+
+.media-image img {
+  width: 100%;
+  transition: all .5s linear;
+}
+
+.media-image:hover img {
+  transform: scale(1.05);
+}
+
+.media-image .filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  transition: opacity .5s ease-out;
+}
+
+.media-image .filter:hover {
+  opacity: 0.3;
+}
+
+.media-icon {
+  text-align: center;
+}
+
+.media-icon .fa {
+  transition: color .5s ease-out;
+}
+
+.media-icon.small .fa {
+  width: 1.75rem;
+  height: 1.75rem;  
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+}
+
+.media-icon.medium .fa {
+  width: 3.75rem;
+  height: 3.75rem;  
+  line-height: 3.75rem;
+  font-size: 2rem;
+}
+
+.media-icon.large .fa {
+  width: 4.75rem;
+  height: 4.75rem;  
+  line-height: 4.75rem;
+  font-size: 2.5rem;
+}
+
+.media-icon.xlarge .fa {
+  width: 5.75rem;
+  height: 5.75rem;  
+  line-height: 5.75rem;
+  font-size: 3rem;  
+}
+
+.media-icon.small.with-border .fa {
+  width: 3rem;
+  height: 3rem;  
+  line-height: 3rem;
+  font-size: 1rem;
+}
+
+.media-icon.medium.with-border .fa {
+  width: 5rem;
+  height: 5rem;  
+  line-height: 5rem;
+  font-size: 1.5rem;
+}
+
+.media-icon.large.with-border .fa {
+  width: 6rem;
+  height: 6rem;  
+  line-height: 6rem;
+  font-size: 2rem;
+}
+
+.media-icon.xlarge.with-border .fa {
+  width: 7rem;
+  height: 7rem;  
+  line-height: 7rem;
+  font-size: 2.5rem;  
+}
+
+.media-icon.rounded .fa {
+  border-radius: 50%;
+}
+
+.media-icon.with-border .fa {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.media-icon.small.with-border .fa,
+.media-icon.medium.with-border .fa {
+  border-width: 1px;
+}
+
+@media screen and (min-width: 40em) {
+  .media-object-section > div {
+    margin-bottom: 1.875rem;
+  }
+
+  .media-object-section:first-child {
+    padding-right: 1.875rem;
+  }
+
+  .media-object-section .media-image img {
+    width: auto;
+  }
+
+  .media-image.without-padding {
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
+  }
+}
+
+/* Content
+---------------------------------*/
+.content-button a {
+  margin: 0.625rem 0.625rem 0 0.625rem;
+}
+
+.content-button.text-left a:first-child {
+  margin-left: 0;
+}
+
+.content-button.text-right a:last-child {
+  margin-right: 0;
+}
+
+/* Reveal
+---------------------------------*/
+.sr .block-reveal {
+  visibility: hidden;
+}
+
+/* BLOCK PATTERN
+----------------------------------------------------------------*/
+/* Pattern 2
+---------------------------------*/
+.inner.pattern-2 .media-image.without-padding {
+  margin-bottom: -1.25rem;
+}
+
+.inner.pattern-2[data-equalizer-watch] .media-image.without-padding {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Pattern 3
+---------------------------------*/
+.inner.pattern-3 .media-image.without-padding {
+  margin-top: -1.25rem;
+}
+
+@media screen and (min-width: 40em) {
+  .inner.pattern-2 .media-image.without-padding {
+    margin-bottom: -1.875rem;
+  }
+
+  .inner.pattern-3 .media-image.without-padding {
+    margin-top: -1.875rem;
+  }
+}
+
+/* Style 3
+---------------------------------*/
+.inner.style-3 .media-image {
+  text-align: center;
+}
+
+.inner.style-3 .media-image img {
+  width: auto;
+}
+
+.inner.style-3 .media-image:hover img {
+  transform: none;
+}
+
+/* BLOCK ATTACHMENT
+----------------------------------------------------------------*/
+.block-attachment .block > .inner {
+  padding: 0;
+}
+
+.block-attachment .vertical.menu {
+  margin-top: -1.25rem;
+}
+
+.block-attachment .vertical.menu a {
+  padding-left: 0;
+}
+
+/* BLOCK MERGING
+----------------------------------------------------------------*/
+/* Merging By Horizontal
+---------------------------------*/
+.merging-horizontal > .with-padding.without-collapse  {
+  padding: 0;
+}
+
+.merging-horizontal > .with-padding.without-collapse > .title, 
+.merging-horizontal > .without-padding > .title {
+  padding-top: 1.25rem;
+}
+
+.merging-horizontal > .without-collapse > .title {
+  margin-bottom: 0;
+}
+
+.merging-horizontal .uncollapse {
+  padding: 1.25rem 0.625rem;
+}
+
+.merging-horizontal .uncollapse > .column {
+  margin-bottom: 1.25rem;
+}
+
+.merging-horizontal .uncollapse > .column:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .merging-horizontal > .with-padding.without-collapse  {
+    padding: 1.875rem;
+  }
+
+  .merging-horizontal > .with-padding.without-collapse > .title {
+    padding-top: 0;
+  }
+
+  .merging-horizontal > .without-padding > .title {
+    padding-top: 1.875rem;
+  }
+
+  .merging-horizontal .uncollapse {
+    padding: 1.875rem 0.9375rem;
+  }
+
+  .merging-horizontal .uncollapse > .column {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .merging-horizontal .uncollapse > .column {
+    margin-bottom: 0;
+  }
+}
+
+/* Merging By Tab
+---------------------------------*/
+ul.tabs {
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  border-width: 0;
+  border-top-width: 1px;
+  z-index: 1;
+}
+
+ul.tabs li {
+  position: relative;
+  float: none;
+  display: inline-block;
+}
+
+ul.tabs li a {
+  padding: 0.9375rem;
+  background-color: transparent !important;
+}
+
+ul.tabs li a .fa {
+  display: block;
+  font-size: 1.5rem;
+  margin: 0.625rem 0;
+}
+
+ul.tabs li .arrow {
+  display: none;
+}
+
+ul.tabs li.is-active .arrow {
+  display: block;
+}
+
+ul.tabs li.is-active .arrow .fa {
+  position: absolute;
+  font-size: 2rem;
+  left: 50%;
+  bottom: -1.25rem;
+  margin-left: -0.5rem;
+}
+
+.tabs-content {
+  border: none;
+  background-color: transparent;
+}
+
+.tabs-panel {
+  padding: 1.875rem 0.625rem;
+}
+
+.tabs-panel .inner {
+  padding: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .tabs-panel {
+    padding: 3.75rem 1.25rem;
+  }
+
+  ul.tabs li a .fa {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  ul.tabs li a .fa {
+    display: inline-block;
+  }
+
+  ul.tabs .title {
+    padding: 0.9375rem;    
+  }
+}
+
+/* Merging By Slider
+---------------------------------*/
+.slide .block-custom > .inner {
+  padding: 1.875rem 0.625rem;
+}
+
+@media screen and (min-width: 40em) {
+  .slide .block-custom > .inner {
+    padding: 3.75rem 1.25rem;
+  }
+}
+
+/* BLOCK SOCIAL MEDIA
+----------------------------------------------------------------*/
+.block-social-media-links ul {
+  margin: 0;
+}
+
+.block-attachment .block-social-media-links .fa-lg {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0;
+  margin: 0 0.15625rem;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+}

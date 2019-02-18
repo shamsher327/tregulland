@@ -1,0 +1,34 @@
+name: Pentire
+type: theme
+description: This is a Pentire sub theme of Omni Portfolio
+core: 8.x
+# Defines the base theme
+base theme: omni_portfolio
+# Defines libraries group in which we can add css/js.
+libraries:
+  - pentire/global-styling
+
+regions:  
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'    
+
+  site_info: 'Site info'
+  primary_menu: 'Menu main'
+  primary_menu_mobile: 'Menu mobile'
+  secondary_menu: 'Menu secondary'
+  social_media: 'Social media'
+  search: 'Search'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  author: 'Author'
+  related: 'Related'
+
+  showcase: 'Showcase'
+  main_top: 'Main top'
+  content: 'Main middle - primary' 
+  sidebar_secondary: 'Main middle - secondary'
+  main_bottom: 'Main bottom'
+
+  footer: 'Footer'  
+  closure: 'Closure'
+  usable: 'Usable'

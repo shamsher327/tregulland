@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_link_target_blank
+id: block_content.custom_block.field_link_target_blank
+field_name: field_link_target_blank
+entity_type: block_content
+bundle: custom_block
+label: Target
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'loads the page into a new browser window'
+  off_label: 'Off'
+field_type: boolean

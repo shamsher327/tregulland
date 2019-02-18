@@ -1,0 +1,76 @@
+global-styling:
+  version: VERSION
+  css:
+    component:
+      css/components/omni.css: {}
+      css/components/omni-header.css: {}
+      css/components/omni-menu.css: {}
+      css/components/omni-reveal.css: {}
+      css/components/omni-showcase.css: {}
+      css/components/omni-block.css: {}
+      css/components/omni-block-custom.css: {}
+      css/components/omni-article.css: {}      
+      css/components/omni-blog.css: {}
+      css/components/omni-portfolio.css: {}      
+      css/components/omni-comment.css: {}    
+      css/components/omni-form.css: {} 
+      css/components/omni-button.css: {} 
+      css/components/omni-view.css: {}
+      css/components/omni-editor.css: {}
+      css/components/omni-custom-overrides.css: {}
+    theme:
+      css/theme/omni-color-dynamic.css: {}
+      css/theme/omni-color-static.css: {}
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css: { type: external }
+      https://fonts.googleapis.com/css?family=Lato:300,400,700,900: { type: external }  
+      
+global-script:
+  version: VERSION
+  js:
+    js/omni.js: {}
+  dependencies:
+    - core/jquery
+
+scroll-reveal:
+  version: VERSION
+  header: true
+  js:
+    js/vendor/scrollreveal.min.js: {}
+    js/vendor/scroll.js: {} 
+
+smooth-scroll:
+  version: VERSION
+  js:
+    js/vendor/smooth-scroll.min.js: {}
+    js/vendor/smooth-scroll.init.js: {}
+
+masonry:
+  version: VERSION
+  js:
+    js/vendor/masonry.pkgd.min.js: {}
+    js/vendor/imagesloaded.pkgd.min.js: {}
+
+slick:
+  version: VERSION
+  css:
+    component:
+      css/vendor/slick.css: {}
+      css/vendor/slick-theme.css: {}
+  js:
+    js/vendor/slick.min.js: {}
+
+foundation:
+  version: VERSION
+  css:
+    component:
+      css/base/foundation.min.css: {}
+  js:
+    js/vendor/what-input.js: {} 
+    js/vendor/foundation.min.js: {} 
+    js/vendor/app.js: {}
+
+preloader:
+  version: VERSION
+  css:
+    component:
+      css/components/omni-preloader.css: {}

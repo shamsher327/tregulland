@@ -1,0 +1,453 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* BASE COLOR 
+----------------------------------------------------------------*/
+/* Text
+---------------------------------*/
+body { 
+  color: #777777;
+}
+
+/* Title
+---------------------------------*/
+h1, h2, h3, h4, h5, h6 { 
+  color: #3d3e41;
+}
+
+/* Link
+---------------------------------*/
+a {
+  color: #e26726;
+}
+
+/* Link Active
+---------------------------------*/
+a:focus, a:hover {
+  color: #2199e8;
+}
+
+/* Meta
+---------------------------------*/
+.meta {
+  color: #999999;
+}
+
+/* Border
+---------------------------------*/
+.pager  {
+  border-color: #e9e9e9;
+}
+
+/* Background
+---------------------------------*/
+body { 
+  background-color: #f9f9f9; 
+} 
+
+/* Foreground
+---------------------------------*/
+.blog-body {
+  background-color: #fefefe;
+}
+
+/* Header Background
+---------------------------------*/
+#header.without-showcase > .inner {
+  background-color: #303030;
+}
+
+/* Primary Menu Link
+---------------------------------*/
+#header a {
+  color: #ffffff;
+}
+
+/* MATCHING COLOR
+----------------------------------------------------------------*/
+/* Text
+---------------------------------*/
+.blog-header .summary {
+  color: #777777;
+}
+
+/* Title
+---------------------------------*/
+.article.teaser .title a,
+.blog.teaser h2 a,
+.blog.teaser .day,
+.blog.teaser .month,
+.blog.teaser .suffix,
+#blog-content .meta .date,
+.portfolio.teaser .title a,
+.portfolio.full .term a,
+#comment .tabs-title.is-active a {
+  color: #3d3e41;
+}
+
+.portfolio.full .term a,
+#comment .tabs-title.is-active a {
+  border-color: #3d3e41;
+}
+
+/* Link
+---------------------------------*/
+.article.teaser .term a:hover,
+.button.link,
+.button.hollow,
+.pager ul a:hover,
+.pager ul .current a {
+  color: #e26726;
+}
+
+.button.hollow,
+.pager ul a:hover,
+.pager ul .current a {
+  border-color: #e26726;
+}
+
+#content-tab li a,
+.article-header .term .inner:hover:before,
+.article-header .term .inner:hover:after,
+.button,
+.share a:hover {
+  background-color: #e26726;
+}
+
+/* Link Active
+---------------------------------*/
+.article.teaser .title a:hover,
+.article.teaser .term a,
+.article.teaser .button.hollow,
+.blog.teaser h2 a:hover,
+.portfolio.teaser .title a:hover,
+.portfolio.teaser .meta a:hover,
+.portfolio.full .term a:hover,
+#header a:focus, #header a:hover,
+.button.link:hover, .button.link:focus,
+.button.hollow:focus, .button.hollow:hover {
+  color: #2199e8;
+}
+
+.article.teaser .button.hollow,
+.portfolio.teaser .meta a:hover,
+.portfolio.full .term a:hover,
+.button.hollow:focus, .button.hollow:hover {
+  border-color: #2199e8;
+}
+
+#content-tab li a:hover,
+.article.teaser .button.hollow:before,
+.button:hover, .button:focus {
+  background-color: #2199e8;
+}
+
+/* Meta
+---------------------------------*/
+.term, .date, .author, .links,
+.term a, .author a,
+.article.teaser .content,
+.article-header .summary,
+#blog-content #author {
+  color: #999999;
+}
+
+/* Border
+---------------------------------*/
+.article.teaser,
+.article-header,
+#article-content .links,
+#article-content .links li,
+.blog-item > .inner,
+.blog-item.without-image > .inner,
+.blog-header,
+#blog-content .links,
+#blog-content .links li,
+#comment,
+.search-result ol li {
+  border-color: #e9e9e9;
+}
+
+/* Background
+---------------------------------*/
+.article-header .user-picture img,
+#article-content .links .title h3,
+.blog-header .share > span {
+  background-color: #f9f9f9;
+}
+
+/* Foreground
+---------------------------------*/
+.view.page-blog,
+#blog-content .links .title h3,
+.portfolio.teaser .content,
+#social-media .fa-lg::after {
+  background-color: #fefefe;
+}
+
+/* Header Background
+---------------------------------*/
+#closure,
+.view.page-blog .group-title,
+#blog-content #author {
+  background-color: #303030;
+}
+
+@media screen and (min-width: 75em) {
+  #blog-content .meta .date {
+    color: #ffffff;
+    background-color: #303030;
+  }
+}
+
+/* Others
+---------------------------------*/
+.site-slogan,
+#content-tab li a,
+.article.teaser .button.hollow:before,
+.view.page-blog .group-title h2,
+#blog-content #author h3,
+.portfolio.teaser.with-overlay .title a,
+.portfolio.teaser .meta a,
+.portfolio.teaser.with-overlay,
+.share a,
+.share a:hover  {
+  color: #ffffff;
+}
+
+.portfolio.teaser.with-overlay .title a:hover {
+  color: #2199e8;
+}
+
+.portfolio.teaser .meta a {
+  border-color: #ffffff;
+}
+
+/* Menu
+---------------------------------*/
+#menu-primary .dropdown.menu > li > a:focus, 
+#menu-primary .dropdown.menu > li > a:hover,
+#reveal-menu-mobile .menu-column a:hover,
+#menu-sub,
+#reveal-menu-sub a {
+  color: #ffffff;
+}
+
+.menu-arrow::before {
+  color: #303030;
+}
+
+#reveal-menu-mobile .menu-column a {
+  color: #e26726;
+}
+
+#reveal-menu-sub a:hover {
+  color: #2199e8;
+}
+
+#menu-primary a::after,
+#menu-sub a.login,
+#menu-sub a.register,
+#menu-sub li.menu-text {
+  border-color: #ffffff;
+}
+
+#menu-secondary,
+#reveal-menu-mobile .menu-column {
+  border-color: #e9e9e9;
+}
+
+#menu-primary .submenu,
+#reveal-menu {
+  background-color: #303030;
+}
+
+#menu-secondary,
+#reveal-menu-mobile nav  {
+  background-color: #f9f9f9; 
+}
+
+#reveal-menu-mobile .menu-column a:hover {
+  background-color: #e26726;
+}
+
+/* Reveal
+---------------------------------*/
+#reveal-site-info .site-name h1 a,
+#reveal-search [type=search],
+#reveal-search input[type="submit"]:hover,
+#reveal-search .close-button:hover {
+  color: #ffffff;
+}
+
+#reveal-site-info .site-name h1 a:hover {
+  color: #2199e8;
+}
+
+#reveal-social-media .fa-lg {
+  color: #303030;
+}
+
+#reveal-search [type=search]:focus {
+  border-color: #ffffff;
+}
+
+/* Block
+---------------------------------*/
+.block ul.tabs li a .fa,
+.block-social-media-links a,
+.pattern-2:hover,
+.pattern-2 .content {
+  color: #ffffff;
+}
+
+.block-social-media-links a:hover {
+  color: #2199e8;
+}
+
+.block-social-media-links .fa-lg,
+.pattern-2:hover {
+  background-color: #e26726;
+}
+
+.block-social-media-links .fa-lg:hover {
+  background-color: #ffffff;
+}
+
+.block ul.tabs li.is-active a,
+.block ul.tabs li a:hover {
+  color: #e26726;
+}
+
+.block ul.tabs li.is-active a,
+.block ul.tabs li a:hover {
+  border-color: #e26726;
+}
+
+/* Showcase
+---------------------------------*/
+.showcase-basic .slick-dots li button:before,
+.showcase-basic .slick-dots li.slick-active button:before,
+.style-main .slide-title h3,
+.style-main .slide-content,
+.style-heading .slide,
+.style-heading h3,
+.showcase-blog .slide,
+.showcase-blog .slide-title h3,
+.showcase-blog .meta.term a,
+.showcase-merging .slick-dots li button:before {
+  color: #ffffff;
+}
+
+.style-heading-alter .slide,
+.style-heading-alter h3,
+.style-heading-alter .slide-category {
+  color: #3d3e41; 
+}
+
+.showcase-merging .slick-dots li.slick-active button:before {
+  color: #e26726;
+}
+
+.showcase-basic .slick-dots li.slick-active,
+.showcase-basic .slick-dots li::after,
+.style-main .slide-content {
+  border-color: #ffffff;
+}
+
+.style-heading-alter .slide-category a {
+  border-color: #3d3e41;
+}
+
+.style-heading-alter .slide-category a:hover {
+  border-color: #2199e8;
+}
+
+.style-heading-alter .slide,
+.style-heading-alter .content {
+  background-color: #ffffff;
+}
+
+.showcase-blog .slide-button .button:hover {
+  background-color: #2199e8;
+}
+
+/* View
+---------------------------------*/
+.block-article .button.hollow:before,
+.block-article-most ul li:before,
+.block-tags li a:hover,
+.block-tags li a.active {
+  color: #ffffff;
+}
+
+.block-article .term a,
+.block-article h4 a,
+.block-article .button.hollow,
+.block-article-latest li h4 a:hover,
+.block-article-most li h4 a:hover,
+.block-blog-latest h4 a:hover {
+  color: #2199e8;
+}
+
+.block-article .term a:hover,
+.block-article h4 a:hover {
+  color: #e26726;
+}
+
+.block-article-latest li h4 a,
+.block-article-most li h4 a,
+.block-blog-latest h4 a {
+  color: #3d3e41;
+}
+
+.views-block-article-latest .inner,
+.views-block-article-most .inner,
+.views-block-article-tags .inner,
+.views-block-blog .inner,
+.views-block-blog-tags .inner,
+#article-content .views-block-about-author .inner,
+.block-article-latest li,
+.block-article-most li,
+.block-blog li,
+.block-related li {
+  border-color: #e9e9e9;
+}
+
+.block-related li .date {
+  border-color: #e26726;
+}
+
+.block-article .button.hollow {
+  border-color: #2199e8;
+}
+
+.block-article .column .inner {
+  background-color: #ffffff;
+}
+
+.block-article-most ul li:before,
+.block-tags li a:hover,
+.block-tags li a.active {
+  background-color: #e26726;
+}
+
+.block-article .button.hollow:before {
+  background-color: #2199e8;
+}
+
+.block-tags li a {
+  color: #999999;
+}

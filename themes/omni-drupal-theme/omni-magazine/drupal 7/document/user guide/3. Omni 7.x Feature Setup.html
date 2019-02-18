@@ -1,0 +1,686 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title> Omni Magazine User Guide </title>
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/typography.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="page">
+    <div id="main">
+	  <h1>3. Omni 7.x Feature Setup</h1> 
+
+<!-- INTRO REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	  
+<div class="content clearfix">
+  <h2>Introduction</h2>
+  <p>Thank you for purchasing ESORS's Drupal theme - Omni Magazine. Omni Feature Setup guide will cover some key features of Omni theme. 
+  <p>If you are a Drupal beginner, we wrote a <a href='1. Drupal 7 Quick Start.html'>short tutorial</a> to help you find your way around Drupal. If you already know Drupal, please complete <a href="2. Omni 7.x Basic Setup.html">Basic Setup</a> first before start with this Feature Setup.</p>
+  <p>For <b>support</b>, you can contact us through themeforest.net. We will respond within 24hrs.</p>
+</div>
+      
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- TABLE OF CONTENT REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	 
+<div class="content clearfix">
+  <h2>Table of Content</h1>
+  <div>
+    <p>
+      <ul>
+        <li><a href="#omni-feature-color">Theme Colors</a></li>
+        <li>
+          <a href="#omni-feature-menu">Menu Options</a>
+          <ol>
+            <li>Dropdown menu</li>
+            <li>Mega menu</li>
+            <li>Edge menu</li>
+            <li>Hybrid menu</li>
+            <li>Secondary menu</li>
+            <li>Quick link</li>
+            <li>Closure</li>
+          </ol>
+        </li>
+        <li>
+          <a href="#omni-feature-showcase">Showcases</a>
+          <ol>
+            <li><a href="#omni-feature-showcase-basic">Basic</a></li>
+            <li><a href="#omni-feature-showcase-thumbnail">Slider with thumbnail</a></li>
+            <li><a href="#omni-feature-showcase-playlist">Slider with playlist</a></li>
+            <li><a href="#omni-feature-showcase-headline">Slider with headline</a></li>
+            <li><a href="#omni-feature-showcase-highlight">Highlight</a></li>
+            <li><a href="#omni-feature-showcase-gallery">Gallery</a></li>
+            <li><a href="#omni-feature-showcase-newsflash">Newsflash</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#omni-feature-custom">Custom Block</a>
+        </li>
+        <li>
+          <a href="#omni-feature-views">Views</a>
+          <ul>
+            <li>Article Block View</li>
+            <li>Blog Block View</li>
+            <li>Page Block View
+              <ol>
+                <li>Page by list</li>
+                <li>Page by grid</li>
+                <li>Page by category</li>
+                <li>Page by category grid</li>
+                <li>Page by grid (block)</li>
+                <li>Page by category (block)</li>
+                <li>Page by category grid (block)</li>
+              </ol>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#omni-feature-search">Search Blocks</a>
+        </li>
+        <li>
+          <a href="#omni-feature-forum">Forum</a>
+        </li>
+      </ul>
+    </p>
+  </div>
+</div>
+  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- FEATURE SETUP REGION 
+---------------------------------------------------------------->  
+<!-- Color
+------------------------------->
+    
+<div class="divider"></div>
+<div id="omni-feature-color" class="content clearfix">
+  <h2>Theme Colors</h2>
+  <p>Omni using Drupal Color module to setup color scheme. You can either choose a built-in color scheme or set a custom scheme of your own. Color module is a bit outdated but as long as you follow its' guide lines, it works just as well.</p>
+  <div class="section">   
+    <div class="section">
+      <h3>- How Color module works</h3>
+      <p>First we need to look at Omni color files structure at Omni theme file folder <b>omni_magazine/color</b>. It has 6 files:
+        <ul>
+          <li>base.png</li>
+          <li>color.inc</li>
+          <li>preview.css</li>
+          <li>preview.html</li>
+          <li>preview.js</li>
+          <li>preview.png</li>
+        </ul>
+      </p>
+      <p>All 6 files required by Color module. Even though some files doesn't have any content, without it Color module won't works.</p>
+      <p>The most important file is <b>color.inc</b>. It contain all the color information. Open <b>color.inc</b> file with text editor, you can see following:</p>
+      <ul>
+        <li>'fields' => array('title' => t('Title'), 'text' => t('Text') ...): The 'title' is field name and 'Title' is the label.</li>
+        <li>'colors' => array('title' => '#333333', 'text' => '#686868' ...): The 'title' is field name and '#333333' is the color code value. This is where it's getting confusing
+          <div class="typo-tip"><b>Color module require default scheme field's color value to be unique!</b></div>
+          <p>It means you can't have two fields with same color code in default scheme! Why? Because Color module using this unique color code to match and replace value in omni-color-dynamic.css file, so that color code is more like identifier to the field.</p>
+         </li>
+      </ul>
+    </div>
+    <div class="section">
+      <h3>- Omni Color CSS Files</h3>
+      <p>There are two color files used by Omni theme and basically these two files contain all color related CSS code:
+        <ul>
+          <li>omni-color-dynamic.css: should not be modified, it is required and dynamically changed by Color module.</li>
+          <li>omni-color-static.css: it contain static color which is not required to be changed very often. This file can be edited but we suggest override it at omni-custom.css file.</li>
+        </ul>      
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Built-in Colors</h3>
+      <p>There are plenty color schemes for you to choose from. Simply click on Color set at theme setting then switch between built-in colors.</p>
+    </div>
+    <div class="section">
+      <h3>- Custom Color</h3>
+      <p>At the end of <b>Color set</b> selection list, you can choose <b>Custom</b>. Modify field value with new color code will change your theme color completely.</p>
+      <div class="typo-tip"><b>Custom color will not be saved when you switch to other color scheme then switch back!</b></div>
+    </div>
+  </div>
+</div>
+    
+<!-- Menu Options
+-------------------------------> 
+<div class="divider"></div>
+<div id="omni-feature-menu" class="content clearfix">
+  <h2>Menu Options</h2>
+  <p>There are three <b>Main menu</b> styles. It can be selected at theme setting:
+    <ul>
+      <li>Dropdown Menu: as default</li>
+      <li>Mega Menu: Edge menu is part of Mega menu</li>
+      <li>Hybrid Menu: combine Dropdown Menu and Mega Menu</li>
+    </ul>  
+  </p>
+  <div class="section">
+    <div class="section">
+      <h3>1. Dropdown menu</h3>
+      <p>Fairly simple, Go to Structure > Menus > Main menu > list links and add new links for Main menu. Go to Structure > Blocks find <b>Main menu</b> block. Publish it at <b>main menu</b> block region.</p>
+     </div>
+    <div class="section">
+      <h3>2. Mega menu</h3>
+      <p>A bit complicated. It require user create a <b>Mega Menu</b> node instead of <b>Menus</b>. The idea is that when user create a <b>Mega Menu</b> node, user have to create <b>Mega Menu Element</b> nodes attach to it. Each <b>Mega Menu Element</b> node can be consider as top level menu link. Each <b>Mega Menu Element</b> node can also has <b>blocks</b> attach to it. It serve as sublevel menu column.</p>
+      <p>To make it simple to understand, before creating Mega menu you need to create blocks first then use <b>Mega Menu</b> node and <b>Mega Menu Element</b> nodes glue those blocks together. Each block serve as single column of sublevel Mega menu</p>
+      <p><img src="images/pic_10.jpg" class="framed"></p>
+      <p>Let's create a Mega menu
+        <ol>
+          <li>Go to Add content > Mega Menu</li>
+          <li>Fill in Title</li>
+          <li>Click on Add new node</li>
+          <li>New node title will be your top level menu link item name</li>
+          <li>URL: full url address with <b>http://</b>. This url will be your menu link item url</li>
+          <li>Style: from one to five columns</li>
+          <li>Edge Menu: default unchecked</li>
+          <li>At Sublevel, there are six fields. Each field represent a column. So if at <b>Style</b>, you select Three columns(even) style then you need to attach three blocks in first three fields. If you select Three columns and only attach two blocks then menu won't show. The number of columns must match the number of blocks you attached to sublevel fields. If <b>Edge Menu</b> option checked then your last sublevel field must be a menu block that created at Structure > Menus. With Edge menu, the <b>Style</b> column number plus 1 must match the number of blocks you attached to sublevel fields. <b>See above screenshot</b>.</li>
+          <li>Click Create node</li>
+          <li>Repeat from step 3 to add on more menu link items</li>
+      </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>3. Edge menu</h3>
+      <p>Edge menu is part of Mega menu. Edge menu block need to be created at Structure > Menus then attach as <b>last</b> block to the sublevel menu fields. Please check Mega menu step 8.</p>
+      <p>For single alone Edge menu</p>
+      <img src="images/pic_13.jpg" class="framed"> 
+      <p>Select Style as One column full width then check Edge Menu option</p>
+    </div>
+    <div class="section">
+      <h3>4. Hybrid menu</h3>
+      <p>The problem with Mega menu is that it can only show main level menu links on mobile device, user won't be able to see sublevel element. Hybrid menu combine Mega menu and Dropdown menu, so when user on mobile device they see Dropdown menu and on PC user see Mega menu.</p>
+    </div>
+    <div class="section">
+      <h3>5. Secondary menu</h3>
+      <p>Go to Structure > Menus > Add new menu and call it <b>Secondary Menu</b> then adding menu links. Click Settings tab and select <b>Secondary Menu</b> as <b>Source for the Secondary links</b></p>
+    </div>
+    <div class="section">
+      <h3>6. Quick links</h3>
+      <p>Go to Structure > Menus > Add new menu and call it <b>Quick Links</b> then adding menu links. Go to Structure > Blocks find <b>Quick Links</b> block. Publish it at <b>quick link</b> block region.</p>
+    </div>
+    <div class="section">
+      <h3>7. Closure</h3>
+      <p>Go to Structure > Menus > Add new menu and call it <b>Closure</b> then adding menu links. Go to Structure > Blocks find <b>Closure</b> block. Publish it at <b>closure</b> block region.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Showcase
+-------------------------------> 
+<div class="divider"></div>
+<div id="omni-feature-showcase" class="content clearfix">
+  <h2>Showcase</h2>
+  <p>Omni offer various style of Showcase with easy setup steps. By using two new content types: <b>Showcase</b> and <b>Showcase Element</b>, user can quickly create Showcase just like to create any other node.  </p>
+  <p>There are three Showcase block regions with different width: <b>showcase main</b>(large, 1380px), <b>showcase spotlight</b>(medium, 1030px), <b>showcase content</b>(small, 780px). Seven Showcase type and two Showcase style. Each Showcase type has alternative setting to create different looks. Publish the right style Showcase into the right Showcase block regions is important. Some Showcase style doesn't match with region width.</p>
+  
+  <div class="section clearfix">
+    <h3>- Understand Showcase and Showcase Element content type</h3>
+    <p>
+      <ul>
+        <li><b>Showcase</b>: contain basic Showcase setting. It also contain multiple <b>Showcase Element</b>.</li>
+        <li><b>Showcase Element</b>: contain actual image, slide title, link, caption etc.</li>
+      </ul>
+    </p>
+    <p>Each <b>Showcase Element</b> act like slide and <b>Showcase</b> act like container that glue slides together.</p>
+  </div>
+
+  <div class="section clearfix">
+    <h3>- Showcase node form</h3>
+    <p><img src="images/pic_26.jpg" class="framed"></p>
+    <p>
+      <ul>
+        <li>Title</li>
+        <li>General Setting
+          <ul>
+            <li>Showcase Type: seven type of Showcase</li>
+            <li>Showcase Style: either default or alternative. </li>
+            <li>Effect: auto play, fading and speed</li>
+            <li>Adding Slide: adding at least slides
+              <ul>
+                <li>Title</li>
+                <li>Caption (optional)</li>
+                <li>Image: all images should be same width and height</li>
+                <li>URL: full url with <b>http://</b> which point to destination node</li>
+                <li>Link: by title or image or both</li>
+                <li>Section (optional)</li>
+              </ul>
+            </li>
+          </ul>
+        </li>          
+        <li>Specific Setting: only needed for Showcase type as <b>Slider with Thumbnail</b>, <b>Slider with Playlist</b>, <b>Slider with Headline</b> and <b>Gallery</b>, other Showcase type can skip this part.
+          <ul>
+            <li>Image to Show: number of images need to be showing</li>
+            <li>Image to Scroll</li>
+            <li>Slider with Thumbnail: adding thumbnail slide. Check below for detail.</li>
+            <li>Slider with Playlist: adding playlist slide. Check below for detail.</li>
+            <li>Slider with Headline: adding headline. Check below for detail.</li>
+            <li>Gallery: show or hide the title</li>
+          </ul>
+        </li>
+      </ul>
+    </p>
+  </div>
+  
+  <div class="section">
+    <div class="section">
+      <h3>1. Basic Slider</h3>
+      <p><img src="images/pic_33.jpg" class="framed"></p>
+      <p>
+        <ul>
+          <li>Requirement:
+            <ul>
+              <li>Complete <b>General</b> setting</li>
+              <li>Same height and width images</li>
+            </ul>
+          </li>
+          <li>Optional:
+            <ul>
+              <li>Caption</li>
+              <li>Section</li>
+            </ul>
+          </li>
+          <li>Skip:
+            <ul>
+              <li><b>Specific</b> setting</li>
+            </ul>
+          </li>
+          <li>Suitable regions: showcase spotlight, showcase content </li>
+        </ul>
+      </p>
+     </div>
+    <div class="section">
+      <h3>2. Slider with thumbnail</h3>
+      <p><img src="images/pic_30.jpg" class="framed"></p>
+      <p>This is actually two sliders merge together, top Basic Slider and bottom Thumbnail slider. So you need to create a smaller image for bottom thumbnail that match top slide. The bottom slide need to be added at Specific setting > Slider with Thumbnail section, similar process as adding slide at General setting with fewer options.
+        <ul>
+          <li>Requirement:
+            <ul>
+              <li>Complete <b>General</b> setting</li>
+              <li>Complete <b>Specific</b> setting > Slider with Thumbnail section</li>
+              <li>Same height and width images</li>
+            </ul>
+          </li>
+          <li>Optional:
+            <ul>
+              <li>Caption</li>
+              <li>Section</li>
+            </ul>
+          </li>
+          <li>Skip:
+            <ul>
+              <li>None</li>
+            </ul>
+          </li>
+          <li>Suitable regions: showcase spotlight, showcase content </li>
+        </ul>
+      </p>    
+    </div>
+    <div class="section">
+      <h3>3. Slider with playlist</h3>
+      <p><img src="images/pic_32.jpg" class="framed"></p>
+      <p>Similar to Slider with Thumbnail. This is actually two sliders merge together, left Basic slider and right Playlist slider. So you need to create a smaller image for right Playlist that match left slide. The right slide need to be added at Specific setting > Slider with Playlist section, similar process as adding slide at General setting with fewer options.
+        <ul>
+          <li>Requirement:
+            <ul>
+              <li>Complete <b>General</b> setting</li>
+              <li>Complete <b>Specific</b> setting > Slider with Playlist section</li>
+              <li>Same height and width images</li>
+            </ul>
+          </li>
+          <li>Optional:
+            <ul>
+              <li>Caption</li>
+              <li>Section</li>
+            </ul>
+          </li>
+          <li>Skip:
+            <ul>
+              <li>None</li>
+            </ul>
+          </li>
+          <li>Suitable regions: showcase spotlight, showcase content </li>
+        </ul>
+      </p>   
+    </div>
+    <div class="section">
+      <h3>4. Slider with headline</h3>
+      <p><img src="images/pic_31.jpg" class="framed"></p>
+      <p>This is actually a left slider with a few static posts. Static posts need to be added at Specific setting > Slider with Headline section, similar process as adding slide at General setting with fewer options.
+        <ul>
+          <li>Requirement:
+            <ul>
+              <li>Complete <b>General</b> setting</li>
+              <li>Complete <b>Specific</b> setting > Slider with Headline section</li>
+              <li>Same height and width images</li>
+            </ul>
+          </li>
+          <li>Optional:
+            <ul>
+              <li>Caption</li>
+              <li>Section</li>
+            </ul>
+          </li>
+          <li>Skip:
+            <ul>
+              <li>None</li>
+            </ul>
+          </li>
+          <li>Suitable regions: showcase spotlight, showcase content </li>
+        </ul>
+      </p>      
+    </div>
+    <div class="section">
+      <h3>5. Highlight</h3>
+      <p><img src="images/pic_29.jpg" class="framed"></p>
+      <p>Highlight Showcase is not a slider. It is static posts show with various layout styles. Layout styles base on number of slides added to General setting.
+        <ul>
+          <li>Requirement:
+            <ul>
+              <li>Complete <b>General</b> setting</li>
+              <li>Base on layout to set height and image width</li>
+            </ul>
+          </li>
+          <li>Optional:
+            <ul>
+              <li>Caption</li>
+              <li>Section</li>
+            </ul>
+          </li>
+          <li>Skip:
+            <ul>
+              <li><b>Specific</b> setting</li>
+            </ul>
+          </li>
+          <li>Suitable regions: showcase main </li>
+        </ul>     
+      </p>
+    </div>
+    <div class="section">
+      <h3>6. Gallery</h3>
+      <p><img src="images/pic_35.jpg" class="framed"></p>
+      <p>Gallery is a Carousel Slider. 
+        <ul>
+          <li>Requirement:
+            <ul>
+              <li>Complete <b>General</b> setting</li>
+              <li>Set title display at <b>Specific</b> setting > Gallery section</li>
+              <li>Same height and width images</li>
+            </ul>
+          </li>
+          <li>Optional:
+            <ul>
+              <li>Caption</li>
+              <li>Section</li>
+            </ul>
+          </li>
+          <li>Skip:
+            <ul>
+              <li>None</li>
+            </ul>
+          </li>
+          <li>Suitable regions: showcase content, content top and bottom </li>
+        </ul>
+      </p>    
+    </div>
+    <div class="section">
+      <h3>7. Newsflash</h3>
+      <p><img src="images/pic_34.jpg" class="framed"></p>
+      <p>Newsflash is a text list Slider. 
+        <ul>
+          <li>Requirement:
+            <ul>
+              <li>Complete <b>General</b> setting</li>
+            </ul>
+          </li>
+          <li>Optional:
+            <ul>
+              <li>None</li>
+            </ul>
+          </li>
+          <li>Skip:
+            <ul>
+              <li>Image</li>
+              <li>Caption</li>
+              <li>Section</li>
+            </ul>
+          </li>
+          <li>Suitable regions: newsflash region </li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Custom Block
+-------------------------------> 
+<div class="divider"></div>
+<div id="omni-feature-custom" class="content clearfix">
+  <h2>Custom Block</h2>
+  <p>There are two ways to create a block.</p>
+  <ol>
+    <li>Regular Block: Go to Structure > Blocks > Add block.</li>
+    <li>Custom Block: Go to Add Content and create a Block node</li>
+  </ol>
+  <p>Regular Block has very limited options for user and that is why we created custom Block content type which allow user to do more. When user create a Block node, Omni will generate a new block name as <b>Content Block: block node title</b>. You can find the new block at Structure > Blocks</p>
+  <p><img src="images/pic_9.jpg" class="framed"></p>
+  <div class="section">
+    <div class="section">
+      <h3>- Title</h3>
+      <p>
+        <ul>
+          <li>Title Name</li>
+          <li>Title Display: display or hide the title.</li>
+          <li>Title Align: change title align position.</li>
+          <li>Title Color: change title color. Input color code without #.</li>
+          <li>Inside Frame: change title position, default checked.</li>
+          <li>Title Border: adding bottom border for title, default unchecked.</li>
+        </ul>
+      </p>
+     </div>
+    <div class="section">
+      <h3>- Image</h3>
+      <p>
+        <ul>
+          <li>Adding image option</li>
+          <li>Position image as default, left or right</li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Body</h3>
+      <p>
+        <ul>
+          <li>Add body content</li>
+          <li>Custom Body Text Color: change body text color. Input color code without #.</li>
+          <li>Custom Body Background Color: change body background color. Input color code without #.</li>
+          <li>Transparent Background</li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Link</h3>
+      <p>It adds a link or a button to the block</p>
+      <p>
+        <ul>
+          <li>URL: require full url with <b>http://</b></li>
+          <li>Link By: image, read more link, read more button</li>
+          <li>Link Text</li>
+          <li>Link Icon: add a Font Awesome icon to the button. For example <span class="fa fa-anchor"></span>, input code as &lt;span class="fa fa-anchor"&gt;&lt;/span&gt;. Check full list of icon at <a href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a></li>
+          <li>Link Icon Position</li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Merging</h3>
+      <p>The idea is to merge several blocks into one block by tab, slider, accordion, tab alternative style. Use it only when you want to merge blocks otherwise this section can be ignored.</p>
+      <p>
+        <ul>
+          <li>Type: select a merging style</li>
+          <li>Add new node: this process will create a new <b>Block Element</b> node. <b>Block Element</b> is a content type that can attach a block to it. Repeat Add new node process then you can add more blocks.</li>
+          <li>Add existing node: add existing <b>Block Element</b> node.</li>
+        </ul>
+      </p>
+      <p>After save the merging block, you can find the result block at Structure > Blocks name as <b>Content Block: block node title</b>.</p>
+    </div>      
+  </div>
+</div>
+	  
+<!-- Views
+-------------------------------> 
+<div class="divider"></div>
+<div id="omni-feature-views" class="content clearfix">
+  <h2>Views</h2>
+  <p>There are three built-in views that come with Omni theme. These three views provide many ready to use pages & blocks.</p>
+  <div class="section">
+    <div class="section">
+      <h3>- Article Blocks view</h3>
+      <p>Article Blocks view focus on Article nodes. It contain nine block displays:
+        <ol>
+          <li>Article Block Basic style</li>
+          <li>Article Block Image style</li>
+          <li>Article Block Text List style</li>
+          <li>Article Block Latest style</li>
+          <li>Article Block Attachment</li>
+          <li>Related Article</li>
+          <li>Article Comment</li>
+          <li>Popular Article Today</li>
+          <li>Popular Article All Time</li>
+        </ol>
+      </p>
+      <p>Each display (except attachment) will generate a block name as View Block: Article (...). You can find it at Structure > Blocks. Once you have some articles created with proper image, you can publish those blocks</p>
+      <p>To use Article Block Attachment. We set attachment to display a single node with picture. If it attach to Article Block Text List style then Article Block Text List style will change. See below screenshot: </p>
+      <img src="images/pic_14.jpg" class="framed"> <img src="images/pic_15.jpg" class="framed">
+      <p>To modify it, click on Article Blocks view <b>attachment</b> display. Find attachment settings > attach to > click on <b>Not defined</b> link and select other display to attach. Notes: not all display suitable for attachment.</p>
+    </div>
+    <div class="section">
+      <h3>- Blog Blocks view</h3>
+      <p>Blog Blocks view focus on Blog nodes. It also contain nine block displays:
+        <ol>
+          <li>Blog Block Basic style</li>
+          <li>Blog Block Image style</li>
+          <li>Blog Block Text List style</li>
+          <li>Blog Block Latest style</li>
+          <li>Blog Block Attachment</li>
+          <li>Related Blog</li>
+          <li>Blog Comment</li>
+          <li>Popular Blog Today</li>
+          <li>Popular Blog All Time</li>
+        </ol>
+      </p>    
+      <p>Again each display (except attachment) will generate a block name as View Block: Blog (...). You can find it at Structure > Blocks. That is eight Blog blocks styles. You can also change Article Block view's each display FILTER CRITERIA from Article to Blog. This way you immediately double your Blog block styles and that is sixteen style plus attachment can create another style set, now your have plenty styles to choose from.</p>
+      <img src="images/pic_16.jpg" class="framed">      
+     </div>
+    <div class="section">
+      <h3>- Page and Block view</h3>
+      <div class="section">
+        <h3>1. Page by list</h3>
+        <p>It display Article nodes in list style, path as /page-list.</p>
+        <img src="images/pic_17.jpg" class="framed">         
+      </div> 
+      <div class="section">
+        <h3>2. Page by grid</h3>
+        <p>It display Article nodes in grid style, path as /page-grid.</p>
+        <p><img src="images/pic_20.jpg" class="framed"></p>
+        <p>The default CSS as <b>pab-grid three-column</b>. Base on your site layout, it can be changed up to five columns by using CSS class <b>pab-grid four-column</b> or <b>pab-grid five-column</b></p>
+        <p><img src="images/pic_21.jpg" class="framed"></p>
+      </div> 
+      <div class="section">
+        <h3>3. Page by category</h3>
+        <p>It display Article nodes in category style, path as /page-category.</p>
+        <img src="images/pic_19.jpg" class="framed"> 
+        <p>Base on the number of nodes under each category, page by category display it in different style.</p>
+        <p><img src="images/pic_22.jpg" class="framed"></p>
+        <p>Page by category display better when there is only one sidebar. If there are two sidebars, page by category will not display the last column. </p>
+      </div> 
+      <div class="section">
+        <h3>4. Page by category grid</h3>
+        <p>It display Article nodes in category grid style, path as /page-category-grid.</p>
+        <img src="images/pic_18.jpg" class="framed"> 
+        <p>The default CSS as <b>pab-category grid</b>, it is two columns layout. Base on your site layout, it can be changed up to four columns by using CSS class <b>pab-category grid three-column</b> or <b>pab-category grid four-column</b></p>
+        <p>Page by category grid also has alternative style as below. To change it, using CSS as <b>pab-category grid alter</b></p>
+        <img src="images/pic_23.jpg" class="framed"> 
+      </div> 
+      <div class="section">
+        <h3>5. Page by grid (block)</h3>
+        <p>This is block version of Page by grid. It slightly different from the page version. It can be used by Mega menu</p>
+        <img src="images/pic_24.jpg" class="framed"> 
+      </div> 
+      <div class="section">
+        <h3>6. Page by category (block)</h3>
+        <p>This is block version of Page by category. It design to work with only one <b>Tags</b> term. For example, if you need a block to display Article nodes that tag as <b>Latest</b> then you need to set FILTER CRITERIA tags as <b>Latest</b>.</p>
+        <img src="images/pic_25.jpg" class="framed">
+      </div> 
+      <div class="section">
+        <h3>7. Page by category grid (block)</h3>
+        <p>This is block version of Page by category grid. It works similar as pager version. It can also set up to four columns use same CSS class. It also has alternative style.</p>
+      </div> 
+    </div>    
+  </div>
+</div>
+    
+<!-- Search Block
+-------------------------------> 
+<div class="divider"></div>
+<div class="content clearfix">
+  <h2>Search</h2>
+  <div id="omni-feature-search" class="section">    
+    <div class="section">
+      <h3>- Search Block</h3>
+      <p>Go to Structure > Blocks, you can find a <b>Search form</b> block & a <b>search</b> region.</p>
+      <p>Publish <b>Search form</b> block into <b>search</b> region, depend on Header Style setting you selected at theme setting, your <b>Search form</b> block will appear at different position with different style.</p>
+      <p>You can also publish <b>Search form</b> block into other region like <b>sidebar tertiary</b>. It will show as default style.</p>
+
+    </div>
+    <div class="section">
+      <h3>- Built-in Header Search Box</h3>
+      <p>At Appearance > Settings > Omni Settings, if you use Full width header style or Box width header style then you can set <b>Display header search box</b> to <b>Yes</b>. A header search box will appear at Header Left position.</p>
+    </div>
+  </div>
+</div>
+    
+<!-- Forum
+-------------------------------> 
+<div class="divider"></div>
+<div class="content clearfix">
+  <h2>Forum</h2>
+  <div id="omni-feature-forum" class="section">
+    <div class="section">
+      <h3>Setup</h3>
+      <p>Drupal Forum setup is quite simple. To begin, you need to enable Forum module first then go to Structure > Forums to setup.</p>
+      <ul>
+        <li>Setting tab: change basic setting for forum</li>
+        <li>Adding container: a container can contain either forum or another container.</li>
+        <li>Adding forum: contain the actual forum posts</li>
+      </ul>
+      <p>You can go to Forums page to add a new forum topic or create a forum node like any other Drupal node.</p>
+      <p>When you enabled Forum module, the system will generate two blocks <b>Active forum topics</b> and <b>New forum topics</b>.</p>
+    </div>    
+  </div>
+</div>
+	  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- COPYRIGHT REGION 
+---------------------------------------------------------------->
+
+<div class="divider"></div>
+<div class="content clearfix">
+<h2>Copyright</h2>
+  <p>The content of this document is copyrighted by ESORS.com. &copy; 2008-2012 All rights reserved. No portion of the content may be directly or indirectly copied, published, reproduced, modified, performed, displayed, sold, transmitted, broadcast, rewritten for broadcast or publication or redistributed in any medium.</p> 
+</div>
+<div class="divider"></div>
+
+<!-- ENDREGION
+---------------------------------------------------------------->	  
+    </div>
+  </div>
+</body>
+</html>

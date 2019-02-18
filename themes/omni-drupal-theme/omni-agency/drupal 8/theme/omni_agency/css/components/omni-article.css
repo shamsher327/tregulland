@@ -1,0 +1,72 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                           
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMON
+----------------------------------------------------------------*/
+.article > header {
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  padding-bottom: 1.25rem;
+}
+
+.article .meta {
+  margin-bottom: 0;
+}
+
+.article .term {
+  margin-bottom: 0.9375rem;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  .article .content {
+    font-size: 1.125rem;
+  }
+}
+
+/* TEASER
+----------------------------------------------------------------*/
+.article.teaser {
+  padding-bottom: 3.125rem;
+  margin-bottom: 4.375rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.article.teaser .link.button {
+  letter-spacing: 0.1875rem;
+}
+
+.article.teaser .share {
+  margin-bottom: -4.5rem;
+}
+
+/* FULL
+----------------------------------------------------------------*/
+.article.full > header {
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.article.full .share {
+  margin-top: -4rem;
+}
+
+.article.full .content {
+  padding: 1.875rem 0;
+}

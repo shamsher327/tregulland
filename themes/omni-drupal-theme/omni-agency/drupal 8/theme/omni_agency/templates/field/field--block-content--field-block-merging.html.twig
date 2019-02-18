@@ -1,0 +1,590 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                           
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% set run = false %}
+{% set merging_type = '' %}
+{% for item in items if run == false %}
+  {% set block = item.content['#block_content'] %}
+  {% set merging_type = block.field_merging_type_hidden.value %}
+  {% set run = true %}
+{% endfor %}
+
+{% if merging_type == 'horizontal' %}
+  {% for item in items %}  
+    <div class="column">
+      {% if item.content.field_block_merging|render %}
+        {{ _self.block_merging(item.content) }}
+      {% elseif item.content.field_block_attachment|render %}
+        {{ _self.block_attachment(item.content) }}
+      {% else %}
+        {{ _self.block_custom(item.content) }}
+      {% endif %}
+    </div>
+  {% endfor %}
+{% elseif merging_type == 'vertical' %}
+  {% for item in items %}
+    {% if item.content.field_block_merging|render %}
+      {{ _self.block_merging(item.content) }}
+    {% elseif item.content.field_block_attachment|render %}
+      {{ _self.block_attachment(item.content) }}
+    {% else %}
+      {{ _self.block_custom(item.content) }}
+    {% endif %}
+  {% endfor %}
+{% elseif merging_type == 'tab' %}
+  <ul class="tabs" data-tabs id="tabs-merging">
+    {% for item in items %}
+      {% set media ='' %}
+      {% set title ='' %}
+      {% if item.content.field_image|render %}
+        {% set media %}{{ item.content.field_image }}{% endset %}
+      {% elseif item.content.field_icon|render %}
+        {% set media %}<span class="{{ item.content.field_icon }}"></span>{% endset %}
+      {% endif %} 
+      {% if item.content.field_title %}
+        {% set title %}<span class="title hide-for-small-only">{{ item.content.field_title }}</span>{% endset %}
+      {% endif %}
+      {% if loop.index==1 %}
+        <li class="tabs-title is-active"><a href="#panel-1" title="{{ item.content.field_title }}" aria-selected="true">{{ media }}{{ title }}</a><div class="arrow"><span class="fa fa-caret-down"></span></div></li>
+      {% else %}
+        <li class="tabs-title"><a href="#panel-{{ loop.index }}" title="{{ item.content.field_title }}">{{ media }}{{ title }}</a><div class="arrow"><span class="fa fa-caret-down"></span></div></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <div class="tabs-content" data-tabs-content="tabs-merging">
+    {% for item in items %}  
+      <div class="tabs-panel{% if loop.index == 1 %} is-active{% endif %}" id="panel-{{loop.index}}"> 
+        <div class="column row">
+          {{ item.content|without('field_title','field_icon','field_image') }}
+        </div> 
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  {% for item in items %}  
+    <div>
+      <div class="slide">        
+        {{ _self.block_custom(item.content, merging_type) }}   
+      </div>
+    </div>
+  {% endfor %}
+{% endif %}
+
+{# PRINT BLOCK MERGING
+----------------------------------------------------------------#}    
+{% macro block_merging(content) %} 
+  {% set block_content = content['#block_content'] %}
+
+  {% set reveal = block_content.field_block_reveal.value %}
+  {% set padding = block_content.field_block_padding.value %}
+  {% set margin = block_content.field_block_margin.value %}
+  {% set style %}{% spaceless %}{{ _self.block_style(block_content, content) }}{% endspaceless %}{% endset %}
+  {% set equal_height = block_content.field_merging_height.value %}
+
+  {% if reveal %}    
+    {% set reveal_setting %} {% spaceless %}{{ _self.block_reveal(block_content) }}{% endspaceless %}{% endset %}
+  {% endif %}
+  {% if padding == false %}
+    {% set padding_setting = ' without-padding' %}
+  {% endif %}
+  {% if margin == true %}
+    {% set margin_setting = ' with-margin' %}
+  {% endif %}
+  {% if style %}    
+    {% set style_setting %} style="{{ style }}"{% endset %}
+  {% endif %}
+  {% if equal_height == true %}
+    {% set equal_height_setting = ' data-equalizer-watch' %}
+  {% endif %}  
+
+  <div class="block block-custom block-merging{{ reveal_setting }}">        
+    <div class="inner{{ padding_setting }}{{ margin_setting }}"{{ style_setting }}{{ equal_height_setting }}> 
+      {{ content }}    
+    </div>
+  </div>
+{% endmacro %}
+
+{# PRINT BLOCK ATTACHMENT
+----------------------------------------------------------------#}    
+{% macro block_attachment(content) %} 
+  {% set block_content = content['#block_content'] %}
+
+  {% set reveal = block_content.field_block_reveal.value %}
+  {% set pattern = block_content.field_block_pattern.value %}
+  {% set pattern_index = pattern|slice(8,1) %}
+  {% set pattern_style = pattern|slice(16,1) %}
+  {% set margin = block_content.field_block_margin.value %}
+  {% set padding = block_content.field_block_padding.value %}
+  {% set style %}{% spaceless %}{{ _self.block_style(block_content, content) }}{% endspaceless %}{% endset %}
+  {% set equal_height = block_content.field_merging_height.value %}  
+
+  {% if reveal %}    
+    {% set reveal_setting %} {% spaceless %}{{ _self.block_reveal(block_content) }}{% endspaceless %}{% endset %}
+  {% endif %}
+  {% if padding == false %}
+    {% set padding_setting = ' without-padding' %}
+  {% endif %}
+  {% if margin == true %}
+    {% set margin_setting = ' with-margin' %}
+  {% endif %}
+  {% if style %}    
+    {% set style_setting %} style="{{ style }}"{% endset %}
+  {% endif %}
+  {% if equal_height == true %}
+    {% set equal_height_setting = ' data-equalizer-watch' %}
+  {% endif %}  
+ 
+  <div class="block block-custom block-attachment{{ reveal_setting }}">        
+    <div class="inner {{pattern}}{{ padding_setting }}{{ margin_setting }}"{{ style_setting }}{{ equal_height_setting }}>
+
+      {% if pattern_index == 1 %}
+        {% if pattern_style == 0 or pattern_style == 3 %}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}
+          {{ content.field_block_attachment }}
+        {% endif %}
+        {% if pattern_style == 1 %}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+            <div class="media-object-section section-content">
+              {{ content.field_block_attachment }}
+            </div>
+          </div>
+        {% endif %}  
+        {% if pattern_style == 2 %}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          <div class="media-object stack-for-small">
+            <div class="media-object-section section-content">
+              {{ content.field_block_attachment }}
+            </div>
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+          </div>
+        {% endif %}    
+      {% endif %}
+
+      {% if pattern_index == 2 %}
+        {% if pattern_style == 0 %}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          {{ content.field_block_attachment }}
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}
+        {% endif %}  
+      {% endif %}
+
+      {% if pattern_index == 3 %}
+        {% if pattern_style == 0 or pattern_style == 3 %}
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          {{ content.field_block_attachment }}
+        {% endif %}
+        {% if pattern_style == 1 %}          
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+            <div class="media-object-section section-content">
+              {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+              {{ content.field_block_attachment }}
+            </div>
+          </div>
+        {% endif %}  
+        {% if pattern_style == 2 %}
+          <div class="media-object stack-for-small">
+            <div class="media-object-section section-content">
+              {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+              {{ content.field_block_attachment }}
+            </div>
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+          </div>
+        {% endif %}   
+      {% endif %}
+
+      {% if pattern_index == 4 %}
+        {% if pattern_style == 0 or pattern_style == 3 %}
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}
+          {{ content.field_block_attachment }}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+        {% endif %}
+        {% if pattern_style == 1 %}          
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+            <div class="media-object-section section-content">
+              {{ content.field_block_attachment }}
+              {{ _self.block_title(block_content, title_prefix, title_suffix ) }}              
+            </div>
+          </div>
+        {% endif %}  
+        {% if pattern_style == 2 %}
+          <div class="media-object stack-for-small">
+            <div class="media-object-section section-content">
+              {{ content.field_block_attachment }}
+              {{ _self.block_title(block_content, title_prefix, title_suffix ) }}              
+            </div>
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+          </div>
+        {% endif %}       
+      {% endif %}
+
+      {% if pattern_index == 5 %}
+        {% if pattern_style == 0 %}
+          {{ content.field_block_attachment }}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}    
+        {% endif %}  
+      {% endif %}
+
+      {% if pattern_index == 6 %}
+        {% if pattern_style == 0 %}
+          {{ content.field_block_attachment }}        
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}   
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}   
+        {% endif %}  
+      {% endif %}
+      
+    </div>
+  </div>
+{% endmacro %}
+
+{# PRINT CUSTOM BLOCK   
+----------------------------------------------------------------#}    
+{% macro block_custom(content, merging_type) %} 
+  {% set block_content = content['#block_content'] %}
+
+  {% set reveal = block_content.field_block_reveal.value %}
+  {% set pattern = block_content.field_block_pattern.value %}
+  {% set pattern_index = pattern|slice(8,1) %}
+  {% set pattern_style = pattern|slice(16,1) %}
+  {% set filter = block_content.field_background_filter.value %}
+  {% set padding = block_content.field_block_padding.value %}
+  {% set style %}{% spaceless %}{{ _self.block_style(block_content, content) }}{% endspaceless %}{% endset %}
+  {% set equal_height = block_content.field_merging_height.value %}
+  {% set url = block_content.field_link.uri %}  
+
+  {% if reveal %}    
+    {% set reveal_setting %} {% spaceless %}{{ _self.block_reveal(block_content) }}{% endspaceless %}{% endset %}
+  {% endif %}
+  {% set class_setting %} {{ pattern }}{% if filter %} with-filter {{ filter }}{% endif %}{% if padding == false %} without-padding{% endif %}{% endset %}
+  {% if style %}    
+    {% set style_setting %} style="{{ style }}"{% endset %}
+  {% endif %}
+  {% if equal_height == true %}
+    {% set equal_height_setting = ' data-equalizer-watch' %}
+  {% endif %}  
+
+  <div class="block block-custom{{ reveal_setting }}">        
+    <div class="inner{{ class_setting }}"{{ style_setting }}{{ equal_height_setting }}> 
+      {% if merging_type == 'slider' %}    
+        <div class="column row">
+      {% endif %}
+
+      {% if pattern_index == 1 %}
+        {% if pattern_style == 0 or pattern_style == 3 %}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}
+          {{ _self.block_body(block_content, content) }}
+        {% endif %}
+        {% if pattern_style == 1 %}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+            <div class="media-object-section section-content">
+              {{ _self.block_body(block_content, content) }}
+            </div>
+          </div>
+        {% endif %}  
+        {% if pattern_style == 2 %}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          <div class="media-object stack-for-small">
+            <div class="media-object-section section-content">
+              {{ _self.block_body(block_content, content) }}
+            </div>
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+          </div>
+        {% endif %}    
+      {% endif %}
+
+      {% if pattern_index == 2 %}
+        {% if pattern_style == 0 %}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          {{ _self.block_body(block_content, content) }}
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}
+        {% endif %}  
+      {% endif %}
+
+      {% if pattern_index == 3 %}
+        {% if pattern_style == 0 or pattern_style == 3 %}
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          {{ _self.block_body(block_content, content) }}
+        {% endif %}
+        {% if pattern_style == 1 %}          
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+            <div class="media-object-section section-content">
+              {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+              {{ _self.block_body(block_content, content) }}
+            </div>
+          </div>
+        {% endif %}  
+        {% if pattern_style == 2 %}
+          <div class="media-object stack-for-small">
+            <div class="media-object-section section-content">
+              {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+              {{ _self.block_body(block_content, content) }}
+            </div>
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+          </div>
+        {% endif %}   
+      {% endif %}
+
+      {% if pattern_index == 4 %}
+        {% if pattern_style == 0 or pattern_style == 3 %}
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}
+          {{ _self.block_body(block_content, content) }}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+        {% endif %}
+        {% if pattern_style == 1 %}          
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+            <div class="media-object-section section-content">
+              {{ _self.block_body(block_content, content) }}
+              {{ _self.block_title(block_content, title_prefix, title_suffix ) }}              
+            </div>
+          </div>
+        {% endif %}  
+        {% if pattern_style == 2 %}
+          <div class="media-object stack-for-small">
+            <div class="media-object-section section-content">
+              {{ _self.block_body(block_content, content) }}
+              {{ _self.block_title(block_content, title_prefix, title_suffix ) }}              
+            </div>
+            <div class="media-object-section">
+              {{ _self.block_image(block_content, content) }}
+              {{ _self.block_icon(block_content, content) }}
+            </div>
+          </div>
+        {% endif %}       
+      {% endif %}
+
+      {% if pattern_index == 5 %}
+        {% if pattern_style == 0 %}
+          {{ _self.block_body(block_content, content) }}
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}    
+        {% endif %}  
+      {% endif %}
+
+      {% if pattern_index == 6 %}
+        {% if pattern_style == 0 %}
+          {{ _self.block_body(block_content, content) }}        
+          {{ _self.block_image(block_content, content) }}
+          {{ _self.block_icon(block_content, content) }}   
+          {{ _self.block_title(block_content, title_prefix, title_suffix ) }}   
+        {% endif %}  
+      {% endif %}
+
+      {% if url and filter %}
+        <a href="{{ url }}" target="_blank" class="filter"></a>
+      {% endif %}
+      
+      {% if merging_type == 'slider' %}    
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}
+
+{# PRINT TITLE   
+----------------------------------------------------------------#}
+{% macro block_title(block_content, title_prefix, title_suffix) %}
+  {% set title = block_content.field_title.value %}
+  {% if title %}
+    {% set title_align = block_content.field_title_align.value %}
+    {% set title_border = block_content.field_title_border.value %}
+    {% set title_color = block_content.field_title_color.value %}
+    {% set title_size = block_content.field_title_size.value %}
+    {% set url = block_content.field_link.uri %}
+
+    {% if title_color is not empty %} 
+      {% set style %}style="color:#{{title_color}};border-color:#{{title_color}};"{% endset %}
+    {% endif %} 
+    
+    {% if url %}
+      {{ title_prefix }}  
+      <div class="title">
+        <h3 class="{{ title_size }} {{ title_align }}{% if title_border %} with-border{% endif %}" {{ style }}{{ title_attributes }}><a href="{{ url }}" target="_blank">{{ title }}</a></h3>   
+      </div>
+      {{ title_suffix }}
+    {% else %}
+      {{ title_prefix }} 
+      <div class="title">
+        <h3 class="{{ title_size }} {{ title_align }}{% if title_border %} with-border{% endif %}" {{ style }}{{ title_attributes }}>{{ title }}</h3>   
+      </div>
+      {{ title_suffix }}  
+    {% endif %}
+  {% endif %}
+{% endmacro %}
+
+{# PRINT IMAGE  
+----------------------------------------------------------------#}
+{% macro block_image(block_content, content) %}
+  {% if content.field_image|render %}
+    {% set url = block_content.field_link.uri %}
+    {% set image_filter = block_content.field_image_filter.value %}  
+    {% set image_padding = block_content.field_image_padding.value %}  
+
+    <div class="media-image{% if image_padding == false %} without-padding{% endif %}">
+      {% if url %}
+        {% if image_filter %}
+          {{ content.field_image }}
+          <a href="{{ url }}" class="filter {{ image_filter }}" target="_blank"></a>
+        {% else %}
+          <a href="{{ url }}" target="_blank">{{ content.field_image }}</a>
+        {% endif %}
+      {% else %}
+        {% if image_filter %}
+          {{ content.field_image }}
+          <div class="filter {{ image_filter }}"></div>
+        {% else %}
+          {{ content.field_image }}
+        {% endif %}
+      {% endif %}    
+    </div> 
+  {% endif %}
+{% endmacro %}
+
+{# PRINT ICON  
+----------------------------------------------------------------#}
+{% macro block_icon(block_content, content) %}  
+  {% if content.field_icon|render %}
+    {% set url = block_content.field_link.uri %}  
+    {% set icon = block_content.field_icon.value %}
+    {% set icon_color = block_content.field_icon_color.value %}
+    {% set icon_background_color = block_content.field_icon_background_color.value %}
+    {% set icon_border = block_content.field_icon_border.value %}
+    {% set icon_rounded = block_content.field_icon_rounded.value %}
+    {% set icon_size = block_content.field_icon_size.value %}
+
+    {% if icon_color %} 
+      {% set style = 'color:#' ~ icon_color ~ ';' %}
+    {% endif %} 
+    {% if icon_background_color %} 
+      {% set style = style~'background-color:#' ~ icon_background_color ~ ';' %}
+    {% endif %} 
+
+    <div class="media-icon{{ ' '~icon_size }}{% if icon_rounded %} rounded{% endif %}{% if icon_border %} with-border{% endif %}">{% if url %}<a href="{{ url }}" target="_blank">{% endif %}<span class="{{ icon }}"{% if style %} style="{{ style }}"{% endif %}></span>{% if url %}</a>{% endif %}</div>   
+  {% endif %}
+{% endmacro %}
+
+{# PRINT BODY  
+----------------------------------------------------------------#}
+{% macro block_body(block_content, content) %}
+  {% if content.body|render or content.field_button|render %}
+    <div class="content clearfix">
+      {{ content.body }}
+      {% if content.field_button|render %}
+        {% set button_align = block_content.field_button_align.value %}
+        <div class="content-button {{ button_align }}">
+          {{ content.field_button }}
+        </div>
+      {% endif %} 
+    </div>
+  {% endif %}   
+{% endmacro %}
+
+{# PRINT BACKGROUND   
+----------------------------------------------------------------#}
+{% macro block_style(block_content, content) %}
+  {% set body_text_color = block_content.field_body_text_color.value %}  
+  {% set background_color = block_content.field_background_color.value %}
+  {% set background_image = content.field_background_image %}
+  {% set style = '' %}
+
+  {% if body_text_color %} 
+    {% set style = 'color:#' ~ body_text_color ~ ';' %}
+  {% endif %} 
+
+  {% if background_color %} 
+    {% set style = style~'background-color:#' ~ background_color ~ ';' %}
+  {% endif %} 
+
+  {% if background_image|render %}     
+    {% set image %}{{ background_image|raw }}{% endset %}
+    {% set style %} 
+      {{style}}{{ background_image(image) }} 
+    {% endset %}
+  {% endif %}  
+  {{ style }}  
+{% endmacro %}
+
+{# PRINT REVEAL   
+----------------------------------------------------------------#}
+{% macro block_reveal(block_content) %}
+  {% set reveal_origin = block_content.field_block_reveal_origin.value %}
+  {% set reveal_speed = block_content.field_block_reveal_speed.value %}
+  {% set reveal_delay = block_content.field_block_reveal_delay.value %}
+  {% set reveal_distance = block_content.field_block_reveal_distance.value %}
+  {% set reveal_reset = block_content.field_block_reveal_reset.value %}
+  {% if reveal_reset == true %}
+     {% set reveal_reset = ' reveal-reset' %}
+  {% else %}
+     {% set reveal_reset = '' %}
+  {% endif %}
+  {% set reveal_setting %} block-reveal {{reveal_origin}} {{reveal_speed}} {% if reveal_delay %}{{reveal_delay}} {% endif %}{{reveal_distance}}{{reveal_reset}}{% endset %}
+  {{ reveal_setting }}  
+{% endmacro %}

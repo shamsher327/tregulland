@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: custom_block_element
+label: 'Custom block element'
+revision: 0
+description: 'Omni custom block element, used by custom block.'

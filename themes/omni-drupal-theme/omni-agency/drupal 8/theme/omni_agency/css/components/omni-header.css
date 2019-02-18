@@ -1,0 +1,90 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                           
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMON
+----------------------------------------------------------------*/
+#header-top {
+  font-size: 0.75rem;
+  padding: 0;
+}
+
+#header-top h2 {
+  display: none;
+}
+
+#header-bottom > .inner {
+  width: 100%;
+  transition: height .5s ease;
+  z-index: 3;
+}
+
+#header-bottom > .inner.is-stuck {
+  height: 3.75rem;
+  padding: 0 0.625rem;
+}
+
+#site-info {
+  text-align: center;
+  padding: 0.625rem 0.625rem 0;
+}
+
+#site-name h1, .is-stuck #site-name h1 {
+  font-size: 1.5625rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  line-height: 1.7;
+  margin: 0;
+}
+
+#site-slogan, .is-stuck #site-slogan {
+  display: none;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (max-width: 39.9375em) {
+  #header-bottom > .inner {
+    position: relative;
+    height: 110px !important;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  #header-bottom > .inner {
+    height: 5rem;
+    padding: 0.625rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  #site-slogan {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+  #site-logo {
+    padding-top: 0.3125rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  #site-name h1 {
+    font-size: 1.9375rem;
+    line-height: 1.4;
+  }
+}

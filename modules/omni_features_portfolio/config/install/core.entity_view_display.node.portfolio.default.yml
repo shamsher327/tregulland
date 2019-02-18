@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.portfolio.body
+    - field.field.node.portfolio.comment
+    - field.field.node.portfolio.field_category
+    - field.field.node.portfolio.field_feature
+    - field.field.node.portfolio.field_filter
+    - field.field.node.portfolio.field_height
+    - field.field.node.portfolio.field_image_thumbnail
+    - field.field.node.portfolio.field_image_unlimited
+    - field.field.node.portfolio.field_overlay
+    - field.field.node.portfolio.field_width
+    - node.type.portfolio
+  module:
+    - comment
+    - image
+    - text
+    - user
+id: node.portfolio.default
+targetEntityType: node
+bundle: portfolio
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  comment:
+    weight: 2
+    label: above
+    settings:
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+  field_category:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_image_unlimited:
+    weight: 4
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_feature: true
+  field_filter: true
+  field_height: true
+  field_image_thumbnail: true
+  field_overlay: true
+  field_width: true

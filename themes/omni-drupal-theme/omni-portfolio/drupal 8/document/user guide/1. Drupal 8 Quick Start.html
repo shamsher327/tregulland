@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Drupal Quick Start</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/typography.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="page">
+    <div id="main">
+	  <h1>1. Drupal 8.x Quick Start</h1> 
+
+<!-- INTRO REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	  
+<div class="content clearfix">
+  <h2>Introduction</h2>
+  <p>If you are new to Drupal, the amount of information you can get from <a href="http://www.drupal.org" target="_blank">Drupal.org</a> can be overwhelming. This is a <span class="pink-raspberry"><i>10 minutes beginner guide</i></span>. It explain the very basic and give you a quick start on Drupal 8.x. It is also useful if you know Drupal 7 but not Drupal 8. If you are familiar with Drupal 8, you can <a href='2. Omni 8.x Basic Setup.html'>skip to Omni Basic Setup</a> user guide.</p>		  
+</div>
+      
+<!-- ENDREGION
+---------------------------------------------------------------->
+      
+<!-- TABLE OF CONTENT REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	 
+<div class="content clearfix">
+  <h2>Table of Content</h1>
+  <div>
+    <ul>
+      <li><a href="#drupal-install">Installation</a></li>
+      <li><a href="#drupal-basic">Drupal 8 Basic</a></li>
+      <li><a href="#drupal-reading">Further Reading</a></li>
+    </ul>
+  </div>  
+</div>
+  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- INSTALLATION REGION 
+---------------------------------------------------------------->
+<div class="divider"></div>
+<div class="content clearfix">  
+<h2>Installation</h2>
+  <div id="drupal-install" class="section">
+    <div class="section">
+      <h3>1. Drupal core</h3>
+      <p>You can get the latest Drupal core files <a href="http://drupal.org/project/drupal" target="_blank">here</a>. Drupal installation process is very similar to other CMS (Content Management System) like Wordpress and Joomla.</p>
+      <p>Requirements:
+        <ul class="typo-checklist">
+        <li>Host ready</li>
+        <li>Database created</li>
+        <li>Admin username & password for the database</li>
+        <li>Drupal core file uploaded & uncompressed to the desire directory</li>
+      </ul>
+      </p>
+      <p>Key in your site base URL into browser, follow the steps process and you will have Drupal 8 installed. For more detailed documents on Drupal installation, you can check out <a href="http://drupal.org/documentation/install" target="_blank">here</a>.</p>
+    </div>
+    <div class="section">
+      <h3>2. Drupal modules & themes</h3>
+      <p>Drupal module serve the same purpose as Wordpress plug-in or Joomla extensions. Basically it extend the core functions so you can have features like showcase, tabbed blocks etc.</p>
+      <p>Before install Drupal modules & themes, you need to complete the Drupal core installation. Drupal 8.x directories structure as below:
+      <ul class="typo-arrow-alter">
+        <li>core</li>
+        <li>modules</li>
+        <li>profiles</li>
+        <li>sites</li>
+        <li>themes</li>
+        <li>vendor</li>
+      </ul>     
+      For Drupal 8.x directory <b>modules</b> & <b>themes</b> is there for you to install your modules and themes. You can upload your Omni modules files into directory <b>modules</b> and Omni theme files into directory <b>themes</b>.
+      You can go to <b>Extend</b>, to enable those modules and go to <b>Appearance</b>, to enable and set default theme. You can also find alternative documentation on this subject at <a href="http://drupal.org/documentation/install/modules-themes" target="_blank">here</a>.</p>
+    </div>
+    <div class="typo-alert"><b>Please don't enable any modules & theme just yet, you need to do it at the <a href='2. Omni 8.x Basic Setup.html'>Omni Basic Setup</a></b></div>
+  </div>
+</div>
+
+<!-- Drupal Basic
+------------------------------------------------------------>
+<div class="divider"></div>
+<div class="content clearfix">  
+  <h2>Drupal 8.x Basic</h2>
+  <div id="drupal-basic" class="section">
+  
+    <div class="section">
+      <h3>1. What is what?</h3>
+      <p><img src="images/pic_1.jpg" class="framed">
+        <ul class="typo-square">
+          <li><b>Content</b> - List all the nodes ( node is a Drupal term for post or article ) you have created. </li>
+          <li><b>Structure</b> - Site Structure. Including important units of Blocks, Content types, Menus, Taxonomy & Views.</li>
+          <li><b>Appearance</b> - Themes & theme settings.</li>
+          <li><b>Extend ( Modules )</b> - Core function extension union.</li>
+          <li><b>Configuration</b> - Site Configuration. Including important units of Text formats, Image styles, Site information, Backup and Migrate, Cron, Performance etc.</li>
+          <li><b>People</b> - Users & permissions.</li>          
+          <li><b>Report</b> - Site log, status, updates info.</li>
+          <li><b>Shortcuts</b> - Stored all direct links that you regular used. <b>Add content & All content</b> links are there as default. To add a new Shortcut:
+          <p><img src="images/pic_36.jpg" class="framed"></p></li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>2. Find your way</h3>
+      <p>
+        <ul class="typo-arrow-alter">
+          <li><b>Create a new post</b>: Click on <b>Add content</b>. You will have options of Article & Basic page. Drupal 8.x no longer has Blog content type but Omni theme create Blog content type for you. For a regular post select Article content type.</li>
+          <li><b>Create a new menu item</b>: Click on <b>Structure</b> then <b>Menus</b>. <b>Main navigation</b> is primary menu. Click on <b>Edit menu</b> for existing menu items. Click on <b>Add link</b> to add a new menu items. If a menu item has submenu items, that menu item need to be edited and enabled the <b>Show as expanded</b> option. Also for Drupal 8.x, user need to configure <b>Main navigation</b> block for menu level.</li>
+          <li><b>Create a new block</b>: Click on <b>Structure</b> then <b>Block layout > Custom block library</b>. Click on <b>Add custom block</b> link to add a new block. Then you need to go back to <b>Block layout</b> and place it into a region.
+          </li>
+        </ul>
+      </p>
+    </div>
+    <div class="section clearfix">
+      <h3>3. Have to know - Block</h3>	
+      <p>You have to know how block works because from content aspect, everything build by blocks. <b>Change blocks setting can change the page layout.</b></p> 
+      <p>By click on <b>Structure</b> then <b>Block layout</b>, you should see all the block regions available to you. Some block regions is being reserved. For example:</p>
+      <ul class="typo-arrow-alter">
+        <li>Highlighted - For system message only</li>
+        <li>Content region - For main page content block only</li>
+      </ul>
+      <p>You can drag & drop or edit the block to publish it to a particular region. Some region can handle more than one blocks, for example <b>Sidebar secondary</b> and <b>Sidebar tertiary</b>. Some region can only have one block, for example <b>closure</b> region.</p>
+      <p>By click on configure link, you can also tell a block when/who to appear. At visibility settings section, you have options of <b>Show for the listed pages</b> or <b>Hide for the listed pages</b>. This is important because it can help you change your page layout. For example, if you set all your left sidebar blocks with <b>Hide for the listed pages</b> option on a particular page then on that page it will only show right sidebar's blocks. This way you will have a different layout.</b>
+      </p>
+      <p><img src="images/pic_37.jpg" class="framed left"><b>New to Drupal 8.x</b><br>Now every block you create, you create a block content. When you place it into a block region, you place an instance of that block content NOT block content itself! It means unlike Drupal 7.x, for Drupal 8.x you can reuse your block content at multiple regions by placing multiple instance of that block.
+      </p>
+      <p>Drupal 8.x also has new Block type. Now we can separate Block type from Content type. For example, Omni 7.x has content type of Mega Menu and Showcase and when you need to create a new Showcase you need to create a new Showcase node. For Omni 8.x, Mega Menu and Showcase are no longer content type. They are block types now. When you need to create a new Showcase, you create a new Showcase block.
+      </p>
+      <div class="typo-alert">Since the block you placed into the region is just an instance of the block content, now when you make a change of your block content you might have to <b>clear the caches at Performance</b></div>
+    </div>
+    <div class="section">
+      <h3>4. Have to know - Content types</h3>
+      <p>You have to know about content type because it help you understand node appearance. By click on <b>Structure</b> > <b>Content types</b>, you should see a list of your content types. Blog content type no longer exist in Drupal 8.x, Omni included Blog content type as custom type. User need to enable Forum module for Forum topic content type.</p>
+    <p><img src="images/pic_38.jpg" class="framed"></p>
+    <p><b>Manage fields</b> help you create new field and manage fields order when node being created. <b>Manage form display</b> is new to Drupal 8.x. It helps user set the edit form when creating node.</p>
+    <p><img src="images/pic_39.jpg" class="framed"></p>   
+    <p><b>Manage display</b> help you control what end user will be seeing. Change order of the fields will change display order to the user. You can also manage your Image field here. For example set difference size of image to <b>default</b> or <b>teaser</b> viewing.</p>
+      </div>
+    <div class="section">
+      <h3>5. Have to know - Image styles</h3>
+      <p>There are three default image styles(size), thumbnail, medium & large. It is being used mostly by content type for teaser and full article display. Find it at <b>Configuration</b> > <b>Media</b>.</p>
+      </div>
+    <div class="section">
+      <h3>6. Have to know - Views</h3>
+      <p>You have to know about Views module because if Drupal is a superhero then Views is his superpower. He hide it under the <b>Structure</b>. That is all you need to know for now. We will explain it in more detail in <a href="3. Omni 8.x Feature Setup.html">Omni Feature Setup</a>.</p>
+      </div>
+    <div class="section">
+      <h3>7. Have to know - Site Information</h3>
+      <p>This is where you set your site name, front page number of posts & default path etc. Find it at <b>Configuration</b> > <b>System</b>.</p>
+      </div>
+    <div class="section">
+      <h3>8. Have to know - Performance</h3>
+      <p>Performance is where you set/clear your site Cache. There are also optimization options for your CSS & JavaScript files. Find it at <b>Configuration</b>.</p>
+    </div>
+    <div id="drupal-reading" class="section">
+      <h3>Further Reading</h3>
+      <p>If you want to know more about Drupal, there are plenty documents & tutorials available online. Here is a <a href="http://drupal.org/documentation" target="_blank">good starting point</a>.</p>		  
+    </div>
+  </div>	
+</div>
+
+<!-- COPYRIGHT REGION 
+---------------------------------------------------------------->
+
+<div class="divider"></div>
+<div class="content clearfix">
+<h2>Copyright</h2>
+  <p>The content of this document is copyrighted by ESORS.com. &copy; 2008-2016 All rights reserved. No portion of the content may be directly or indirectly copied, published, reproduced, modified, performed, displayed, sold, transmitted, broadcast, rewritten for broadcast or publication or redistributed in any medium.</p> 
+</div>
+<div class="divider"></div>
+
+<!-- ENDREGION
+---------------------------------------------------------------->	  
+    </div>
+  </div>
+</body>
+</html>

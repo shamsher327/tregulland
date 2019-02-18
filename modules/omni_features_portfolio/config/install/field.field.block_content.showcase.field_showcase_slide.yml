@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.showcase
+    - block_content.type.showcase_element
+    - field.storage.block_content.field_showcase_slide
+id: block_content.showcase.field_showcase_slide
+field_name: field_showcase_slide
+entity_type: block_content
+bundle: showcase
+label: Slide
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      showcase_element: showcase_element
+    sort:
+      field: _none
+field_type: entity_reference

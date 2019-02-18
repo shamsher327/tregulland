@@ -1,0 +1,77 @@
+; $Id$
+
+name        = esors - omni magazine
+description = Theme by <a href="http://www.esors.com">esors</a>
+core        = 7.x
+
+stylesheets[all][]   = css/normalize.css
+stylesheets[all][]   = css/slick.css
+stylesheets[all][]   = css/slick-theme.css
+stylesheets[all][]   = css/sm-core-css.css
+stylesheets[all][]   = css/omni.css
+stylesheets[all][]   = css/omni-menu.css
+stylesheets[all][]   = css/omni-showcase.css
+stylesheets[all][]   = css/omni-forum.css
+stylesheets[all][]   = css/omni-color-dynamic.css
+stylesheets[all][]   = css/omni-color-static.css
+stylesheets[all][]   = css/omni-custom.css
+
+scripts[] = js/vendor/modernizr-2.8.3.min.js
+scripts[] = js/vendor/jquery.smartmenus.min.js
+scripts[] = js/vendor/jquery.matchheight.min.js
+scripts[] = js/vendor/slick.min.js
+scripts[] = js/omni.js
+
+
+regions[help]                 = help
+regions[page_top]             = page top
+regions[page_bottom]          = page bottom
+
+regions[social_media]         = social media
+
+regions[header_left]          = header left
+regions[header_right]         = header right
+regions[main_menu]            = main menu
+
+regions[search]               = search
+regions[quick_link]           = quick link
+regions[newsflash]            = newsflash
+
+regions[showcase_main]        = showcase main
+regions[showcase_spotlight]   = showcase spotlight
+regions[showcase_content]     = showcase content
+
+regions[main_top_one]         = main top one
+regions[main_top_two]         = main top two
+regions[main_top_three]       = main top three
+regions[main_top_four]        = main top four
+
+regions[spotlight_one]        = spotlight one
+regions[spotlight_two]        = spotlight two
+regions[spotlight_three]      = spotlight three
+
+regions[sidebar_right]        = sidebar secondary
+regions[sidebar_left]         = sidebar tertiary
+
+regions[content_top_left]     = content top left
+regions[content_top_right]    = content top right
+regions[content]              = content
+regions[content_bottom_left]  = content bottom left
+regions[content_bottom_right] = content bottom right
+
+regions[main_bottom_one]      = main bottom one
+regions[main_bottom_two]      = main bottom two
+regions[main_bottom_three]    = main bottom three
+regions[main_bottom_four]     = main bottom four
+
+regions[footer_one]           = footer one
+regions[footer_two]           = footer two
+regions[footer_three]         = footer three
+regions[footer_four]          = footer four
+regions[closure]              = closure
+
+settings[omni_header]         = compact-width
+settings[omni_header_search]  = no
+settings[omni_menu]           = list-style
+settings[omni_layout]         = pst
+settings[omni_breadcrumb]     = no

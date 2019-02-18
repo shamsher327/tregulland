@@ -1,0 +1,22 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#} 
+{% set showcase_type = block_content.field_showcase_type.value %}
+
+{% if showcase_type == 'showcase-1' %}
+  <div class="showcase showcase-basic {{showcase_type}}"{{data_slick|raw}}>
+    {{ content.field_showcase_slide }}
+{% endif %}

@@ -1,0 +1,321 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                           
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMON
+----------------------------------------------------------------*/
+.slick-slider {
+  margin-bottom: 0;  
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.slick-slide .slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.showcase {
+  visibility: hidden;
+}
+
+.showcase.slick-initialized {
+  visibility: visible;
+}
+
+/* Pager
+---------------------------------*/
+ul.slick-dots {
+  bottom: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.slick-dots li {
+  margin: 0.3125rem;
+}
+
+.slick-dots li button:before {
+  font-size: 2rem;
+}
+
+.slick-prev,
+.slick-next {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-top: -1.5625rem;
+  border-radius: 0;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 0;  
+} 
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev:before, 
+.slick-next:before { 
+  font-family: FontAwesome; 
+  font-size: 1.5rem; 
+  line-height: 1.5; 
+}
+
+.slick-prev:before { content: "\f104"; }
+.slick-next:before { content: "\f105"; }
+
+/* SHOWCASE BASIC
+----------------------------------------------------------------*/
+.showcase-basic .slide {
+  height: 400px;
+}
+
+.showcase-basic .slide .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 1.875rem 1.25rem 1.25rem 1.25rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.showcase-basic .slide-title,
+.showcase-basic .slide-content,
+.showcase-basic .slide-button {
+  display: none;  
+  margin-bottom: 1.875rem; 
+}
+
+.showcase-basic .slide-title h3 {
+  font-size: 1.5rem; 
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.showcase-basic .slide-button .button {
+  margin: 0 0.625rem 0.625rem 0.625rem; 
+}
+
+.showcase-basic .slide-button .button.large {
+  font-size: 0.9rem;
+  padding: 1rem 2rem; 
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  .showcase-basic .slide {
+    height: 500px;
+  }
+
+  .showcase-basic .slide .inner {
+    padding: 6.25rem 1.875rem 1.875rem 1.875rem;
+  }
+
+  .showcase-basic .slide-title h3 {
+    font-size: 2.5rem;
+  }
+
+  .showcase-basic .slide-content {
+    font-size: 1.125rem;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .showcase-basic .slide {
+    height: 700px;
+  }
+
+  .showcase-basic .slide .inner {
+    padding-top: 12.5rem;
+  }
+
+  .showcase-basic .slide-title h3 {
+    font-size: 3.5rem;
+  }
+
+  .showcase-basic .slide-content {
+    font-size: 1.25rem;
+  }
+}
+
+/* Pattern
+---------------------------------*/
+.showcase-basic .pattern-1 .slide-title {
+  margin-bottom: 0.9375rem;  
+}
+
+.showcase-basic .pattern-2 .slide-title {
+  margin-top: -1.25rem;
+}
+
+/* media query
+-----------------*/
+@media screen and (min-width: 40em) {
+  .showcase-basic .pattern-2 .slide-content {
+    margin-bottom: 0;
+  }
+}
+
+/* SHOWCASE GALLERY
+----------------------------------------------------------------*/
+.showcase-gallery,
+.showcase-gallery .slide > .inner {
+  margin: 0 0.9375rem;
+}
+
+.showcase-gallery .slick-prev {
+  top: 0;
+  left: -0.9375rem;  
+  width: 1.875rem;
+  height: 100%;
+  margin: 0
+} 
+
+.showcase-gallery .slick-next {
+  top: 0;
+  right: -0.9375rem;
+  width: 1.875rem;
+  height: 100%;
+  margin: 0
+}
+
+.showcase-gallery .image-default {
+  position: relative;
+  margin: 0;
+}
+
+.showcase-gallery .image-default img {
+  width: 100%;
+}
+
+.showcase-gallery .with-filter::before {
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.showcase-gallery .with-filter:hover::before {
+  opacity: 0.8;
+}
+
+.showcase-gallery .link {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: -1.25rem;
+  text-align: center;
+  transition: all .5s ease-in-out;
+}
+
+.showcase-gallery .image-default:hover .link {  
+  opacity: 1;
+}
+
+.showcase-gallery .link a {  
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  margin: 0 0.625rem;
+  border-radius: 50%;
+}
+
+.showcase-gallery .link a.fa-arrows-alt {
+  display: none;
+}
+
+.showcase-gallery.with-reveal .link a.fa-arrows-alt {
+  display: inline-block;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .showcase-gallery .link a[type="button"] {  
+    display: none;
+  }
+}
+
+/* SHOWCASE GALLERY REVEAL
+----------------------------------------------------------------*/
+#showcase-gallery-reveal {
+  border: none;
+  padding: 3.125rem 0 0 0;
+  background-color: transparent;
+}
+
+#showcase-gallery-reveal .close-button {
+  top: 0;
+  right: 0;
+  width: 3.125rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  text-align: center;
+  opacity: 0.75;
+}
+
+#showcase-gallery-reveal .close-button:hover {
+  opacity: 1;
+}
+
+.showcase-gallery-reveal {
+  padding: 1.875rem 0.9375rem;
+}
+
+.showcase-gallery-reveal .slick-prev {  
+  top: -3.125rem;
+  left: auto;  
+  right: 6.25rem;
+  margin: 0;
+} 
+
+.showcase-gallery-reveal .slick-next {
+  top: -3.125rem;
+  right: 3.125rem;
+  margin: 0;
+}
+
+.showcase-gallery-reveal .image-default {
+  margin: 0;
+}
+
+.showcase-gallery-reveal h3.title {
+  text-transform: uppercase;
+  margin: 1.875rem 0;
+}
+
+.reveal-overlay {
+  background-color: hsla(0,0%,4%,.85);
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 64em) {
+  .showcase-gallery-reveal {
+    font-size: 1.125rem;
+  }
+}

@@ -1,0 +1,37 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                           
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% set showcase_type = block_content.field_showcase_type.value %}
+{% set reveal = block_content.field_showcase_reveal.value %}
+
+{% if showcase_type == 'basic' %}
+  <div class="showcase showcase-basic"{{data_slick|raw}}>
+    {{ content.field_showcase_slide }}
+  </div>  
+{% elseif showcase_type == 'gallery' %}
+  <div class="showcase showcase-gallery{% if reveal %} with-reveal{% endif %}"{{data_slick|raw}}>
+    {{ content.field_showcase_slide }}
+  </div>  
+{% else %}
+  <div id="showcase-gallery-reveal" class="large reveal" data-reveal data-close-on-click="true" data-animation-in="scale-in-up" data-animation-out="scale-out-down">
+    <div class="showcase showcase-gallery-reveal">
+      {{ content.field_showcase_slide }}    
+    </div>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+{% endif %}

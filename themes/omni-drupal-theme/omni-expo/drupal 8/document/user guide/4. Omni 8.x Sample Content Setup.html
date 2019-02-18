@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title> Omni User Guide </title>
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/typography.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="page">
+    <div id="main">
+	  <h1>4. Omni 8.x Sample Content Setup</h1> 
+
+<!-- INTRO REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	  
+<div class="content clearfix">
+  <h2>Introduction</h2>
+  <div class="typo-alert"><b><span class="pink-raspberry">WARNING: Omni Sample Content Setup only suitable for newly installed Drupal site. It shouldn't install on existing site as it will delete all existing data and cannot be undone.</span></b></div>
+  <p>Sample content help user understand how everything setup as in demo. It should install in a testing or development environment.</p>   
+  <p>Omni 8.x Sample Content Setup process is a bit different than Omni 7.x. Omni 7.x using <a href="https://www.drupal.org/project/backup_migrate" target="_blank">Backup and Migrate</a> module to install a replica of Omni demo content. Since Backup and Migrate module doesn't have 8.x release yet, we will use basic sql import for Omni 8.x Sample Content Setup. When Backup and Migrate module ready, we will update accordingly. Even without third party module's help, the setup process still quite simple.</p>   
+</div>
+      
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	 
+<div class="content clearfix">
+  <h2>Simplify Steps: </h1>
+  <div>
+    <p>
+      <ol>
+        <li>Install Drupal</li>
+        <li>Install Required Modules</li>
+        <li>Install Omni Theme</li>        
+        <li>Import Database</li>
+        <li>Restore Images Directory</li>
+        <li>Re-log in</li>
+        <li>Run Update</li>
+        <li>Flash Caches</li>
+        <li>Change User Name & Password</li>
+      </ol>      
+    </p>
+  </div>
+</div>
+  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- DETAIL SETUP
+---------------------------------------------------------------->  
+   
+<div class="divider"></div>
+<div id="omni-feature-color" class="content clearfix">
+  <h2>In Detalis</h2>  
+  <div class="section">   
+    <div class="section">
+      <h3>- Install Drupal 8</h3>
+      <p>Download latest Drupal 8 and install it as usual. For how to install Drupal, you can check <a href="1. Drupal 8 Quick Start.html"> Drupal 8 Quick Start</a> user guide for detail.</p>
+    </div>
+    <div class="section">
+      <h3>- Install Required Modules</h3>
+      <p>Upload & <span class="pink-raspberry">upzip</span> all required modules into drupal 8 root's <b>modules</b> folder. Not need to enable it.
+      <div class="typo-alert"><b>Drupal 8 has lot of dependency built-in. Even if you don't need some modules, upload it anyway. When setup complete then you can disable the modules that you don't want.</b></div>
+    </div>
+    <div class="section">
+      <h3>- Install Omni Theme</h3>
+      <p>Upload <b>omni_expo</b> theme files into drupal 8 root's <b><span class="pink-raspberry">themes/custom</span></b> folder. If custom folder doesn't exist, create one. Not need to enable it.</p>
+    </div>
+    <div class="section">
+      <h3>- Import Database</h3>
+      <p>Since we can't use Backup and Migrate module yet, we are going to import sql file into Drupal site directly. Many hosting service offer database admin interface. We are going to use popular phpMyAdmin as example.</p>
+      <p>Open phpMyAdmin panel and find the database you create for Drupal 8 site. Click on Import tab & make sure you select the correct database. Double check with database name!</p>
+      <p>Click on Choose file button and upload omni-expo/drupal 8/document/sample content/<b>omni-expo-replica.sql.zip</b>.
+      <p>Click on Go button, the process might take a few minutes. At the end it will show import complete message.</p>
+      <p><img src="images/pic_55.jpg" class="framed"></p>      
+    </div>
+    <div class="section">
+      <h3>- Restore Image Directory</h3>      
+      <p>Unzip omni-expo/drupal 8/document/sample content/<b>omni-expo-image.zip</b> file. It contain 2 folders(2016-10 & default_images). Upload these two folders into Drupal 8 root's directory sites/default/files/. 
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Re-log in</h3>
+      <p>After above Restore Database step, you will be forced logout since your original user doesn't exist anymore. Your new user name as: <b>Admin</b> and password as <b>Admin</b> with admin right. You need to re-login (go to www.MYSITEADDRESS.com/user) as user Admin.</p>
+    </div>
+    <div class="section">
+      <h3>- Run Update</h3>
+      <p>After re-log in, you need to run site update. Go to www.MYSITEADDRESS.com/update.php to update your site.</p>
+    </div>
+    <div class="section">
+      <h3>- Flash Caches</h3>
+      <p>Now flush site caches, you can go to Configuration > Development > Performance or use Admin tool bar.</p>
+      <p><img src="images/pic_54.jpg" class="framed"></p>
+    </div>
+    <div class="section">
+      <h3>- Change User Name & Password</h3>
+      <p>You need to change Admin password and email to something else immediately.</p>
+    </div>
+    <div class="section">
+      <h3>- Setup Complete!</h3>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% if not page %}
+  {% set classes %}node portfolio teaser portfolio-item {{ content.field_width }} {{ content.field_height }} {{ content.field_overlay }} clearfix{% endset %}
+  {% set image %}{{ content.field_image_thumbnail|raw }}{% endset %}
+  <article{{ attributes.addClass(classes) }}>
+    <div class="inner{% if content.field_filter|render %} with-filter {{ content.field_filter }}{% endif %}" style="{{ background_image(image) }}">
+      <div class="content">
+        <div class="meta text-center">
+          {{ content.field_category }}
+        </div>
+        {{ title_prefix }}
+        <h3 class="title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h3>  
+        {{ title_suffix }}
+        {% if summary %}    
+          <div class="summary">{{ summary }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </article>  
+{% else %}
+  <article{{ attributes.addClass('node portfolio full clearfix') }}> 
+    <header class="text-center">
+      <div class="row">
+        <div class="small-centered large-11 columns">
+          <div class="term">                   
+            {% if content.field_category|render %}
+              {{ content.field_category }}
+            {% endif %}                   
+          </div>
+          <h1 class="title">{{ label }}</h1>
+          {% if summary %}
+            <div class="summary">{{ summary }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </header>  
+    <div class="row">
+      <div id="content-image" class="large-7 column"> 
+        {% if content.field_image_unlimited|render %}
+          <div class="image-default">
+            {{ content.field_image_unlimited }}
+          </div>
+        {% endif %}
+      </div>
+      <div class="large-5 column" data-sticky-container>            
+        <div class="content sticky" data-sticky data-sticky-on="large" data-anchor="content-image"> 
+          {% if display_submitted %}
+            <div class="meta">
+              <span class="author">{{ 'By'|t }} <b>{{ author_name }}</b></span>
+              <span class="divider"></span>                
+              <span class="date">{{ date }}</span>
+            </div>
+          {% endif %}  
+          {{ content|without('comment', 'links', 'field_category', 'field_image_unlimited', 'addtoany') }}
+          {% if content.addtoany %}
+            <div class="share text-center">{{ content.addtoany }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </article>
+  <section id="related">
+    {{ related }}
+  </section>  
+  {{ content.comment }}
+{% endif %}

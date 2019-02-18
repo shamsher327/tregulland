@@ -1,0 +1,167 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+<div id="page"> 
+  {% if page.showcase %}
+    <header id="header" class="with-showcase">
+  {% else %}
+    <header id="header" class="without-showcase">      
+  {% endif %} 
+    <div class="inner">
+      <div id="header-top" class="expanded row collapse text-center">
+        <div id="social-media" class="large-4 column show-for-large">
+          {{ page.social_media }}
+        </div>
+        {% if page.primary_menu_mobile %}
+          <div id="menu-mobile" class="small-3 medium-3 column hide-for-large">
+            <button type="button" class="button hollow ghost" title="Menu" data-toggle="reveal-menu">menu</button>
+          </div>
+        {% endif %}
+        <div id="site-info" class="small-9 medium-6 large-4 column">        
+          {% if page.site_info %}          
+            {{ page.site_info }}
+          {% endif %}
+        </div>
+        <div id="menu-sub" class="medium-3 large-4 column show-for-medium">
+          {% if omni_header_login or page.search %}
+            <ul class="menu">
+              {% if omni_header_login %}
+                <li><a class="login" href="{{ base_path }}user">Login</a></li>
+                <li class="menu-text"> / </li>
+                <li class="show-for-large"><a class="register" href="{{ base_path }}user/register">Register</a></li>
+              {% endif %}
+              {% if page.search %}
+                <li><a class="search" data-toggle="reveal-search"><span class="fa fa-search" aria-hidden="true"></span></a></li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+      <div id="header-bottom" class="show-for-large">
+        {% if page.primary_menu %}
+          <div id="menu-primary" class="expanded column row">
+            {{ page.primary_menu }}
+          </div>
+        {% endif %}     
+      </div>
+      <div class="large reveal fast" id="reveal-search" data-reveal data-close-on-click="true" data-animation-in="scale-in-up" data-animation-out="scale-out-down">
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        {{ page.search }}
+      </div>
+      <div class="full reveal fast text-center" id="reveal-menu" data-reveal data-close-on-click="true" data-animation-in="scale-in-up" data-animation-out="scale-out-down">
+        <div class="row">
+          <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div id="reveal-site-info">        
+            {% if page.site_info %}          
+              {{ page.site_info }}
+            {% endif %}
+          </div>
+          {% if omni_header_login or page.search %}
+            <div id="reveal-menu-sub" class="menu-centered">
+              <ul class="menu">
+                {% if omni_header_login %}
+                  <li><a class="login" href="{{ base_path }}user"><span class="fa fa-user" aria-hidden="true"></span>Login</a></li>
+                  <li class="menu-text"> | </li>
+                  <li><a class="register" href="{{ base_path }}user/register"><span class="fa fa-pencil" aria-hidden="true"></span>Register</a></li>
+                  <li class="menu-text"> | </li>
+                {% endif %}
+                {% if page.search %}
+                  <li><a data-toggle="reveal-search"><span class="fa fa-search" aria-hidden="true"></span>Search</a></li>
+                {% endif %}
+              </ul>
+            </div>
+          {% endif %}
+          {% if page.primary_menu_mobile %}
+            <div id="reveal-menu-mobile">          
+              {{ page.primary_menu_mobile }}
+            </div>
+          {% endif %} 
+          {% if page.social_media %}
+            <div id="reveal-social-media">
+              {{ page.social_media }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>  
+  </header>        
+  {% if page.showcase %}
+    <div id="showcase">
+      {{ page.showcase }}
+    </div>
+  {% endif %}
+  {% if page.secondary_menu is not empty %}    
+    <div class="show-for-medium" data-sticky-container>
+      <div id="menu-secondary" class="expanded row collapse" data-sticky data-margin-top="0" data-top-anchor="main:top" data-btm-anchor="main:bottom">
+        <div class="medium-11 column">
+          {{ page.secondary_menu }}
+        </div>
+        <div class="medium-1 column">
+          <ul class="menu expanded text-center">
+            <li><a data-scroll href="#menu-secondary"><span class="fa fa-angle-up" aria-hidden="true"></span></a></li>
+            <li><a data-scroll data-options='{"offset": 0}' href="#menu-secondary"><span class="fa fa-angle-down" aria-hidden="true"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  <div id="main">
+    {% if page.main_top %}
+      <div id="main-top">
+        {{ page.main_top }}    
+      </div> 
+    {% endif %}
+    <div id="main-middle">
+      <div id="primary">
+        {% if page.breadcrumb %}
+          {{ page.breadcrumb }}
+        {% endif %}
+        {% if page.highlighted %}            
+          <div id="highlight">
+            {{ page.highlighted }}
+          </div>
+        {% endif %}
+        <div id="content" class="clearfix">
+          {{ page.content }}
+        </div>                
+      </div>
+    </div>   
+    {% if page.main_bottom %}
+      <div id="main-bottom">
+        {{ page.main_bottom }}         
+      </div> 
+    {% endif %}    
+  </div>   
+  {% if page.footer or page.closure %}
+    <footer id="footer">
+      {{ page.footer }}  
+      <div id="closure">
+        <div class="row">
+          <div class="large-8 column">
+            {{ page.closure }}
+          </div>
+          <div class="large-4 column show-for-large">
+            <ul class="menu align-right"><li><a href="http://www.esors.com" title="Drupal theme" class="design-by">Drupal theme by esors</a></li></ul>
+          </div>
+        </div>
+      </div>  
+    </footer>
+  {% endif %}  
+</div>

@@ -1,0 +1,5 @@
+services:
+  omni_custom.twig.omni_extension:
+    class: Drupal\omni_custom\Twig\OmniExtension
+    tags:
+      - { name: twig.extension }

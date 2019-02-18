@@ -1,0 +1,216 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                           
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* BASE COLOR 
+----------------------------------------------------------------*/
+/* Text
+---------------------------------*/
+body { 
+  color: #0a0a0a;
+}
+
+/* Link
+---------------------------------*/
+a {
+  color: #c7a462;
+}
+
+/* Link Active
+---------------------------------*/
+a:focus, a:hover {
+  color: #a37e3a;
+}
+
+/* Border
+---------------------------------*/
+.article.teaser {
+  border-color: #eeeeee;
+}
+
+/* Background
+---------------------------------*/
+body { 
+  background-color: #fefefe; 
+} 
+
+/* Header Background
+---------------------------------*/
+#header {
+  background-color: #202020;
+}
+
+/* Primary Menu Link
+---------------------------------*/
+#menu-primary a {
+  color: #808285;
+}
+
+/* Primary Menu Background
+---------------------------------*/
+#menu-primary .submenu {  
+  background-color: #040404;
+}
+
+/* MATCHING COLOR
+----------------------------------------------------------------*/
+/* Text
+---------------------------------*/
+.article.teaser .link.button,
+.blog.teaser .link.button  {
+  color: #0a0a0a;
+}
+
+/* Link
+---------------------------------*/
+#breadcrumb a,
+.button.link,
+.button.hollow,
+.menu-arrow::before,
+.menu-arrow::after,
+.showcase-gallery .link,
+.showcase-gallery .slick-prev::before,
+.showcase-gallery .slick-next::before,
+#showcase-gallery-reveal .close-button,
+.showcase-gallery-reveal .slick-prev::before,
+.showcase-gallery-reveal .slick-next::before,
+.showcase-gallery-reveal h3.title,
+ul.tabs li a:hover,
+ul.tabs li a:focus,
+ul.tabs li a[aria-selected=true],
+#menu-primary a:hover,
+#menu-primary a.is-active,
+#menu-mobile .is-accordion-submenu-parent:after,
+.sub-item button:hover,
+.sub-item button:focus,
+.sub-item button.hover {
+  color: #c7a462;
+}
+
+#content-tab li a,
+.button,
+.comment .links li a,
+#menu-mobile .divider {
+  background-color: #c7a462;
+}
+
+#menu-primary .submenu,
+#menu-reveal #menu-mobile,
+#menu-mobile .is-accordion-submenu-parent[aria-expanded=true]> a,
+.sub-item .dropdown-pane,
+.button.hollow {
+  border-color: #c7a462;
+}
+
+/* Link Active
+---------------------------------*/
+#breadcrumb a:focus, #breadcrumb a:hover,
+.pager .current a,
+.article.teaser .link.button:hover,
+.article.teaser .link.button:focus,
+.blog.teaser .link.button:hover,
+.blog.teaser .link.button:focus,
+.button.link:hover, .button.link:focus,
+.button.hollow:focus, .button.hollow:hover {
+  color: #a37e3a;
+}
+
+#content-tab li a:hover,
+.button:hover, .button:focus,
+.comment .links li a:hover {
+  background-color: #a37e3a;
+}
+
+.button.hollow:focus, .button.hollow:hover {
+  border-color: #a37e3a;
+}
+
+/* Border
+---------------------------------*/
+.search-result ol li,
+.share a,
+.article.full > header,
+.blog.teaser,
+.blog.full > header,
+.blog.full .meta .links li,
+#comment-post,
+#comment-box,
+.comment .content,
+.view-block-article .meta,
+.view-block-blog .meta {
+  border-color: #eeeeee;
+}
+
+/* Background
+---------------------------------*/
+.addtoany_list,
+#comment-post h3.title,
+#comment-box h3.title,
+.comment .links,
+ul.tabs {
+  background-color: #fefefe;
+}
+
+ul.tabs li.is-active .arrow .fa {
+  color: #fefefe;
+}
+
+/* Header Background
+---------------------------------*/
+#header-bottom > .inner,
+#footer,
+#showcase-gallery-reveal .close-button:hover,
+.showcase-gallery-reveal,
+.showcase-gallery-reveal .slick-prev:hover, 
+.showcase-gallery-reveal .slick-next:hover,
+#menu-primary .submenu a:hover,
+#site-info-alter,
+#item-login input[type="text"],
+#item-login input[type="password"],
+#item-search input[type="search"] {
+  background-color: #202020;
+}
+
+/* Primary Menu Link
+---------------------------------*/
+#header,
+#menu-reveal a:hover,
+#menu-reveal a:focus,
+#menu-reveal .close-button,
+#menu-mobile .is-accordion-submenu-parent:hover:after,
+.showcase-gallery-reveal,
+.sub-item button::after,
+#item-login input[type="text"],
+#item-login input[type="password"],
+#item-search input[type="search"] {
+  color: #808285;
+}
+
+#menu-mobile li:hover > .divider {
+  background-color: #808285;
+}
+
+/* Primary Menu Background
+---------------------------------*/
+#header-top,
+#menu-reveal,
+#menu-mobile .is-accordion-submenu-parent:after,
+.sub-item .dropdown-pane,
+#closure {
+  background-color: #040404;
+}
+
+.menu-arrow::after {
+  color: #040404;
+}

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: main-mobile
+label: 'Main navigation mobile'
+description: 'Site section mobile links '
+locked: false

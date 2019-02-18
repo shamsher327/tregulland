@@ -1,0 +1,40 @@
+name: Omni Expo
+type: theme
+description: ''
+package: Custom
+version: 8.x-1.0
+core: 8.x
+
+libraries:
+  - core/normalize
+  - omni_expo/foundation
+  - omni_expo/slick
+  - omni_expo/global-styling
+  - omni_expo/global-script
+  
+regions:  
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'    
+
+  site_info: 'Site info'
+  primary_menu: 'Menu main'
+  primary_menu_mobile: 'Menu mobile'
+  primary_menu_mega: 'Menu mega'
+  social_media: 'Social media'
+  search: 'Search'
+
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  prev_next: 'Prev/Next'
+  author: 'Author'
+  related: 'Related'
+
+  showcase: 'Showcase'
+  main_top: 'Main top'
+  content: 'Main middle - primary' 
+  sidebar_secondary: 'Main middle - secondary'
+  main_bottom: 'Main bottom'
+
+  footer: 'Footer'  
+  closure: 'Closure'
+  usable: 'Usable'

@@ -1,0 +1,131 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_background_filter
+field_name: field_background_filter
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: red-alizarin
+      label: 'red alizarin'
+    -
+      value: red-pomegranate
+      label: 'red pomegranate'
+    -
+      value: purple-amethyst
+      label: 'purple amethyst'
+    -
+      value: purple-wisteria
+      label: 'purple wisteria'
+    -
+      value: blue-sky
+      label: 'blue sky'
+    -
+      value: blue-royal
+      label: 'blue royal'
+    -
+      value: blue-ocean
+      label: 'blue ocean'
+    -
+      value: blue-ink
+      label: 'blue ink'
+    -
+      value: green-emerald
+      label: 'green emerald'
+    -
+      value: green-jade
+      label: 'green jade'
+    -
+      value: cyan-turquoise
+      label: 'cyan turquoise'
+    -
+      value: cyan-sea
+      label: 'cyan sea'
+    -
+      value: yellow-can
+      label: 'yellow can'
+    -
+      value: yellow-sunflower
+      label: 'yellow sunflower'
+    -
+      value: orange-orange
+      label: 'orange orange'
+    -
+      value: orange-carrot
+      label: 'orange carrot'
+    -
+      value: gray-smoke
+      label: 'gray smoke'
+    -
+      value: gray-silver
+      label: 'gray silver'
+    -
+      value: black-midnight
+      label: 'black midnight'
+    -
+      value: black-eclipse
+      label: 'black eclipse'
+    -
+      value: gradient-rose-water
+      label: 'rose water'
+    -
+      value: gradient-lemon-twist
+      label: 'lemon twist'
+    -
+      value: gradient-pinky
+      label: pinky
+    -
+      value: gradient-aqua-marine
+      label: 'aqua marine'
+    -
+      value: gradient-bora-bora
+      label: 'bora bora'
+    -
+      value: gradient-peach
+      label: peach
+    -
+      value: gradient-moonrise
+      label: moonrise
+    -
+      value: gradient-blurry-beach
+      label: 'blurry beach'
+    -
+      value: gradient-miaka
+      label: miaka
+    -
+      value: gradient-almost
+      label: almost
+    -
+      value: gradient-virgin
+      label: virgin
+    -
+      value: gradient-shore
+      label: shore
+    -
+      value: gradient-endless-river
+      label: 'endless river'
+    -
+      value: gradient-back-to-earth
+      label: 'back to earth'
+    -
+      value: gradient-green-and-blue
+      label: 'green and blue'
+    -
+      value: gradient-tranquil
+      label: tranquil
+    -
+      value: gradient-sweet-morning
+      label: 'sweet morning'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,147 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#} 
+{% if not page %}
+  {% if content.field_image_thumbnail|render == false %}
+    {% set image_check %} without-image{% endset %}
+  {% endif %}
+  {% set classes %}node post teaser{{ image_check }} text-center clearfix{% endset %}
+  {% set teaser_content %}{{ content|without('comment', 'links', 'field_tags', 'field_category', 'field_image', 'field_image_thumbnail', 'addtoany') }}{% endset %}
+  <article{{ attributes.addClass(classes) }}>
+    {% if content.field_image_thumbnail|render %}
+      <div class="image-default">
+        {{ content.field_image_thumbnail }}
+      </div>
+    {% endif %} 
+    <header>
+      <div class="meta">   
+        {% if content.field_category|render %}
+          <span class="term">{{ content.field_category }}</span>
+        {% endif %}
+         <span class="date">{{ node.createdtime|date("F j, Y") }}</span>
+      </div>
+      {{ title_prefix }}
+        <h2 class="title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+      {{ title_suffix }} 
+    </header>
+    <div class="content">
+      {{ teaser_content|striptags }}
+    </div>
+  </article>
+{% else %}
+  {% if content.field_image|render %}
+    {% set image %}{{ content.field_image|raw }}{% endset %}
+    {% set image_check %} with-image{% endset %}
+  {% else %}
+    {% set image_check %} without-image{% endset %}
+  {% endif %}
+  {% set classes %}node post full{{ image_check }} clearfix{% endset %}  
+
+  <article{{ attributes.addClass(classes) }}>
+    <header>
+      <div class="inner{% if content.field_filter|render %} with-filter {{ content.field_filter }}{% endif %}" style="{{ background_image(image) }}">
+        <div class="header-top">
+          <div class="row">
+            <div class="large-8 large-offset-3 xlarge-7 xlarge-offset-2 xlarge-6 xlarge-offset-2 column">
+              <div class="inner">
+                {% if content.field_category|render %}
+                  <div class="meta term">{{ content.field_category }}</div>
+                 {% endif %} 
+                <h1 class="title">{{ label }}</h1>
+                {% if summary %}
+                  <div class="summary show-for-medium">{{ summary }}</div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="row">          
+            <div class="large-8 large-offset-3 xlarge-6 xlarge-offset-2 column">
+              {% if display_submitted %}
+                <div class="meta submit text-center large-text-left">
+                  {{ author_picture }}                  
+                  <span class="author">{{ 'Posted'|t }} <span class="lowercase">{{ 'by'|t }}</span> {{ author_name }}</span> <span class="lowercase">{{ 'on'|t }}</span> <span class="date">{{ node.createdtime|date("l, m/d/Y") }}</span>                      
+                </div>
+              {% endif %}
+            </div> 
+            {% if prev_next %}
+              <div class="prev-next">{{ prev_next }}</div>
+            {% endif %}      
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="content row">
+      <div class="large-3 xlarge-2 column">
+        <aside class="inner">
+          {% if content.addtoany %}
+            <section class="share text-center">
+              <h3 class="title">{{ 'Share'|t }}</h3>
+              {{ content.addtoany }}
+            </section>
+          {% endif %}
+          {% if related %}
+            <section id="related">   
+              {{ related }}
+            </section>
+          {% endif %}
+        </aside>
+      </div>
+      {% if sidebar_secondary %}
+        <div class="large-9 xlarge-6 column">
+      {% else %}
+        <div class="large-9 xlarge-7 column end">
+      {% endif %}
+        <div class="inner" id="content-body">
+          {% if highlighted %}            
+            <div id="highlight">
+              {{ highlighted }}
+            </div>
+          {% endif %}  
+          <div id="content-main">
+            {{ content|without('comment', 'links', 'field_tags', 'field_category', 'field_image', 'field_filter', 'addtoany') }}  
+            {% if content.links %}
+              <div class="links">
+                <div class="title"><h3>{{ 'Links'|t }}</h3></div>                        
+                {{ content.links }}       
+              </div>
+            {% endif %}
+            {% if content.field_tags|render %}
+              <div class="tags">             
+                <div class="title"><h3>{{ 'Tags'|t }}</h3></div>
+                {{ content.field_tags }}                               
+              </div>
+            {% endif %}          
+          </div>          
+          <section id="author">   
+            {{ author }}
+          </section>
+          {{ content.comment }}
+        </div>
+      </div>
+      {% if sidebar_secondary %}
+        <div class="xlarge-4 column">
+          <div class="inner" data-sticky-container>
+            <div class="sticky" data-sticky data-margin-top="5" data-sticky-on="xlarge" data-anchor="content-body">
+              {{ sidebar_secondary }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </article>
+{% endif %}

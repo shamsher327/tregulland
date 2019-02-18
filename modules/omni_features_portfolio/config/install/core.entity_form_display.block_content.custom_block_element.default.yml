@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block_element
+    - field.field.block_content.custom_block_element.field_block
+id: block_content.custom_block_element.default
+targetEntityType: block_content
+bundle: custom_block_element
+mode: default
+content:
+  field_block:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: 'CBE - '
+    third_party_settings: {  }
+hidden: {  }

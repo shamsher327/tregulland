@@ -1,0 +1,50 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* FONT SIZE
+----------------------------------------------------------------*/
+p.font-xsmall {
+  font-size: 0.75rem;
+}
+
+p.font-small {
+  font-size: 0.875rem;
+}
+
+p.font-large {
+  font-size: 1.1875rem;
+}
+
+p.font-xlarge {
+  font-size: 1.25rem;
+}
+
+p.font-xxlarge {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 40em) {
+  p.font-large {
+    font-size: 1.25rem;
+  }
+
+  p.font-xlarge {
+    font-size: 2.5rem;
+  }
+
+  p.font-xxlarge {
+    font-size: 3rem;
+  }
+}

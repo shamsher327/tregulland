@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.showcase_element
+    - field.storage.block_content.field_category
+    - taxonomy.vocabulary.category
+id: block_content.showcase_element.field_category
+field_name: field_category
+entity_type: block_content
+bundle: showcase_element
+label: Category
+description: 'For Heading Alternative Showcase type only.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      category: category
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

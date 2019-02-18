@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature
+    - node.type.portfolio
+  module:
+    - options
+id: node.portfolio.field_feature
+field_name: field_feature
+entity_type: node
+bundle: portfolio
+label: 'Featured in'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

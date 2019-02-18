@@ -1,0 +1,275 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* GENERAL
+----------------------------------------------------------------*/
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', Arial, Helvetica, Sans-Serif;  
+}
+
+.meta, .term, .date, .author, .links {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+
+a {
+  transition: color .25s ease-out;
+}
+  
+p {
+  line-height: 1.8;
+}
+
+blockquote, blockquote p {
+  color: inherit;
+  border-color: inherit;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.user-picture img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transition: all .5s ease-in-out;
+}
+
+.user-picture img:hover {
+  filter: gray;
+  filter: grayscale(1); 
+  -webkit-filter: grayscale(1); 
+}
+
+.image-default {
+  margin-bottom: 1.875rem;
+}
+
+.image-default.float-left {
+  margin-right: 1.875rem;
+}
+
+.image-default.float-right {
+  margin-left: 1.875rem;
+}
+
+.status-message {
+  margin-bottom: 1.875rem; 
+}
+
+/* PAGE 
+----------------------------------------------------------------*/
+#main-middle {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+
+/* CONTENT
+----------------------------------------------------------------*/
+#content-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  margin-bottom: 1.875rem; 
+}
+
+#content-title:first-letter {
+  text-transform: capitalize;
+}
+
+.page-user #content-title {
+  text-align: center;
+}
+
+/* Content Tab
+---------------------------------*/
+#content-tab {
+  margin-bottom: 1.875rem;
+}
+
+#content-tab ul {
+  display: inline-block;
+}
+
+#content-tab li a {
+  font-size: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  margin-right: 1px;
+}
+
+#content-tab li:first-child a {
+  border-radius: 0.1875rem 0 0 0.1875rem;
+}
+
+#content-tab li:last-child a {
+  margin: 0;
+  border-radius: 0 0.1875rem 0.1875rem 0;
+}
+
+@media screen and (min-width: 40em) {
+  #content-tab li a {
+    padding: 0.9375rem 1.875rem;
+  }
+}
+
+/* Node
+---------------------------------*/
+.meta {
+ margin-bottom: 0.9375rem;
+}
+
+.node.basic .button.link {
+  padding-left: 0;
+}
+
+/* Breadcrumb
+---------------------------------*/
+#breadcrumb {
+  margin-bottom: 1.875rem;
+}
+
+/* Pager
+---------------------------------*/
+.pager { 
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.pager ul {
+  margin-top: -1px;
+}
+
+.pager ul a {
+  font-size: 0.75rem;
+  padding: 0.625rem;
+  text-transform: uppercase;
+}
+
+.pager ul a:hover,
+.pager ul .current a {
+  border-top-width: 1px;
+  border-top-style: solid;
+  background-color: transparent;
+}
+
+.pager ul .current {
+  padding: 0;  
+  background-color: transparent;
+}
+
+.pager.load-more {  
+  border-top: 0;
+}
+
+/* CLOSURE
+----------------------------------------------------------------*/
+#closure {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 0.9375rem 0;
+}
+
+/* SEARCH RESULT
+----------------------------------------------------------------*/
+.search-result ol li {
+  padding-bottom: 0.625rem;
+  margin-bottom: 1.25rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.search-result ol li:last-child {
+  border: none;
+}
+
+/* SHARE
+----------------------------------------------------------------*/
+.share a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  padding: 0; 
+  margin: 0 0.15625rem;
+  border-radius: 50%;
+  transition: background-color .25s ease-out;
+}
+
+.addtoany_list {
+  display: inline-block;
+  padding: 0 0.3125rem;
+}
+
+.addtoany_list a:hover span {
+  opacity: 1;
+}
+
+/* FILTER
+----------------------------------------------------------------*/
+.with-filter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  transition: opacity .5s ease-out;
+  background-color: inherit;
+}
+
+.with-filter > div {
+  position: relative;
+}
+
+.with-filter a {
+  color: inherit;
+}
+
+.with-filter a.button {
+  position: relative;
+  z-index: 1;
+}
+
+a.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* XLARGE
+----------------------------------------------------------------*/
+@media screen and (min-width: 75em) {
+  .xlarge-up-6 > .column, .xlarge-up-6 > .columns {
+    width: 16.66667%;
+    float: left; }
+  .xlarge-up-6 > .column:nth-of-type(1n), .xlarge-up-6 > .columns:nth-of-type(1n) {
+    clear: none; }
+  .xlarge-up-6 > .column:nth-of-type(6n+1), .xlarge-up-6 > .columns:nth-of-type(6n+1) {
+    clear: both; }
+  .xlarge-up-6 > .column:last-child, .xlarge-up-6 > .columns:last-child {
+    float: left; }
+}

@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_showcase_pattern
+field_name: field_showcase_pattern
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'pattern-1 a-0'
+      label: 'pattern 1.0 (hinge)'
+    -
+      value: 'pattern-1 a-1'
+      label: 'pattern 1.1 (hinge alter)'
+    -
+      value: 'pattern-1 a-2'
+      label: 'pattern 1.2 (slide)'
+    -
+      value: 'pattern-1 a-3'
+      label: 'pattern 1.3 (slide alter)'
+    -
+      value: 'pattern-1 a-4'
+      label: 'pattern 1.4 (scale)'
+    -
+      value: 'pattern-1 a-5'
+      label: 'pattern 1.5 (scale alter)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

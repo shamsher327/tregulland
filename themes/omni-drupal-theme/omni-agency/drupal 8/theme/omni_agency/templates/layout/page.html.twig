@@ -1,0 +1,282 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                           
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+<div id="page">  
+  <header id="header">
+    {% if page.secondary_menu %}
+      <div id="header-top" class="top-bar show-for-medium">        
+        <div id="menu-secondary" class="top-bar-right">
+          {{ page.secondary_menu }}
+        </div>
+      </div> 
+    {% endif %}
+    {% if omni_header_sticky == true %}
+      <div id="header-bottom" data-sticky-container>
+      {% if page.showcase %}
+        <div class="inner" data-sticky data-margin-top="0" data-top-anchor="main:top" data-btm-anchor="main:bottom">
+      {% else %}
+        <div class="inner" data-sticky data-margin-top="0" data-top-anchor="1" data-btm-anchor="main:bottom">
+      {% endif %}
+    {% else %}
+      <div id="header-bottom">
+      <div class="inner">
+    {% endif %}
+        <div class="expanded row collapse">
+          <div id="site-info" class="medium-7 large-3 column">        
+            {% if page.site_info %}          
+              {{ page.site_info }}
+            {% endif %}
+          </div> 
+          {% if page.primary_menu %}
+            {% if page.social_media or page.login or page.search %}
+              <div id="menu-primary" class="large-7 column show-for-large">
+                {{ page.primary_menu }}
+              </div>
+              <div id="menu-sub" class="medium-5 large-2 column">
+            {% else %}   
+              <div id="menu-primary" class="large-9 column show-for-large">
+                {{ page.primary_menu }}
+              </div>
+              <div id="menu-sub" class="medium-5 column hide-for-large">
+            {% endif %}  
+              {% if omni_menu_reveal == true and page.primary_menu_mobile %}
+                <div class="sub-item">
+                  <button class="icon-nav hide-for-large" type="button" title="Menu" data-toggle="menu-reveal"></button>
+                </div>
+              {% endif %}
+              {% if omni_menu_reveal == false and page.primary_menu_mobile %}
+                <div class="sub-item">
+                  <button class="icon-nav hide-for-large" type="button" title="Menu" data-toggle="item-menu"></button>
+                  <div id="item-menu" class="dropdown-pane" data-dropdown data-v-offset="0" data-h-offset="0">
+                    <div class="menu-arrow"></div>
+                    <div id="menu-mobile" class="text-center">             
+                      {{ page.primary_menu_mobile }}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+              {% if page.social_media %}
+                <div class="sub-item">
+                  <button class="icon-social" type="button" title="Social Media" data-toggle="item-social"></button>
+                  <div id="item-social" class="dropdown-pane" data-dropdown data-v-offset="0" data-h-offset="0">
+                    <div class="menu-arrow"></div>
+                    {{ page.social_media }}
+                  </div>
+                </div>
+              {% endif %}
+              {% if page.login %}
+                <div class="sub-item">
+                  <button class="icon-login" type="button" title="Log In" data-toggle="item-login"></button>
+                  <div id="item-login" class="dropdown-pane" data-dropdown data-auto-focus="true" data-v-offset="0" data-h-offset="0">
+                    <div class="menu-arrow"></div>
+                    {{ page.login }}
+                  </div>
+                </div>
+              {% endif %}
+              {% if page.search %}
+                <div class="sub-item">
+                  <button class="icon-search" type="button" title="Search" data-toggle="item-search"></button>
+                  <div id="item-search" class="dropdown-pane" data-dropdown data-auto-focus="true" data-v-offset="0" data-h-offset="0">
+                    <div class="menu-arrow"></div>
+                    {{ page.search }}
+                  </div>  
+                </div>
+              {% endif %} 
+            </div>            
+          {% endif %} 
+        </div>
+        <div class="full reveal fast" id="menu-reveal" data-reveal data-close-on-click="true" data-animation-in="scale-in-up" data-animation-out="scale-out-down">
+          <div class="row">
+            <div id="site-info-alter">        
+              {% if page.site_info %}          
+                {{ page.site_info }}
+              {% endif %}
+            </div>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            {% if page.primary_menu_mobile %}
+              <div id="menu-mobile" class="text-center">
+                <div class="menu-arrow"></div>             
+                {{ page.primary_menu_mobile }}
+              </div>
+            {% endif %} 
+          </div>
+        </div>
+      </div>
+    </div>  
+  </header>        
+  {% if page.showcase %}
+    <div id="showcase">
+      {{ page.showcase }}
+    </div>
+  {% endif %}
+  <div id="main">
+    {% if page.main_top or main_top_lower > 0 %}
+      <div id="main-top">
+        {% if page.main_top %}
+          <div id="main-top-upper">
+            {{ page.main_top }} 
+          </div>
+        {% endif %}
+        {% if main_top_lower > 0 %}
+          {% if main_top_lower == 2 %}
+            <div id="main-top-lower" class="row small-up-1 medium-up-2" data-equalizer>
+          {% elseif main_top_lower == 3 or main_top_lower == 4 %}
+            <div id="main-top-lower" class="row small-up-1 medium-up-2 large-up-{{main_top_lower}}" data-equalizer>
+          {% else %}
+            <div id="main-top-lower" class="row small-up-1" data-equalizer>
+          {% endif %}
+            {% if page.main_top_one %}
+              <div class="column">
+                {{ page.main_top_one }}
+              </div>
+            {% endif %}
+            {% if page.main_top_two %}
+              <div class="column">
+                {{ page.main_top_two }}
+              </div>
+            {% endif %}
+            {% if page.main_top_three %}
+              <div class="column">
+                {{ page.main_top_three }}
+              </div>
+            {% endif %}
+            {% if page.main_top_four %}
+              <div class="column">
+                {{ page.main_top_four }}
+              </div>
+            {% endif %} 
+          </div>    
+        {% endif %}   
+      </div> 
+    {% endif %}
+    <div id="main-middle" class="row">
+      <div id="primary" class="{{primary_width}}column">
+        {% if page.breadcrumb %}
+          {{ page.breadcrumb }}
+        {% endif %}
+        {% if page.highlighted %}            
+          <div id="highlight">
+            {{ page.highlighted }}
+          </div>
+        {% endif %}
+        <div id="content" class="clearfix">
+          {{ page.content }}
+        </div>                
+      </div>                        
+      {% if page.sidebar_secondary %}
+        <div id="secondary" class="medium-4 large-2 column sidebar">
+          {{ page.sidebar_secondary }}
+        </div>
+      {% endif %}
+      {% if page.sidebar_tertiary %}
+        <div id="tertiary" class="large-4 column sidebar">
+          {{ page.sidebar_tertiary }}
+        </div>
+      {% endif %}
+    </div>   
+    {% if page.main_bottom or main_bottom_lower > 0 %}
+      <div id="main-bottom">
+        {% if page.main_bottom %}
+          <div id="main-bottom-upper">
+            {{ page.main_bottom }} 
+          </div>
+        {% endif %}
+        {% if main_bottom_lower > 0 %}
+          {% if main_bottom_lower == 2 %}
+            <div id="main-bottom-lower" class="row small-up-1 medium-up-2" data-equalizer>
+          {% elseif main_bottom_lower == 3 or main_bottom_lower == 4 %}
+            <div id="main-bottom-lower" class="row small-up-1 medium-up-2 large-up-{{main_bottom_lower}}" data-equalizer>
+          {% else %}
+            <div id="main-bottom-lower" class="row small-up-1" data-equalizer>
+          {% endif %}
+            {% if page.main_bottom_one %}
+              <div class="column">
+                {{ page.main_bottom_one }}
+              </div>
+            {% endif %}
+            {% if page.main_bottom_two %}
+              <div class="column">
+                {{ page.main_bottom_two }}
+              </div>
+            {% endif %}
+            {% if page.main_bottom_three %}
+              <div class="column">
+                {{ page.main_bottom_three }}
+              </div>
+            {% endif %}
+            {% if page.main_bottom_four %}
+              <div class="column">
+                {{ page.main_bottom_four }}
+              </div>
+            {% endif %} 
+          </div>    
+        {% endif %}   
+      </div> 
+    {% endif %}    
+  </div> 
+  
+  {% if page.footer or footer_lower > 0 or page.closure %}
+    <footer id="footer">
+      {% if page.footer %}
+        <div id="footer-upper">
+          {{ page.footer }} 
+        </div>
+      {% endif %}
+      {% if footer_lower > 0 %}
+        {% if footer_lower == 2 %}
+          <div id="footer-lower" class="row small-up-1 medium-up-2" data-equalizer>
+        {% elseif footer_lower == 3 or footer_lower == 4 %}
+          <div id="footer-lower" class="row small-up-1 medium-up-2 large-up-{{footer_lower}}" data-equalizer>
+        {% else %}
+          <div id="footer-lower" class="row small-up-1" data-equalizer>
+        {% endif %}
+          {% if page.footer_one %}
+            <div class="column">
+              {{ page.footer_one }}
+            </div>
+          {% endif %}
+          {% if page.footer_two %}
+            <div class="column">
+              {{ page.footer_two }}
+            </div>
+          {% endif %}
+          {% if page.footer_three %}
+            <div class="column">
+              {{ page.footer_three }}
+            </div>
+          {% endif %}
+          {% if page.footer_four %}
+            <div class="column">
+              {{ page.footer_four }}
+            </div>
+          {% endif %} 
+        </div>    
+      {% endif %} 
+      <div id="closure">
+        <div class="row">
+          <div class="large-8 column">
+            {{ page.closure }}
+          </div>
+          <div class="large-4 column show-for-large">
+            <ul class="menu align-right"><li><a href="http://www.esors.com" title="Drupal theme" class="design-by">Drupal theme by esors</a></li></ul>
+          </div>
+        </div>
+      </div>  
+    </footer>
+  {% endif %}  
+</div>

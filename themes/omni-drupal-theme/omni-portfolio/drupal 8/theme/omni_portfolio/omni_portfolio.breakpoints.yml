@@ -1,0 +1,24 @@
+omni_portfolio.small:
+  label: small
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+omni_portfolio.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 40em) and (max-width: 63.9375em)'
+  weight: 1
+  multipliers:
+    - 1x
+omni_portfolio.large:
+  label: large
+  mediaQuery: 'all and (min-width: 64em) and (max-width: 74.9375em)'
+  weight: 2
+  multipliers:
+    - 1x
+omni_portfolio.xlarge:
+  label: xlarge
+  mediaQuery: 'all and (min-width: 75em)'
+  weight: 3
+  multipliers:
+    - 1x

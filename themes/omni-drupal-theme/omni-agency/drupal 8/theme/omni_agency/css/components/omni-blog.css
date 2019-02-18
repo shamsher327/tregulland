@@ -1,0 +1,126 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                            
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMON
+----------------------------------------------------------------*/
+.blog > header {
+  padding-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+}
+
+.blog .meta  { 
+  text-transform: uppercase;
+}
+
+.blog .comment-count  {
+  font-size: 0.875rem;
+} 
+
+.blog .share {
+  text-align: center;
+}
+
+.blog .image-default img {
+  width: 100%;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  .blog .content {
+    font-size: 1.125rem;
+  }
+}
+
+/* TEASER
+----------------------------------------------------------------*/
+.blog.teaser {
+  padding-bottom: 3.125rem;
+  margin-bottom: 4.375rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.blog.teaser .share {
+  margin-bottom: -4.5rem;
+}
+
+.blog.teaser .link.button {
+  letter-spacing: 0.1875rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* FULL
+----------------------------------------------------------------*/
+.blog.full > header {
+  margin-bottom: 2.5rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.blog.full .share a {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.625rem;
+}
+
+.blog.full .sticky {
+  width: 100%;
+  padding: 0 1.25rem;
+}
+
+.blog.full .user-picture {
+  margin-bottom: 1.25rem;
+}
+
+.blog.full .user-picture img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.blog.full .author,
+.blog.full .links,
+.blog.full .term {
+  margin-bottom: 1.25rem;
+}
+
+.blog.full .author {
+  display: block;
+}
+
+.blog.full .meta .links {
+  list-style: none;
+}
+
+.blog.full .meta .links li {
+  padding: 0.625rem 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.blog.full .content {
+  margin-bottom: 2.5rem;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  .blog.full .share a {
+    display: block;
+  }
+}

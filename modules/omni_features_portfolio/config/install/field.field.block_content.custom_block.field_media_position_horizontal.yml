@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_media_position_horizontal
+  module:
+    - options
+id: block_content.custom_block.field_media_position_horizontal
+field_name: field_media_position_horizontal
+entity_type: block_content
+bundle: custom_block
+label: 'Horizontal Position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,126 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* PAGE
+----------------------------------------------------------------*/
+.page-article .row {
+  padding: 0 0.9375rem;
+}
+
+/* TEASER
+----------------------------------------------------------------*/
+.article.teaser {
+  padding: 1.875rem 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.article.teaser .title {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.article.teaser .content {
+  font-size: 0.9375rem;
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+
+.article.teaser .button {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .article.teaser .title {
+    font-size: 1.9375rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .article.teaser .content {    
+    margin-bottom: 1.875rem;
+  }
+}
+
+/* FULL
+----------------------------------------------------------------*/
+.article.full > header {
+  margin-bottom: 3.75rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;  
+}
+
+.article.full > header .title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.article.full > header .meta.submit {
+  padding-left: 1.25rem;
+  margin-bottom: -2.125rem;
+  text-align: left;
+}
+
+.article.full > header .meta.submit .wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 1.25rem;
+}
+
+.article.full > header .user-picture {
+  display: inline-block;
+  padding-right: 1.25rem;
+}
+
+.article.full > header .user-picture img {
+  width: 80px;
+  height: 80px;
+  padding: 0.9375rem;
+}
+
+.article.full #content-main {  
+  margin-bottom: 1.875rem;
+}
+
+.article.full #content-main .image-default img {
+  width: 100%;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  .article-body .body-left > .inner {
+    padding: 0 1.875rem;
+  }
+
+  .article.full #content-main > .inner p {
+    margin-bottom: 1.875rem;
+  }
+
+  .article.full > header .title {
+    font-size: 3rem;
+  }
+
+  .article.full > header .user-picture img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .article.full > header .title {
+    font-size: 4rem;
+  }
+}

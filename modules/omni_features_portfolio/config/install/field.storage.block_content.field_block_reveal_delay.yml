@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_block_reveal_delay
+field_name: field_block_reveal_delay
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: delay-1000
+      label: '1000 (milliseconds)'
+    -
+      value: delay-2000
+      label: '2000'
+    -
+      value: delay-3000
+      label: '3000'
+    -
+      value: delay-4000
+      label: '4000'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

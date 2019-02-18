@@ -1,0 +1,54 @@
+name: Omni Agency
+type: theme
+description: ''
+package: Custom
+version: 8.x-1.0
+core: 8.x
+
+libraries:
+  - core/normalize
+  - omni_agency/scrollreveal
+  - omni_agency/foundation
+  - omni_agency/slick
+  - omni_agency/global-styling
+  - omni_agency/global-script
+  
+regions:  
+  site_info: 'Site info'
+  primary_menu: 'Menu main'
+  primary_menu_mobile: 'Menu mobile'
+  secondary_menu: 'Menu secondary'
+  social_media: 'Social media'
+  login: 'Login'
+  search: 'Search'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'    
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted  
+
+  showcase: 'Showcase'
+
+  main_top: 'Main top'
+  main_top_one: 'Main top - one'
+  main_top_two: 'Main top - two'
+  main_top_three: 'Main top - three'
+  main_top_four: 'Main top - four'
+
+  content: 'Main middle - primary content' 
+  sidebar_secondary: 'Main middle - secondary sidebar '
+  sidebar_tertiary: 'Main middle - tertiary sidebar '
+
+  main_bottom: 'Main bottom'
+  main_bottom_one: 'Main bottom - one'
+  main_bottom_two: 'Main bottom - two'
+  main_bottom_three: 'Main bottom - three'
+  main_bottom_four: 'Main bottom - four'
+
+  footer: 'Footer'
+  footer_one: 'Footer - one'
+  footer_two: 'Footer - two'
+  footer_three: 'Footer - three'
+  footer_four: 'Footer - four'
+  
+  closure: 'Closure'
+  usable: 'Usable'

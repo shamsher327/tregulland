@@ -1,0 +1,13 @@
+name: tregullandandcowhite
+type: theme
+description: 'A White Subtheme of Bootstrap'
+version: VERSION
+core: 8.x
+base theme: bootstrap
+stylesheets:
+  all:
+    - css/style.css
+
+libraries:
+  - tregullandandcowhite/base
+  - tregullandandcowhite/fonts

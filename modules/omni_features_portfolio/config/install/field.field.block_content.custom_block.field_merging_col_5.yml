@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - block_content.type.custom_block_element
+    - field.storage.block_content.field_merging_col_5
+id: block_content.custom_block.field_merging_col_5
+field_name: field_merging_col_5
+entity_type: block_content
+bundle: custom_block
+label: 'Column 5'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      custom_block_element: custom_block_element
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

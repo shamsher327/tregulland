@@ -1,0 +1,36 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#} 
+{% set image %}{{ fields['field_image_thumbnail'].content|raw }}{% endset %}
+{% set filter %}{{ fields['field_filter'].content }}{% endset %}
+
+{% if 'no result' not in filter|render  %}      
+  {% set filter %} with-filter {{ filter }}{% endset %}
+{% else %}
+  {% set filter %}{% endset %}
+{% endif %}
+
+<div class="image-default{{ filter }}" style="{{ background_image(image) }}">{{ fields['view_node'].content }}</div>
+{% if fields['field_category'].content %}
+  <span class="term">{{ fields['field_category'].content }}</span>
+{% endif %}
+<div class="content">
+  <div class="meta">  
+     <span class="date">{{ fields['created'].content }}</span>
+  </div>
+  <h4>{{ fields['title'].content }}</h4>
+  <div class="summary">{{ fields['body'].content }}</div>		  
+</div>

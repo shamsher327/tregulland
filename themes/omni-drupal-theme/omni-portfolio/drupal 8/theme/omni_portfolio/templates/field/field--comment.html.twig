@@ -1,0 +1,46 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+<section id="comment">
+  <ul class="tabs" data-tabs id="comment-tabs">
+    {% if comments %}
+      <li class="tabs-title is-active"><a href="#comment-post" aria-selected="true">{{ 'Comments'|t }}</a></li>
+      <li class="tabs-title"><a href="#comment-box">{{ 'Join the conversation'|t }}</a></li>
+    {% else %}
+      <li class="tabs-title is-active"><a href="#comment-box" aria-selected="true">{{ 'Join the conversation'|t }}</a></li>
+    {% endif %}    
+  </ul>
+  <div class="tabs-content" {{ attributes }} data-tabs-content="comment-tabs">
+    {% if comments %}  
+      <div id="comment-post" class="tabs-panel is-active">
+        <div class="comments">
+          {{ comments }}
+        </div>
+      </div>
+      {% if comment_form %}
+        <div id="comment-box" class="tabs-panel">
+          {{ comment_form }}
+        </div>
+      {% endif %}
+    {% else %}
+      {% if comment_form %}
+        <div id="comment-box" class="tabs-panel is-active">
+          {{ comment_form }}
+        </div>
+      {% endif %}
+    {% endif %}  
+  </div>
+</section>

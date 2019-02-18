@@ -1,0 +1,122 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.showcase_element
+    - field.field.block_content.showcase_element.body
+    - field.field.block_content.showcase_element.field_background_filter
+    - field.field.block_content.showcase_element.field_background_image
+    - field.field.block_content.showcase_element.field_category
+    - field.field.block_content.showcase_element.field_link
+    - field.field.block_content.showcase_element.field_showcase_pattern
+    - field.field.block_content.showcase_element.field_showcase_type
+    - field.field.block_content.showcase_element.field_title
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_background:
+      children:
+        - field_background_image
+        - field_background_filter
+      parent_name: group_general_setting
+      weight: 4
+      label: Background
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_general_setting:
+      children:
+        - field_title
+        - body
+        - group_background
+        - group_link
+        - field_showcase_pattern
+        - field_category
+      parent_name: ''
+      weight: 1
+      label: 'General Setting'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_link:
+      children:
+        - field_link
+        - field_button
+      parent_name: group_general_setting
+      weight: 5
+      label: Link
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: block_content.showcase_element.default
+targetEntityType: block_content
+bundle: showcase_element
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_background_filter:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_background_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_category:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_link:
+    weight: 14
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_showcase_pattern:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_showcase_type: true

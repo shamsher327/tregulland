@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_background_repeat
+  module:
+    - options
+id: block_content.custom_block.field_background_repeat
+field_name: field_background_repeat
+entity_type: block_content
+bundle: custom_block
+label: Repeat
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: no-repeat
+default_value_callback: ''
+settings: {  }
+field_type: list_string

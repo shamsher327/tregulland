@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.showcase_element
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.showcase_element.body
+field_name: body
+entity_type: block_content
+bundle: showcase_element
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

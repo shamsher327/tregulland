@@ -1,0 +1,326 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* MENU PRIMARY
+----------------------------------------------------------------*/
+#menu-primary {
+  height: 60px;
+}
+
+.with-showcase #menu-primary {
+  padding-top: 2.5rem;
+  height: 100px;
+}
+
+#menu-primary a {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 2;
+  padding: 1rem 1.5rem;
+}
+
+#menu-primary a::after {
+  display: block;
+  content: "";
+  border: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid; 
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  transition: transform 0.35s ease-in-out;
+}
+
+#menu-primary a:hover::after {
+  transform: scaleX(1);
+}
+
+#menu-primary .submenu {
+  min-width: 225px;
+  border: 0;
+  border-radius: 5px;
+}
+
+#menu-primary .submenu.first-sub {
+  top: 60px;
+}
+
+.without-showcase #menu-primary .submenu.first-sub {
+  top: 70px;
+}
+
+#menu-primary .submenu a {
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.1875rem;
+  padding: 1rem 1.5rem;  
+}
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a::before,
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right>a::before {
+  position: absolute;  
+  content: '+';
+  right: 5px;
+  top: 15px;
+  border: 0;
+}
+
+#menu-primary ul ul .is-dropdown-submenu-parent a::before {
+  right: 15px;
+}
+
+.is-dropdown-submenu .is-dropdown-submenu {
+  margin-top: 0;
+}
+
+.menu-arrow::before {
+  position: absolute;
+  left: 25px;
+  top: -24px;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-family: FontAwesome; 
+  font-size: 1.5rem;
+  content: '\f0d8';
+  text-align: center;
+}
+
+.is-dropdown-submenu-parent.opens-right>.is-dropdown-submenu {
+  left: calc(100% + 15px);
+}
+
+#menu-primary ul ul ul .menu-arrow::before {
+  left: -13px;
+  top: 10px;
+  content: '\f0d9';
+}
+
+/* MENU SECONDARY
+----------------------------------------------------------------*/
+#menu-secondary {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;  
+}
+
+#menu-secondary h2 {
+  display: none;
+}
+
+#menu-secondary ul {
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+#menu-secondary a {
+  font-size: 0.75rem;
+  padding: 1.125rem 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.0625rem;
+}
+
+#menu-secondary .fa {
+  display: block;
+  font-size: 1.5rem;
+  padding-bottom: 0.625rem;
+  vertical-align: middle;
+}
+
+#menu-secondary .column:first-child li {
+  position: relative;
+}
+
+#menu-secondary .column:first-child li::after {
+  position: absolute;
+  content: '';
+  left: auto;
+  right: -1px;
+  top: 50%;
+  width: 1px;
+  height: 10px;
+  margin-top: -5px;
+}
+
+#menu-secondary .column:last-child a {
+  padding: 1.125rem 0.625rem;
+}
+
+#menu-secondary .column:last-child .fa {
+  padding: 0;
+}
+
+#menu-secondary .column:last-child li:first-child,
+#menu-secondary.is-stuck .column:last-child li:last-child {
+  display: none;
+}
+
+#menu-secondary.is-stuck .column:last-child li:first-child {
+  display: block;
+}
+
+/*@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  #menu-secondary .column:last-child li a {
+    padding-top: 1.75rem;
+  }
+}*/
+
+@media screen and (min-width: 64em) {
+  #menu-secondary .fa {
+    display: inline-block;
+    padding: 0 1.25rem 0  0;
+  }
+
+  #menu-secondary .column:last-child a {
+    padding: 1.125rem 1rem;
+  }
+}
+
+/* MENU MOBILE
+----------------------------------------------------------------*/
+#reveal-menu {
+  top: 0 !important;
+  padding: 1.875rem 0;
+}
+
+#reveal-menu .close-button {
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+#reveal-menu-mobile .menu-row {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+#reveal-menu-mobile .menu-column {
+  display: table-cell;
+  border-width: 1px;
+  border-style: solid;
+  border-top-width: 0;
+  border-left-width: 0;
+  vertical-align: middle;
+}
+
+#reveal-menu-mobile .menu-row:last-child .menu-column {
+  border-bottom: 0;
+}
+
+#reveal-menu-mobile .menu-column:last-child {
+  border-right: 0;
+}
+
+#reveal-menu-mobile .menu-column a {
+  display: block;
+  padding: 1.25rem;
+  height: 100%;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  transition: all 0.5s ease-in-out;
+}
+
+#reveal-menu-mobile .menu-column span {
+  display: block;
+  font-size: 2rem;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  #reveal-menu {
+    padding: 1.875rem;
+  }
+
+  #reveal-menu-mobile .menu-column span {
+    font-size: 2.5rem;
+  }
+}
+
+/* MENU SUB
+----------------------------------------------------------------*/
+#menu-sub {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#menu-sub ul {
+  display: inline-block;
+}
+
+#menu-sub li.menu-text {
+  padding: 0;
+}
+
+#menu-sub .search {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  #menu-sub ul {
+    padding-top: 0.3125rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  #menu-sub ul {
+    padding-top: 0.75rem;
+  }
+
+  #menu-sub a.login {
+    padding-left: 1.875rem;
+    padding-right: 0.3125rem;
+    border-width: 1px;
+    border-style: solid;
+    border-right-width: 0;
+  }
+
+  #menu-sub a.register {
+    padding-left: 0.3125rem;
+    padding-right: 1.875rem;
+    border-width: 1px;
+    border-style: solid;
+    border-left-width: 0;
+  }
+
+  #menu-sub li.menu-text {
+    padding: 0 0.3125rem;
+    border-width: 1px;
+    border-style: solid;
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+}
+
+/* REVEAL MENU SUB
+----------------------------------------------------------------*/
+#reveal-menu-sub a {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+
+#reveal-menu-sub a span {
+  padding-right: 0.625rem;
+}
+
+/* OTHERS
+----------------------------------------------------------------*/
+nav h2 {
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.1875rem;
+}

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main-mobile
+  module:
+    - system
+  theme:
+    - omni_portfolio
+id: mainnavigationmobile
+theme: omni_portfolio
+region: primary_menu_mobile
+weight: -9
+provider: null
+plugin: 'system_menu_block:main-mobile'
+settings:
+  id: 'system_menu_block:main-mobile'
+  label: 'Main navigation mobile'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

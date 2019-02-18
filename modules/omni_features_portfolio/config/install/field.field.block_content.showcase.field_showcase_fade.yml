@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.showcase
+    - field.storage.block_content.field_showcase_fade
+id: block_content.showcase.field_showcase_fade
+field_name: field_showcase_fade
+entity_type: block_content
+bundle: showcase
+label: Fade
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: fade
+  off_label: 'Off'
+field_type: boolean

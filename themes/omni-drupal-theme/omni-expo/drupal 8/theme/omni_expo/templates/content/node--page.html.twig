@@ -1,0 +1,55 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#} 
+{% if not page %}
+  <article{{ attributes.addClass('node page article teaser clearfix') }}>
+    <header>
+      {{ title_prefix }}
+        <h2 class="title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+      {{ title_suffix }} 
+    </header>
+    <div class="content">
+      {{ content|without('comment', 'links') }}
+    </div>   
+    <a href="{{ url }}" class="button">{{ 'READ MORE'|t }}</a>    
+  </article>
+{% else %}
+  <article{{ attributes.addClass('node page article full clearfix') }}>
+    <header class="text-center">
+      <div class="row">
+        <div class="small-centered large-8 column">
+          <h1 class="title">{{ label }}</h1>          
+        </div>
+      </div>
+    </header>
+    <div class="content row">
+      <div class="small-centered large-8 column">
+        <div class="inner">
+          <div id="content-main">    
+            {{ content|without('comment', 'links') }}
+            {% if content.links %}
+              <div class="links">
+                <div class="title"><h3>{{ 'links'|t }}</h3></div>                        
+                {{ content.links }}       
+              </div>
+            {% endif %}
+          </div> 
+          {{ content.comment }}
+        </div>
+      </div>
+    </div>
+  </article>
+{% endif %}

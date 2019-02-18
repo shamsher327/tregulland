@@ -1,0 +1,451 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Omni Basic Setup</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/typography.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="page">
+    <div id="main">
+	  <h1>2. Omni 7.x Basic Setup</h1> 
+
+<!-- INTRO REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	  
+<div class="content clearfix">
+  <h2>Introduction</h2>
+  <p>Thank you for purchasing ESORS's Drupal theme - Omni Magazine. Omni theme build for Drupal natively, not repack from other CMS platform. We reduce third party modules usage by using Drupal Content Type and Views so you can have a clean and less stress start.</p>
+  <p>For Drupal beginner, we wrote a <a href='1. Drupal 7 Quick Start.html'>short tutorial</a> to help you find your way around Drupal and quickly pass Drupal learning curve. If you already know Drupal, you can continue with following section.</p>
+  <div class="typo-alert"><b>In order for Omni theme function correctly, you need to complete the <a href="#omni-basic-intro">Basic Configuration</a> (<span class="pink-raspberry"><i>30 minutes</i></span>) section.</b></div>
+  <p>For <b>support</b>, you can contact us through themeforest.net. We will respond within 24hrs.</p>
+</div>
+      
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- TABLE OF CONTENT REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	 
+<div class="content clearfix">
+  <h2>Table of Content</h1>
+  <div>
+    <p>
+      <ul>
+        <li><a href="#omni-basic-intro">Introduction</a></li>
+        <li><a href="#omni-basic-file">Theme Pack Folder Structure</a></li>
+        <li><a href="#omni-basic-install">Installation</a></li>
+        <li>
+          <a href="#omni-basic-config">Basic Configuration</a>
+          <ol>
+            <li>Enable required modules</li>
+            <li>Configure Statistics</li>
+            <li>Configure AddToAny</li>
+            <li>Configure jQuery Update</li>
+            <li>Check & modify Content Type</li>
+            <li>Set taxonomy terms</li>
+            <li>Check views</li>
+            <li>Check Image Style</li>
+            <li>Setup avatar</li>
+            <li>Publish main menu</li>
+            <li>Change permission</li>
+            <li>Omni Magazine theme setting</li>
+          </ol>
+        </li>        
+        <li><a href="#omni-basic-image">Image Size</a></li>
+        <li><a href="#omni-basic-map">Block Regions Map</a></li>
+      </ul>
+    </p>
+  </div>
+</div>
+  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- BASIC SETUP REGION 
+---------------------------------------------------------------->
+<div class="divider"></div>
+<div class="content clearfix">
+  <h2>Omni Basic Setup</h1>
+
+<!-- Introduction
+------------------------------->
+
+  <div id="omni-basic-intro" class="section">
+    <h3>- Introduction</h3>
+    <p>In this section, we will show you some basic setup steps that Omni theme need. By using this guide, we assume you have basic knowledge of Drupal and have Drupal 7.x installed on your system.
+    </p>		  
+  </div>
+
+<!-- File Structure
+------------------------------->
+  
+  <div id="omni-basic-file" class="section">
+    <h3>- Theme Pack Folder Structure</h3>
+    <p>
+      <ul class="typo-arrow-alter">
+        <li>omni: theme files folder
+          <ul>
+            <li>omni_magazine: this is the actual theme, please upload this folder to your server.</li>
+          </ul>
+        </li>
+        <li>licensing</li>
+        <li>modules: all required modules for Omni Drupal theme.</li>
+        <li>document
+          <ul>
+            <li>user guide</li>
+            <li>views: importable view files for backup</li>
+          </ul>
+        </li>
+        <li>README.txt</li>
+      </ul>
+    </p> 
+  </div>
+
+<!-- Installation
+------------------------------->  
+
+  <div id="omni-basic-install" class="section">
+    <h3>- Installation</h3>
+    <p>There is a modules folder within the download package which include all necessary modules for this theme. Only package included version of modules were tested for compatibility. If new version released please backup before upgrade since it might not be compatible.</p>
+    <p>Please install Omni Magazine theme and following Modules (If you don't know how to install Drupal theme, please check our <a href='1. Drupal 7 Quick Start.html'>Drupal Quick Start</a> guide):
+      <ul class="typo-checklist">
+        <li><a href="http://drupal.org/project/blockreference" target="_blank">Block reference 7.x-2.2</a></li>
+        <li><a href="http://drupal.org/project/ctools" target="_blank">Chaos tool suite (ctools) 7.x-1.9</a></li>
+        <li><a href="http://drupal.org/project/entity" target="_blank">Entity API 7.x-1.6</a></li>
+        <li><a href="http://drupal.org/project/entityreference" target="_blank">Entity reference 7.x-1.1</a></li>
+        <li><a href="http://drupal.org/project/features" target="_blank">Features 7.x-2.7</a></li>
+        <li><a href="http://drupal.org/project/field_group" target="_blank">Field Group 7.x-1.4</a></li>
+        <li><a href="http://drupal.org/project/inline_entity_form" target="_blank">Inline Entity Form 7.x-1.6</a></li>
+        <li><a href="http://drupal.org/project/jquery_update" target="_blank">jQuery Update 7.x-2.7</a></li>
+        <li><a href="http://drupal.org/project/addtoany" target="_blank">Share Buttons by AddToAny 7.x-4.10</a></li>
+        <li><a href="http://drupal.org/project/views" target="_blank">Views 7.x-3.13</a></li>
+        <li>Omni Custom 7.x-1.0</li>
+        <li>Omni Features 7.x-1.0: simply import all content types & views for Omni theme. Available within download files.</li>
+      </ul>
+    </p>		 
+  </div>
+
+<!-- Basic Configuration
+------------------------------->
+
+  <div id="omni-basic-config" class="section">
+    <h3>- Basic Configuration</h3>
+    <div class="section">
+      <div class="typo-alert"><p>You need to do <b>ALL</b> the following steps, even if you think you might not need it for now.</p></div>      
+    </div>
+    <div class="section">
+      <h3>1. Enable required modules <span class="red-alizarin">BY ORDER!</span></h3>
+      <p>Go to Modules page:</p>
+      <p>
+        <ol>
+          <li>Enable modules <b>Chaos tools</b> and <b>Bulk Export</b> then click <b>Save Configuration</b></li>
+          <li>Enable modules <b>Entity API</b> and <b>Entity tokens</b> then click <b>Save Configuration</b></li>
+          <li>Enable modules <b>Block reference</b>, <b>Entity Reference</b>, <b>Field Group</b> and <b>Inline Entity Form</b> then click <b>Save Configuration</b></li>
+          <li>Enable modules <b>jQuery Update</b>, <b>Views</b> and <b>Views UI</b> then click <b>Save Configuration</b></li>
+          <li>Enable modules <b>Blog</b>, <b>Statistics</b>, <b>AddToAny</b>, <b>Omni Custom</b> and <b>Features</b> then click <b>Save Configuration</b></li>
+          <li>Enable modules <b>Omni Features</b> (take longer to install), and <b>Forum</b> then click <b>Save Configuration</b></li>
+        </ol>
+      </p>
+    </div>
+    <div class="section">
+      <h3>2. Configure Statistics</h3>
+      <p>Go back to Modules page and find <b>Statistics</b> module then click on <b>Configure</b> link</p>
+      <p>
+        <ul>
+          <li>Check <b>Count content views</b> box then click <b>Save Configuration</b></li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>3. Configure AddToAny</h3>
+      <p>Go back to Modules page and find <b>AddToAny</b> module then click on <b>Configure</b> link</p>
+      <p>
+        <ul>
+          <li>Change <b>Icon size</b> to 16 pixels</li>
+          <li>Adding <b>Service Buttons</b> HTML code
+            <div class="typo-tip">
+              &lt;a class="a2a_button_facebook"&gt;&lt;span class="fa fa-facebook"&gt;&lt;/span&gt;&lt;/a&gt;</br>
+              &lt;a class="a2a_button_twitter"&gt;&lt;span class="fa fa-twitter"&gt;&lt;/span&gt;&lt;/a&gt;</br>
+              &lt;a class="a2a_button_google_plus"&gt;&lt;span class="fa fa-google-plus"&gt;&lt;/span&gt;&lt;/a&gt;</br>
+              &lt;a class="a2a_button_pinterest"&gt;&lt;span class="fa fa-pinterest-p"&gt;&lt;/span&gt;&lt;/a&gt;
+            </div>
+          </li>
+          <li>Check <b>Service Buttons placement</b> as <b>Before the universal sharing button</b></li>
+          <li>Check <b>Universal Button</b> as <b>None</b></li>
+          <li>Open <b>Placement</b> and check only <b>Article</b>, <b>Blog entry</b>, <b>Display for node teasers</b>, <b>Display in link section</b>, <b>Display in content section</b></li>
+          <li>Click <b>Save Configuration</b></li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>4. Configure jQuery Update</h3>
+      <p>Go back to Modules page and find <b>jQuery Update</b> module then click on <b>Configure</b> link</p>
+      <p>
+        <ul>
+          <li>Make sure <b>Default jQuery Version</b> as 1.10</li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>5. Check & modify Content Type</h3>
+      <p>Go to Structure > Content types. After all required modules installed, you should see 10 content types:</p>
+      <p>
+        <ol>
+          <li>Article: we need to add an existing field to this content type
+            <ul>
+              <li>Click on <b>manage fields</b> link</li>   
+              <li>At <b>Add existing field</b> section, find and select <b>field_section</b> from list selection</li>
+              <li>Click <b>Save</b> and continue</li>
+              <li>At setting page, keep it as it is and click <b>Save Setting</b></li>
+              <li>Back to <b>manage fields</b>, reorder fields as Title > Section > Tags > Images > Body</li>
+              <li>Click <b>Save</b></li>
+              <li>Click on <b>manage display</b> link</li> 
+              <li>Make sure fields show as below for both default & teaser. Image should set to Original image style.
+                <p><img src="images/pic_5.jpg" class="framed"></p>
+                <p><img src="images/pic_6.jpg" class="framed"></p>              
+              </li>
+              <li>Complete</li>
+            </ul>           
+          </li>
+          <li>Basic page</li>
+          <li>Block
+            <ul>
+              <li>Click on <b>edit</b> link</li>   
+              <li>At <b>Publishing options</b> tab, uncheck <b>Promoted to front page</b></li>  
+              <li>At <b>Display settings</b> tab, uncheck <b>Display author and date information</b></li>  
+              <li>At <b>Comment settings</b> tab, select <b>Closed</b></li>
+            </ul>
+          </li>
+          <li>Block element</li>
+            <ul>
+              <li>Click on <b>edit</b> link</li>   
+              <li>At <b>Publishing options</b> tab, uncheck <b>Promoted to front page</b></li>  
+              <li>At <b>Display settings</b> tab, uncheck <b>Display author and date information</b></li>  
+              <li>At <b>Comment settings</b> tab, select <b>Closed</b></li>
+            </ul>
+          <li>Blog entry: we need to add two existing fields to this content type
+            <ul>
+              <li>Click on <b>manage fields</b> link</li>   
+              <li>At <b>Add existing field</b> section, find and select <b>field_tags</b> from list selection</li>
+              <li>Click <b>Save</b> and continue</li>
+              <li>At setting page, keep it as it is and click <b>Save Setting</b></li>
+              <li>Back to <b>manage fields</b>, at <b>Add existing field</b> section, find and select <b>field_image</b> from list selection</li>
+              <li>Click <b>Save</b> and continue</li>
+              <li>At setting page, keep it as it is and click <b>Save Setting</b></li>
+              <li>Back to <b>manage fields</b>, reorder fields as Title > Tags > Images > Body</li>
+              <li>Click <b>Save</b></li>
+              <li>Click on <b>manage display</b> link</li> 
+              <li>Make sure fields show as below for both default & teaser 
+                <p><img src="images/pic_7.jpg" class="framed"></p>
+                <p><img src="images/pic_8.jpg" class="framed"></p>    
+              <li>Complete</li>
+            </ul> 
+          </li>
+          <li>Forum topic</li>
+          <li>Mega menu</li>
+            <ul>
+              <li>Click on <b>edit</b> link</li>   
+              <li>At <b>Publishing options</b> tab, uncheck <b>Promoted to front page</b></li>  
+              <li>At <b>Display settings</b> tab, uncheck <b>Display author and date information</b></li>  
+              <li>At <b>Comment settings</b> tab, select <b>Closed</b></li>
+            </ul>
+          <li>Mega menu element</li>
+            <ul>
+              <li>Click on <b>edit</b> link</li>   
+              <li>At <b>Publishing options</b> tab, uncheck <b>Promoted to front page</b></li>  
+              <li>At <b>Display settings</b> tab, uncheck <b>Display author and date information</b></li>  
+              <li>At <b>Comment settings</b> tab, select <b>Closed</b></li>
+            </ul>
+          <li>Showcase</li>
+            <ul>
+              <li>Click on <b>edit</b> link</li>   
+              <li>At <b>Publishing options</b> tab, uncheck <b>Promoted to front page</b></li>  
+              <li>At <b>Display settings</b> tab, uncheck <b>Display author and date information</b></li>  
+              <li>At <b>Comment settings</b> tab, select <b>Closed</b></li>
+            </ul>
+          <li>Showcase element</li>
+            <ul>
+              <li>Click on <b>edit</b> link</li>   
+              <li>At <b>Publishing options</b> tab, uncheck <b>Promoted to front page</b></li>  
+              <li>At <b>Display settings</b> tab, uncheck <b>Display author and date information</b></li>  
+              <li>At <b>Comment settings</b> tab, select <b>Closed</b></li>
+            </ul>
+        </ol>
+      </p>
+    </div>
+    <div class="section">
+      <h3>6. Set taxonomy terms</h3>
+      <p>Go to Structure > Taxonomy. There should be 3 existing vocabularies: </p>
+      <p>
+        <ol>
+          <li>Forums</li>
+          <li>Section: we need to adding some sample terms for Section vocabulary
+            <ul>
+              <li>Click <b>Add term</b> link and add term <b>News</b>, fill in Description (optional), select a <b>Color</b> then click <b>Save</b></li>   
+              <li>Click <b>Add term</b> link and add term <b>Sport</b>, fill in Description (optional), select a <b>Color</b> then click <b>Save</b></li>
+              <li>Click <b>Add term</b> link and add term <b>Tech</b>, fill in Description (optional), select a <b>Color</b> then click <b>Save</b></li>
+              <li>Click <b>Add term</b> link and add term <b>Travel</b>, fill in Description (optional), select a <b>Color</b> then click <b>Save</b></li>
+            </ul>          
+          </li>
+          <li>Tags</li>
+        </ol>
+      </p>
+    </div>
+    <div class="section">
+      <h3>7. Check views</h3>
+      <p>Go to Structure > Views. There should be 3 existing Views: </p>
+      <p>
+        <ol>
+          <li>Article Block</li>
+          <li>Blog Block</li>
+          <li>Page and Block</li>
+        </ol>
+      </p>
+      <p>We also need to enable a View call <b>Taxonomy term</b> at bottom of the list.</p>
+    </div>
+    <div class="section">
+      <h3>8. Check Image Style</h3>
+      <p>Go to Configuration > Image styles. There should be 6 existing image styles: </p>
+      <p>
+        <ol>
+          <li>Thumbnail (100x100)</li>
+          <li>Medium (220x220)</li>
+          <li>Large (480x480)</li>
+          <li>View large (600x400)</li>
+          <li>View Medium (300x200)</li>
+          <li>View Thumbnail (100x80)</li>
+        </ol>
+      </p>      
+    </div>
+    <div class="section">
+      <h3>9. Setup avatar</h3>
+      <p>Go to Configuration > People > Account setting</p>
+      <p>
+        <ul>
+          <li>Check <b>Enable user pictures</b></li>
+          <li>Fill <b>Picture directory</b> field as <b>pictures</b></li>
+          <li>Upload avatar.png file in theme file <b>images</b> folder to <b>Picture directory</b></li>
+          <li>Fill <b>Default picture</b> field with full URL that point to <b>Picture directory</b></li>
+          <li>Click <b>Save Configuration</b></li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>10. Publish main menu</h3>
+      <p>Go to Structure > Blocks</p>
+      <p>
+        <ul>
+          <li>Go to Structure > Menus to configure <b>Main menu</b>.</li>
+          <li>Go to Structure > Blocks find <b>Main menu</b> block. Publish it at <b>main menu</b> block region.</li>
+          <li>For more detail setup, you can check it out later at <b>Menu Options</b> section</li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>11. Change permission</h3>
+      <p>Go to People > Permissions <b>Tab</b></p>
+      <p>
+        <ul>         
+          <li>At <b>Omni Custom</b> section check
+            <ul>
+              <li>View full node Blog entry page for ANONYMOUS USER and AUTHENTICATED USER</li>
+              <li>View full node Forum topic page for ANONYMOUS USER and AUTHENTICATED USER</li>
+              <li>View full node Article page for ANONYMOUS USER and AUTHENTICATED USER</li>
+              <li>View full node Basic page for ANONYMOUS USER and AUTHENTICATED USER</li>
+            </ul>          
+          </li>
+          <li>At <b>Search</b> section check Use search for ANONYMOUS USER</li>
+          <li>Click <b>Save Configuration</b></li>
+        </ul>
+      </p>
+    </div>    
+    <div class="section">
+      <h3>12. Omni Magazine theme setting</h3>
+      <p>Go to Appearance</p>
+      <p>
+        <ul>
+          <li>Enable and set Omni Magazine as Default theme</li>
+          <li>Make sure administration theme set to <b>Seven</b></li>
+          <li>Click Setting link under Omni Magazine</li>
+          <li>Color Scheme should set to Default Compact</li>
+          <li>Toggle Display: Check Logo & Slogan <b>OR</b> Site name & Slogan. It can't display Logo & Site Name at same time</li>
+          <li>Omni Setting</li>
+            <ul>
+              <li>Header Style: it should match Color Scheme. For example, if you select <b>Color Scheme</b> as <b>Default Box</b> then <b>Header Style</b> should be <b>Box Width Style</b>.
+                <ul>
+                  <li>Compact Style (default style)</li>
+                  <li>Full Width Style</li>
+                  <li>Box Width Style</li>
+                </ul>
+              </li>
+              <li>Menu Style</li>
+                <ul>
+                  <li>Drop Down Menu (default style)</li>
+                  <li>Mega Menu (see <a href="3.%20Omni%20Feature%20Setup.html">Omni Feature Setup</a>)</li>
+                  <li>Hybrid Menu (see <a href="3.%20Omni%20Feature%20Setup.html">Omni Feature Setup</a>)</li>
+                </ul>
+              <li>Layout Options: switch sidebars position</li>
+                <ul>
+                  <li>Primary/Secondary/Tertiary (default style)</li>
+                  <li>Secondary/Primary/Tertiary</li>
+                  <li>Tertiary/Primary/Secondary</li>
+                </ul>
+              <li>Display header search box? (no as default)</li>
+              <li>Display breadcrumb? (no as default)</li>
+            </ul>
+          <li>Save the change</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="typo-tip">
+        <h3>Knowing issues of Drupal 7.x</h3>
+        <p>Users might find some functionality involve with Javascript not working properly. To fix it, you might have to enable <b>Aggregate JavaScript files</b> option at <b>Performance</b>. For live site, you should enable <b>Aggregate and compress CSS files</b> too.</p>
+      </div>
+      <div class="typo-tip"><b>Now you have completed the basic setup! You can start to create new content or continue on <a href="3. Omni 7.x Feature Setup.html">Omni Feature Setup</a></b></div>      
+    </div> 
+  </div>
+
+<!-- Image
+------------------------------->
+
+  <div id="omni-basic-image" class="section">
+    <h3>- Image Size</h3>
+    <p>With two sidebars layout, default image size for both Article and Blog node should be at least 740px width.</p>
+  </div>
+
+<!-- Block Map
+------------------------------->
+
+  <div id="omni-basic-map" class="section">
+    <h3>- Block Regions Map</h3>
+    <p><img src="images/map.jpg" class="left framed"></p>
+  </div>
+</div>
+
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- COPYRIGHT REGION 
+---------------------------------------------------------------->
+
+<div class="divider"></div>
+<div class="content clearfix">
+<h2>Copyright</h2>
+  <p>The content of this document is copyrighted by ESORS.com. &copy; 2008-2012 All rights reserved. No portion of the content may be directly or indirectly copied, published, reproduced, modified, performed, displayed, sold, transmitted, broadcast, rewritten for broadcast or publication or redistributed in any medium.</p> 
+</div>
+<div class="divider"></div>
+
+<!-- ENDREGION
+---------------------------------------------------------------->	  
+    </div>
+  </div>
+</body>
+</html>

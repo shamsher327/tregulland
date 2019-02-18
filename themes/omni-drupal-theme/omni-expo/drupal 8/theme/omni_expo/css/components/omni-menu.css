@@ -1,0 +1,330 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* MENU COMMON
+----------------------------------------------------------------*/
+[data-dropdown-menu] ul {
+  display: none;
+}
+
+/* MENU PRIMARY
+----------------------------------------------------------------*/
+#menu-primary {
+  height: 60px;
+}
+
+#menu-primary a {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 2;
+  padding: 1rem 1.5rem;
+}
+
+#menu-primary .submenu {
+  text-align: left;
+  min-width: 250px;
+  padding: 0 1.875rem;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#menu-primary .submenu.first-sub {
+  top: 80px;
+}
+
+.is-stuck #menu-primary .submenu.first-sub {
+  top: 60px;
+}
+
+#menu-primary .submenu a {
+  font-size: 0.8125rem;
+  text-transform: none;
+  padding: 1rem 0;  
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+#menu-primary .submenu li:last-child a {
+  border: none;
+}
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a:after,
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right>a:after {
+  border: 0;
+}
+
+.is-dropdown-submenu .is-dropdown-submenu-parent.opens-right>a::before {
+  position: absolute;  
+  content: '+';
+  right: 5px;
+  top: 15px;
+  border: 0;
+}
+
+.is-dropdown-submenu-parent.opens-right>.is-dropdown-submenu {
+  left: calc(100% + 30px);
+}
+
+.is-dropdown-submenu .is-dropdown-submenu {
+  margin-top: -1px;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+/* MENU MEGA
+----------------------------------------------------------------*/
+#menu-mega li.is-dropdown-submenu-parent {
+  position: static;
+}
+
+#menu-mega  ul.dropdown > li > a {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 2;
+  padding: 1rem 1.25rem;
+}
+
+.dropdown.menu>li.opens-right>.mega-menu.is-dropdown-submenu {
+  right: auto;
+  left: 0;
+  top: 100%;
+  min-width: 100%;
+}
+
+.mega-menu {
+  text-align: left;
+  margin: 0;
+  list-style: none;
+  border: none;
+  -webkit-box-shadow: 0px 5px 5px -5px #ccc;
+  -moz-box-shadow: 0px 5px 5px -5px #ccc;
+  box-shadow: 0px 5px 5px -5px #ccc;
+}
+
+.mega-menu .menu {
+  display: block;
+  font-size: 0.875rem;
+}
+
+.mega-menu .menu li {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.mega-menu .image-default {
+  margin-bottom: 0;
+}
+
+.mega-menu .block-merging .block-views > .inner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mega-menu .block-merging .block-views .block-mega-menu .column:nth-of-type(1),
+.mega-menu .block-merging .block-views .block-mega-menu .column:nth-of-type(2) {
+  margin-bottom: 1.875rem;
+} 
+
+.block-mega-menu {
+  margin: 0 -0.9375rem;
+}
+
+.block-mega-menu .media-object {
+  margin-bottom: 0;
+}
+
+.block-mega-menu .media-object-section .meta {
+  padding-bottom: 0.625rem;
+  margin-bottom: 0.625rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.block-mega-menu h4 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 90em) {
+  .mega-menu .block-merging .block-views .column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 89.9375em) {
+  .block-mega-menu .column:nth-of-type(1),
+  .block-mega-menu .column:nth-of-type(2) {
+    margin-bottom: 1.875rem;
+  }
+}
+ 
+/* MENU MOBILE
+----------------------------------------------------------------*/
+#offCanvas .close-button {
+  position: absolute;
+  color: #8a8a8a;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 30px;
+  border-radius: 0 15px 15px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.02)
+  cursor: pointer;
+}
+
+#menu-mobile-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 21px;
+  margin-right: 1.875rem;
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+}
+
+#menu-mobile-button::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 30px;
+  height: 3px;
+}
+
+#menu-mobile > div {
+  margin-left: 1.875rem;
+}
+
+#menu-mobile > div:first-child {
+  height: 100px;
+}
+
+#menu-mobile .button {
+  font-size: 0.625rem;
+  padding: 0.625rem 0.875rem;
+  margin-top: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+#menu-mobile .button:hover,
+#offCanvas .close-button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#menu-mobile .button.close {
+  font-size: 1.25rem;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+}
+
+#menu-mobile h2,
+#menu-mobile .title {
+  display: none;
+}
+
+#menu-mobile > nav > ul {
+  margin-left: 1.875rem;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+#menu-mobile > nav ul li {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+#menu-mobile > nav ul ul li:last-child {
+  border-bottom: none;
+}
+
+#menu-mobile > nav ul li a {
+  padding: 1.4375rem 1rem;
+}
+
+#menu-mobile .is-accordion-submenu-parent[aria-expanded=true]>a {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+#menu-mobile .is-accordion-submenu-parent>a:after {
+  content: '+';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 40px;
+  height: 60px;
+  margin-top: 0;
+  border: none;
+  line-height: 60px;
+  text-align: center;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+#menu-mobile .is-accordion-submenu-parent[aria-expanded=true]>a:after {
+  content: '-';
+}
+
+@media screen and (min-width: 40em) {
+  #menu-mobile-button {
+    left: 0px;
+  }
+}
+
+/* FOOTER
+----------------------------------------------------------------*/
+#footer-menu {
+  display: none;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 1.25rem;
+}
+
+#footer #footer-menu li a {
+  padding: 0.7rem 1rem;
+}
+
+@media screen and (min-width: 40em) {
+  #footer-menu {
+    display: block;
+  }
+}
+
+/* OTHERS
+----------------------------------------------------------------*/
+nav h2 {
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 0.1875rem;
+}

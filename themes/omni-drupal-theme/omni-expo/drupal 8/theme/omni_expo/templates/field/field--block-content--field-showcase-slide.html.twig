@@ -1,0 +1,84 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#} 
+{% set run = false %}
+{% set type = '' %}
+{% for item in items if run == false %}
+  {% set block = item.content['#block_content'] %}
+  {% set type = block.field_showcase_type.value %}
+  {% set run = true %}
+{% endfor %}
+
+{% if type == 'showcase-1' %}  
+  {% for item in items %}  
+    {% set block = item.content['#block_content'] %}   
+    {% set url = block.field_link.uri %}    
+    {% set position = block.field_showcase_position.value %}
+    {% set pattern = block.field_showcase_pattern.value %}  
+    {% set filter = block.field_background_filter.value %}
+    {% if filter %}
+      {% set filter %} with-filter {{ filter }}{% endset %}
+    {% endif %}
+    {% set image %}{{ item.content.field_background_image|raw }}{% endset %}
+    {% if 'internal' in url %}
+      {% set url %}{{ url('<front>') }}{{ url[10:] }}{% endset %}
+    {% endif %}
+
+    <div>
+      <div class="slide"> 
+        <div class="inner {{ position }} {{ pattern }}{{ filter }}">
+          <div class="cover">
+            <img data-lazy="{{ background_image_path(image) }}"/>
+          </div>
+          <div class="wrapper">
+            <div>
+              <div class="slide-title element">
+                <div class="term">{{ item.content.field_category }}</div>
+                <h3>{% if url %}<a href="{{ url }}" target="_blank">{% endif %}{{ item.content.field_title }}{% if url %}</a>{% endif %}</h3>
+              </div>
+              {% if item.content.body|render %}
+                <div class="slide-content element show-for-medium">                   
+                  {{ item.content.body }}
+                </div>
+              {% endif %}
+              {% if item.content.field_button|render %}
+                <div class="slide-button element">
+                {{ item.content.field_button }}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+  <div class="showcase showcase-pager pager-1">
+    {% for item in items %}  
+      <div>
+        <div class="slide"> 
+          <div class="inner">
+            <div class="content">
+              <div class="term float-right">{{ item.content.field_category }}</div>
+              <div class="number">0{{loop.index}}.</div>
+              <h4 class="title">{{ item.content.field_title }}</h4>
+            </div>
+          </div> 
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

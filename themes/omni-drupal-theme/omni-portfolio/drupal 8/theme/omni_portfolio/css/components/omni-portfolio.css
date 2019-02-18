@@ -1,0 +1,208 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* PAGE
+----------------------------------------------------------------*/
+.page-portfolio h1#content-title {
+  text-align: center;
+}
+
+.portfolio-grid {
+  margin: 0 -0.9375rem;
+}
+
+.page-portfolio .portfolio-grid {
+  padding-top: 1.875rem;
+}
+
+.portfolio-sizer,
+.portfolio-item { 
+  width: 100%; 
+  padding: 0 15px;
+}
+
+.portfolio-item { 
+  margin-bottom: 30px;
+}
+
+.portfolio-item.width-double { 
+  width: 100%; 
+}
+
+.portfolio-item > .inner {
+  height: 350px;
+}
+
+@media screen and (min-width: 40em) {
+  .portfolio-sizer,
+  .portfolio-item { 
+    width: 50%; 
+  }
+  .portfolio-item.width-double { width: 100%; }
+  .portfolio-item.height-double > .inner {
+    height: 730px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .portfolio-sizer,
+  .portfolio-item { 
+    width: 33.33333%; 
+  }
+  .portfolio-item.width-double { width: 66.66666%; }
+}
+
+@media screen and (min-width: 75em) {
+  .portfolio-sizer,
+  .portfolio-item { 
+    width: 25%; 
+  }
+  .portfolio-item.width-double { width: 50%; }
+}
+
+/* TEASER
+----------------------------------------------------------------*/
+.portfolio.teaser > .inner {
+  position: relative;
+  margin-bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  transition: all .5s ease-in-out;
+}
+
+.portfolio.teaser > .inner:hover {
+  background-position: 40% 40%;
+}
+
+.portfolio.teaser > .inner.with-filter:hover::before {
+  opacity: 0.3;
+}
+
+.portfolio.teaser .title {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
+.portfolio.teaser.width-double.with-overlay .title,
+.portfolio.teaser.height-double.with-overlay .title  { 
+  font-size: 1.25rem;
+}
+
+.portfolio.teaser .meta a {
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  padding-bottom: 0.3125rem;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;  
+  transition: all .5s ease-in-out;
+}
+
+.portfolio.teaser.without-overlay .meta {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 7.5rem;
+  margin-bottom: 0;
+}
+
+.portfolio.teaser .content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1.25rem;
+  height: 100px;
+}
+
+.portfolio.teaser.with-overlay .content {
+  height: auto;
+  background-color: transparent;
+}
+
+.portfolio.teaser.width-double .content { 
+  text-align: center;
+}
+
+.portfolio.teaser .summary {
+  display: none;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.portfolio.teaser.width-double .summary {
+  display: block;
+}
+
+/* FULL
+----------------------------------------------------------------*/
+.node-type-portfolio #main-middle {
+  padding-bottom: 3.75rem;
+}
+
+.portfolio.full header {
+  margin-bottom: 1.875rem;
+}
+
+.portfolio.full .image-default {
+  margin-bottom: 0;
+}
+
+.portfolio.full .image-default img {
+  width: 100%;
+  margin-bottom: 1.875rem;
+}
+
+.portfolio.full .term a {
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  padding: 0 0 0.3125rem 0;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;  
+}
+
+.portfolio.full .title {
+  font-size: 1.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+}
+
+.portfolio.full .content {
+  padding: 0 1.875rem 3.75rem 1.875rem;
+}
+
+.portfolio.full .content p {
+  margin-bottom: 1.875rem;
+}
+
+.portfolio.full .term {
+  margin-bottom: 1.25rem;
+}
+
+.portfolio.full .summary {
+  font-style: italic;
+}
+
+@media screen and (min-width: 40em) {
+  .portfolio.full header,
+  .portfolio.full .image-default img {
+    margin-bottom: 3.75rem;
+  }
+}

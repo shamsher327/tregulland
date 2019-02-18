@@ -1,0 +1,42 @@
+name: Omni Portfolio
+type: theme
+description: ''
+package: Custom
+version: 8.x-1.0
+core: 8.x
+
+libraries:
+  - core/normalize
+  - omni_portfolio/scroll-reveal
+  - omni_portfolio/smooth-scroll
+  - omni_portfolio/foundation
+  - omni_portfolio/slick
+  - omni_portfolio/masonry
+  - omni_portfolio/preloader
+  - omni_portfolio/global-styling
+  - omni_portfolio/global-script
+  
+regions:  
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'    
+
+  site_info: 'Site info'
+  primary_menu: 'Menu main'
+  primary_menu_mobile: 'Menu mobile'
+  secondary_menu: 'Menu secondary'
+  social_media: 'Social media'
+  search: 'Search'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  author: 'Author'
+  related: 'Related'
+
+  showcase: 'Showcase'
+  main_top: 'Main top'
+  content: 'Main middle - primary' 
+  sidebar_secondary: 'Main middle - secondary'
+  main_bottom: 'Main bottom'
+
+  footer: 'Footer'  
+  closure: 'Closure'
+  usable: 'Usable'

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_icon_rounded
+id: block_content.custom_block.field_icon_rounded
+field_name: field_icon_rounded
+entity_type: block_content
+bundle: custom_block
+label: Rounded
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: rounded
+  off_label: 'Off'
+field_type: boolean

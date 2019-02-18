@@ -1,0 +1,100 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Omni theme.
+ */
+
+use Drupal\Core\Template\Attribute;
+
+function omni_agency_preprocess_html(&$variables) {
+
+  if (!empty($variables['page']['sidebar_secondary']) && !empty($variables['page']['sidebar_tertiary'])) {
+    $variables['attributes']['class'][] = 'two-sidebars';
+    $variables['content_width'] = '8';
+  }
+  elseif (!empty($variables['page']['sidebar_secondary'])) {
+    $variables['attributes']['class'][] = 'sidebar-secondary';
+  }
+  elseif (!empty($variables['page']['sidebar_tertiary'])) {
+    $variables['attributes']['class'][] = 'sidebar-tertiary';
+  }
+  else {
+    $variables['attributes']['class'][] = 'no-sidebars';
+  }
+}
+
+function omni_agency_preprocess_page(&$variables) {
+  
+  $variables['omni_header_sticky'] = theme_get_setting('omni_header_sticky', 'omni_agency');
+  $variables['omni_menu_reveal'] = theme_get_setting('omni_menu_reveal', 'omni_agency');
+
+  if (!empty($variables['page']['sidebar_secondary']) && !empty($variables['page']['sidebar_tertiary'])) {
+    $variables['primary_width'] = 'medium-8 large-6 ';
+  }
+  elseif (!empty($variables['page']['sidebar_secondary'])) {
+    $variables['primary_width'] = 'large-10 ';
+  }
+  elseif (!empty($variables['page']['sidebar_tertiary'])) {
+    $variables['primary_width'] = 'large-8 ';
+  }
+  else {
+    $variables['primary_width'] = '';
+  }
+  $variables['main_top_lower'] = count(array_filter(array($variables['page']['main_top_one'], $variables['page']['main_top_two'], $variables['page']['main_top_three'], $variables['page']['main_top_four'])));
+  $variables['main_bottom_lower'] = count(array_filter(array($variables['page']['main_bottom_one'], $variables['page']['main_bottom_two'], $variables['page']['main_bottom_three'], $variables['page']['main_bottom_four'])));
+  $variables['footer_lower'] = count(array_filter(array($variables['page']['footer_one'], $variables['page']['footer_two'], $variables['page']['footer_three'], $variables['page']['footer_four'])));
+}
+
+function omni_agency_preprocess_block(&$variables) {
+
+  $block = entity_load('block', $variables['elements']['#id']);
+  $variables['block_region'] = $block->get('region'); 
+
+  if (isset($variables['elements']['content']['#block_content'])) {  
+  
+    $variables['block_content'] = $variables['elements']['content']['#block_content']; 
+
+    if ( $variables['block_content']->bundle()=='showcase' ){
+    
+      $data_slick = "";
+
+      $effect_fade = $variables['block_content']->field_showcase_fade->value;
+      $effect_auto = $variables['block_content']->field_showcase_autoplay->value;
+      $effect_speed = $variables['block_content']->field_showcase_speed->value;
+
+      if ($effect_fade==true) {
+        $data_slick = $data_slick."\"fade\": true, ";
+      }
+
+      if ($effect_auto==true) {
+        $data_slick = $data_slick."\"autoplay\": true, ";
+      }
+
+      if (!empty($effect_speed)) {
+        $data_slick = $data_slick."\"autoplaySpeed\": ".$effect_speed.", ";
+      }    
+
+      $variables['data_slick'] = " data-slick='{".substr($data_slick, 0, -2)."}'";
+    }    
+  }
+}
+
+function omni_agency_preprocess_node(&$variables) {
+
+  if ($variables['node']->getType() == 'blog') {
+    $variables['comment_count'] = $variables['node']->get('comment')->comment_count;
+  }
+}
+
+function omni_agency_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if ($variables['element']['#form_id'] == 'search_block_form') {
+    $suggestions[] = 'form__search_block_form';
+  }
+}
+
+function omni_agency_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__custom__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}

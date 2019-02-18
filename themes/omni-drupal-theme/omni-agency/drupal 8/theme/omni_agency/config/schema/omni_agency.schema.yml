@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Omni Agency theme.
+
+omni_agency.settings:
+  type: theme_settings
+  label: 'Omni settings'

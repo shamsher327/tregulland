@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_block_reveal_origin
+  module:
+    - options
+id: block_content.custom_block.field_block_reveal_origin
+field_name: field_block_reveal_origin
+entity_type: block_content
+bundle: custom_block
+label: Origin
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: origin-top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

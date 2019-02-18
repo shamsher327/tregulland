@@ -1,0 +1,107 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* BLOCK SOCIAL MEDIA
+----------------------------------------------------------------*/
+.block.block-social-media-links > .inner {
+  text-align: center;
+  padding: 0;
+}
+
+.block-social-media-links ul {
+  margin: 0;
+}
+
+.block-social-media-links .horizontal li {
+  padding: .2em;
+}
+
+.block-social-media-links .fa-lg {
+  display: inline-block;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+/* BLOCK SUBSCRIPTION
+----------------------------------------------------------------*/
+.block-simplenews {
+  margin-bottom: 1.875rem;
+}
+
+.block.block-simplenews > .inner {
+  position: relative;
+  padding: 0;
+}
+
+.block-simplenews .title,
+.block-simplenews label,
+.block-simplenews .description {
+  display: none;
+}
+
+.block-simplenews .form-item-message {
+  font-family: 'Playfair Display', Georgia, Serif;  
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  margin-top: 0;
+}
+
+.block-simplenews [type=email] {
+  color: inherit;
+  font-size: 0.875rem;
+  padding: 0.9375rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.block-simplenews [type=email]:focus {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.block-simplenews .form-actions {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+}
+
+.user-logged-in .block-simplenews .form-actions {
+  position: static;
+  text-align: center;
+}
+
+.block-simplenews input[type=submit] {
+  height: 36px;
+  border-radius: 3px;
+  line-height: 36px;
+  padding: 0 1.5rem;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 40em) {
+  .block-simplenews .form-item-message {
+    font-size: 2.5rem;
+  }
+}

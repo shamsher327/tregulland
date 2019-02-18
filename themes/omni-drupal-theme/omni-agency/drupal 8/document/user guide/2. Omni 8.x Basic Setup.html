@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Omni Basic Setup</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/typography.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="page">
+    <div id="main">
+	  <h1>2. Omni 8.x Basic Setup</h1> 
+
+<!-- INTRO REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	  
+<div class="content clearfix">
+  <h2>Introduction</h2>
+  <p>Thank you for purchasing ESORS's Drupal theme - Omni. Omni theme build for Drupal natively, not repack from other CMS platform. We reduce third party modules usage by using Drupal Content Type, Block Type and Views so you can have a clean and less stress start.</p>
+  <p>For Drupal beginner, we wrote a <a href='1. Drupal 8 Quick Start.html'>short tutorial</a> to help you find your way around Drupal and quickly pass Drupal learning curve. If you already know Drupal, you can continue with following section.</p>
+  <div class="typo-alert"><b>In order for Omni theme function correctly, you need to complete the <a href="#omni-basic-intro">Basic Configuration</a> (<span class="pink-raspberry"><i>15 minutes</i></span>) section.</b></div>
+  <p>For <b>support</b>, you can contact us through themeforest.net. We will respond within 24hrs.</p>
+</div>
+      
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- TABLE OF CONTENT REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	 
+<div class="content clearfix">
+  <h2>Table of Content</h2>
+  <div>
+    <p>
+      <ul>
+        <li><a href="#omni-basic-intro">Introduction</a></li>
+        <li><a href="#omni-basic-file">Theme Pack Folder Structure</a></li>
+        <li><a href="#omni-basic-install">Installation</a></li>
+        <li>
+          <a href="#omni-basic-config">Basic Configuration</a>
+          <ol>
+            <li>Enable required modules</li>
+            <li>Enable Omni Agency theme</li>
+            <li>Configure Blocks</li>
+            <li>Configure AddToAny</li>
+            <li>Change default contact form</li>
+            <li>Import views</li>
+            <li>Setup avatar</li>
+          </ol>
+        </li>        
+      </ul>
+    </p>
+  </div>
+</div>
+  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- BASIC SETUP REGION 
+---------------------------------------------------------------->
+<div class="divider"></div>
+<div class="content clearfix">
+  <h2>Omni Basic Setup</h2>
+
+<!-- Introduction
+-------------------------------->
+
+  <div id="omni-basic-intro" class="section">
+    <h3>- Introduction</h3>
+    <p>In this section, we will show you some basic setup steps that Omni theme need. By using this guide, we assume you have basic knowledge of Drupal and have Drupal 8.x installed on your system.
+    </p>		  
+  </div>
+
+<!-- File Structure
+-------------------------------->
+  
+  <div id="omni-basic-file" class="section">
+    <h3>- Theme Pack Folder Structure</h3>
+    <p>
+      <ul class="typo-arrow-alter">
+        <li>theme: theme files folder
+          <ul>
+            <li>omni_agency: this is the actual theme, please upload this folder to your server.</li>
+          </ul>
+        </li>
+        <li>licensing</li>
+        <li>modules: all required modules for Omni Drupal theme.</li>
+        <li>document
+          <ul>
+            <li>user guide</li>
+            <li>views: importable view files</li>
+            <li>sample content: demo SQL files & demo image files</li>
+          </ul>
+        </li>
+        <li>README.txt</li>
+      </ul>
+    </p> 
+  </div>
+
+<!-- Installation
+-------------------------------->  
+
+  <div id="omni-basic-install" class="section">
+    <h3>- Installation</h3>
+    <p>There is a modules folder within the download package which include all necessary modules for this theme. Only package included version of modules were tested for compatibility. If new version released please backup before upgrade since it might not be compatible.</p>
+    <p>Please install Omni Magazine theme and following Modules (If you don't know how to install Drupal theme, please check our <a href='1. Drupal 8 Quick Start.html'>Drupal Quick Start</a> guide):
+      <ul class="typo-checklist">
+        <li><a href="https://www.drupal.org/project/admin_toolbar" target="_blank">Admin Toolbar 8.x-1.15</a></li>
+        <li><a href="https://www.drupal.org/project/config_update" target="_blank">Configuration Update Manager 8.x-1.1</a></li>
+        <li><a href="https://www.drupal.org/project/contact_block" target="_blank">Contact Block 8.x-1.1</a></li>
+        <li><a href="http://drupal.org/project/features" target="_blank">Features 8.x-3.0-beta3</a></li>
+        <li><a href="http://drupal.org/project/field_group" target="_blank">Field Group 8.x-1.0-rc4</a></li>
+        <li><a href="http://drupal.org/project/inline_entity_form" target="_blank">Inline Entity Form 8.x-1.0-alpha6</a></li>
+        <li><a href="http://drupal.org/project/addtoany" target="_blank">Share Buttons by AddToAny 8.x-1.10</a></li>
+        <li><a href="https://www.drupal.org/project/social_media_links" target="_blank">Social Media Links Block 8.x-2.1</a></li>
+        <li>Omni Custom</li>
+        <li>Omni Feature: simply import all content type & block type for Omni theme. Available within download files.</li>
+      </ul>
+    </p>		 
+  </div>
+
+<!-- Basic Configuration
+-------------------------------->
+
+  <div id="omni-basic-config" class="section">
+    <h3>- Basic Configuration</h3>
+    <div class="section">
+      <div class="typo-alert"><p>You need to do <b>ALL</b> the following steps, even if you think you might not need it for now.</p></div>      
+    </div>
+    <div class="section">
+      <h3>1. Enable required modules <span class="red-alizarin">BY ORDER!</span></h3>
+      <p>Go to Extend page:</p>
+      <p>
+        <ol>
+          <li>Enable modules <b>Admin Toolbar</b>, <b>Contact Block</b>, <b>Field Group</b>, <b>Inline Entity Form</b>, <b>AddToAny</b>, <b>Social Media Links Block</b> then click <b>Save Configuration</b></li>
+          <li>Enable modules <b>Features</b>, <b>Features UI</b> and <b>Configuration Update Base</b> then click <b>Save Configuration</b></li>
+          <li>Enable modules <b>Omni Custom</b> and <b>Omni Feature</b> then click <b>Save Configuration</b></li>
+        </ol>
+      </p>
+    </div>
+    <div class="section">
+      <h3>2. Enable Omni Agency theme</h3>
+      <p>Go to Appearance</p>
+      <p>
+        <ul>
+          <li>Enable and set Omni Agency as Default theme</li>
+          <li>Make sure administration theme set to <b>Seven</b></li>
+          <li>Click Setting link under Omni Agency</li>
+          <li>Omni Setting</li>
+            <ul>
+              <li>Sticky header: checked</li>
+              <li>Reveal mobile menu: checked</li>
+            </ul>
+          <li>Save the change</li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>3. Configure Blocks</h3>
+      <p>Go to Structure > Block layout</p>
+      <p>
+        <ul>
+          <li>Move <b>Search form</b> block from <b>Site Info</b> into <b>Search</b> region & disable its' title.</li>
+          <li>Move <b>Footer menu</b> block from <b>Site Info</b> into <b>Closure</b> region.</li>
+          <li>Move <b>User login</b> block into <b>Login</b> region & disable its' title.</li>
+          <li>Disable <b>Tools, Powered by Drupal</b> blocks from <b>Site Info</b> region.</li>
+          <li>Configure <b>Site branding</b> block. Toggle Branding Elements: Check Logo & Slogan OR Site name & Slogan. It can't display Logo & Site Name at same time.</li>
+          <li>Configure <b>Main navigation</b> block. Change Maximum number of menu levels to display as 3, then Save block.</li>
+          <li>Configure <b>Page title</b> block. Click on Pages tab then fill in <b>/node/*</b> and select <b>Hide for listed pages</b></li>
+          <li>Place <b>Social Media Links</b> block. Click on <b>Place block</b> button beside the <b>Social media</b> region then place <b>Social Media Links</b> block. Disable its' title and fill in your social media links. Appearance as horizotal and Icon Sets as Font Awesome with <b>fa-lg</b> style only then save it.</li>
+          <li>Keep the rest of blocks as it is.</li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>4. Configure AddToAny</h3>
+      <p>Go to Home > Administration > Configuration > System > AddToAny</p>
+      <p>
+        <ul>
+          <li>Change <b>Icon size</b> to 16 pixels</li>
+          <li>Adding <b>Service Buttons</b> HTML code
+            <div class="typo-tip">
+              &lt;a class="a2a_button_facebook"&gt;&lt;span class="fa fa-facebook"&gt;&lt;/span&gt;&lt;/a&gt;</br>
+              &lt;a class="a2a_button_twitter"&gt;&lt;span class="fa fa-twitter"&gt;&lt;/span&gt;&lt;/a&gt;</br>
+              &lt;a class="a2a_button_google_plus"&gt;&lt;span class="fa fa-google-plus"&gt;&lt;/span&gt;&lt;/a&gt;</br>
+              &lt;a class="a2a_button_pinterest"&gt;&lt;span class="fa fa-pinterest-p"&gt;&lt;/span&gt;&lt;/a&gt;</br>
+              &lt;a class="a2a_button_linkedin"&gt;&lt;span class="fa fa-linkedin"&gt;&lt;/span&gt;&lt;/a&gt;
+            </div>
+          </li>
+          <li>Check <b>Universal Button</b> as <b>None</b></li>
+          <li>Open <b>Placement</b> and check only <b>Article</b>, <b>Blog</b>, <b>Display for node teasers</b>, <b>Display in content section</b></li>
+          <li>Click <b>Save Configuration</b></li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>5. Change default contact form</h3>
+      <p>Go to Home > Administration > Structure > Contact forms > Edit <b>Custom contact form</b> and check <b>Make this the default form</b></p>     
+    </div>
+    <div class="section">
+      <h3>6. Import views</h3>
+      <p>Go to Configuration > Configuration synchronization > Import tab > Single item </p>
+      <p>
+        <ul>
+          <li>Select <b>View</b> for Configuration type</li>
+          <li>Open omni-drupal-theme/omni-agency/drupal 8/document/views/views.view.omni_custom_block_library.yml file</li>
+          <li>Copy & Paste views.view.omni_custom_block_library.yml file content into <b>Paste your configuration here</b> box</li>
+          <li>Click Import then Confirm</li>
+          <li>Do the same for views.view.omni_library.yml</li>
+        </ul>
+      </p>
+      <p>Go to Structure > Views. There should be two more views that you just imported:
+        <ol>
+          <li>Omni custom block library</li>
+          <li>Omni library</li>
+        </ol>
+      </p>
+      <p>Now you can <b><span class="red-alizarin">disable</span> Custom block library</b> Drupal built-in view since we have just imported Omni custom block library view which can replace its' function with more options.</p>
+    </div>
+    <div class="section">
+      <h3>7. Setup avatar</h3>
+      <p>Go to Configuration > Account setting > Manage fields</p>
+      <p>
+        <ul>
+          <li>Edit Picture field</li>
+          <li>Upload images/avatar.png file as default image</li>
+          <li>Click <b>Save Configuration</b></li>
+        </ul>
+      </p>
+    </div>    
+    <div class="section">
+      <div class="typo-tip">
+        For live site, you should enable <b>Aggregate for JavaScript and CSS files.</b> <b>Now you have completed the basic setup! You can continue on <a href="3. Omni 8.x Feature Setup.html">Omni Feature Setup</a></b>.</p>
+      </div>
+    </div> 
+  </div>
+
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- COPYRIGHT REGION 
+---------------------------------------------------------------->
+
+<div class="divider"></div>
+<div class="content clearfix">
+<h2>Copyright</h2>
+  <p>The content of this document is copyrighted by ESORS.com. &copy; 2008-2016 All rights reserved. No portion of the content may be directly or indirectly copied, published, reproduced, modified, performed, displayed, sold, transmitted, broadcast, rewritten for broadcast or publication or redistributed in any medium.</p> 
+</div>
+<div class="divider"></div>
+
+<!-- ENDREGION
+---------------------------------------------------------------->	  
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.custom_contact_form
+    - field.field.contact_message.custom_contact_form.field_contact_email
+    - field.field.contact_message.custom_contact_form.field_contact_first_name
+    - field.field.contact_message.custom_contact_form.field_contact_last_name
+    - field.field.contact_message.custom_contact_form.field_contact_number
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_row_2:
+      children:
+        - group_column_1_1
+        - group_column_2_1
+      parent_name: group_column_left
+      weight: 9
+      label: Row
+      format_type: html_element
+      format_settings:
+        label: Row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: row
+    group_row_1:
+      children:
+        - group_column_3
+      parent_name: group_column_left
+      weight: 8
+      label: Row
+      format_type: html_element
+      format_settings:
+        label: Row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: row
+    group_column_1_1:
+      children:
+        - field_contact_first_name
+      parent_name: group_row_2
+      weight: 8
+      label: Column
+      format_type: html_element
+      format_settings:
+        label: Column
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'large-6 column'
+    group_column_2_1:
+      children:
+        - field_contact_last_name
+      parent_name: group_row_2
+      weight: 9
+      label: Column
+      format_type: html_element
+      format_settings:
+        label: Column
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'large-6 column'
+    group_column_1_2:
+      children:
+        - field_contact_email
+      parent_name: group_row_3
+      weight: 7
+      label: Column
+      format_type: html_element
+      format_settings:
+        label: Column
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'large-6 column'
+    group_column_2_2:
+      children:
+        - field_contact_number
+      parent_name: group_row_3
+      weight: 8
+      label: Column
+      format_type: html_element
+      format_settings:
+        label: Column
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'large-6 column'
+    group_container:
+      children:
+        - group_column_left
+        - group_column_right
+      parent_name: ''
+      weight: 0
+      label: Container
+      format_type: html_element
+      format_settings:
+        label: Container
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: custom-contact
+    group_row_3:
+      children:
+        - group_column_1_2
+        - group_column_2_2
+      parent_name: group_column_left
+      weight: 10
+      label: Row
+      format_type: html_element
+      format_settings:
+        label: Row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: row
+    group_column_3:
+      children:
+        - subject
+      parent_name: group_row_1
+      weight: 7
+      label: Column
+      format_type: html_element
+      format_settings:
+        label: Column
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: column
+    group_column_right:
+      children:
+        - group_row_5
+      parent_name: group_container
+      weight: 8
+      label: Column
+      format_type: html_element
+      format_settings:
+        label: Column
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'large-6 column'
+    group_column_left:
+      children:
+        - group_row_1
+        - group_row_2
+        - group_row_3
+      parent_name: group_container
+      weight: 7
+      label: Column
+      format_type: html_element
+      format_settings:
+        label: Column
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'large-6 column'
+    group_row_5:
+      children:
+        - message
+      parent_name: group_column_right
+      weight: 10
+      label: Row
+      format_type: html_element
+      format_settings:
+        label: Row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'row column'
+id: contact_message.custom_contact_form.default
+targetEntityType: contact_message
+bundle: custom_contact_form
+mode: default
+content:
+  field_contact_email:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_contact_first_name:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_contact_last_name:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_contact_number:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  message:
+    type: string_textarea
+    weight: 9
+    settings:
+      rows: 7
+      placeholder: ''
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  copy: true
+  mail: true
+  name: true

@@ -1,0 +1,539 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title> Omni User Guide </title>
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/typography.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="page">
+    <div id="main">
+	  <h1>3. Omni 8.x Feature Setup</h1> 
+
+<!-- INTRO REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	  
+<div class="content clearfix">
+  <h2>Introduction</h2>
+  <p>Thank you for purchasing ESORS's Drupal theme - Omni. Omni Feature Setup guide will cover some key features of Omni theme. 
+  <p>If you are a Drupal beginner, we wrote a <a href='1. Drupal 8 Quick Start.html'>short tutorial</a> to help you find your way around Drupal. If you already know Drupal, please complete <a href="2. Omni 8.x Basic Setup.html">Basic Setup</a> first before start with this Feature Setup.</p>
+  <p>For <b>support</b>, you can contact us through themeforest.net. We will respond within 24hrs.</p>
+</div>
+      
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- TABLE OF CONTENT REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	 
+<div class="content clearfix">
+  <h2>Table of Content</h1>
+  <div>
+    <p>
+      <ul>
+        <li>
+          <a href="#omni-feature-menu">Menu</a>
+          <ol>
+            <li>Main navigation</li>
+            <li>Main navigation mobile</li>
+            <li>Secondary menu</li>
+            <li>Other menus</li>
+          </ol>
+        </li>
+        <li>
+          <a href="#omni-feature-showcase">Showcases</a>
+          <ol>
+            <li><a href="#omni-feature-showcase-basic">Basic</a></li>
+            <li><a href="#omni-feature-showcase-gallery">Gallery</a></li>
+            <li><a href="#omni-feature-showcase-newsflash">Gallery Reveal</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="#omni-feature-custom">Custom Block</a>
+        </li>
+        <li>
+          <a href="#omni-feature-views">Views</a>
+          <ul>
+            <li>Article Block View</li>
+            <li>Blog Block View</li>
+          </ul>
+        </li>
+        <li>
+          <a href="#omni-feature-search">Contact Form</a>
+        </li>
+      </ul>
+    </p>
+  </div>
+</div>
+  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- FEATURE SETUP REGION 
+---------------------------------------------------------------->  
+<!-- Color
+-------------------------------->
+    
+<div class="divider"></div>   
+<!-- Menu Options
+--------------------------------> 
+<div id="omni-feature-menu" class="content clearfix">
+  <h2>Menu</h2>
+  <div class="section">
+    <div class="section">
+      <h3>1. Main navigation</h3>
+      <p>Fairly simple, Go to Structure > Menus > Main navigation > list links and add new links for Main navigation. Go to Structure > Blocks find <b>Main navigation</b> block. Publish it at <b>Menu main</b> block region.</p>
+    </div>
+    <div class="section">
+      <h3>2. Main navigation mobile</h3>
+      <p>Omni Agency require menu set for mobile version so when mobile device viewing the website, Main navigation mobile menu will show instead of Main navigation menu.
+      <p>Similar process, go to Structure > Menus > Add menu. Make sure to name it as Main navigation mobile and machine name MUST be <b>main-mobile</b> then add new links for it. Go to Structure > Blocks layout, click Place block button beside <b>Menu mobile</b> region and select Main navigation mobile. Then configure its' menu level to maximun level 3.</p>
+      <p>Main navigation mobile can have two styles:</p>
+      <ul>
+        <li><b>Reveal</b>: configure it at theme setting, checked by default.</li>
+        <li><b>Dropdown</b>: configure it at theme setting, uncheck reveal.</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h3>3. Secondary menu</h3>
+      <p>Drupal 8 normally put User account menu block into secondary menu region, user can change it by creating another menu set and call it Secondary Menu. Similar process as above Main navigation mobile but be sure machine name MUST be <b>secondary</b>. After creating Secondary menu, user can move User account menu block into disabled and place Secondary Menu block into Menu secondary region.</p>     
+    </div>
+    <div class="section">
+      <h3>4. Other menus</h3>
+      <p>By default, Omni Agency set all other created menus as vertical menu. If user require a horizontal menu then please make a copy of omni_agency/templates/navigation/menu--secondary.html.twig file and rename it to menu--MENUMACHINENAME.html.twig</p>
+    </div>   
+  </div>
+</div>
+
+<!-- Showcase
+--------------------------------> 
+<div class="divider"></div>
+<div id="omni-feature-showcase" class="content clearfix">
+  <h2>Showcase</h2>
+  <p>Omni Agency offer three Showcase styles with easy setup steps. By using two new Block types: <b>Showcase</b> and <b>Showcase Element</b>, user can quickly create Showcase just like to create any other blocks. There is also a Showcase block region for placing showcase block.</p>
+  <div class="section clearfix">
+    <h3>- Understand Showcase and Showcase Element block type</h3>
+    <p>
+      <ul>
+        <li><b>Showcase</b>: contain basic Showcase setting. It also contain multiple <b>Showcase Element</b>.</li>
+        <li><b>Showcase Element</b>: contain actual image, slide title, link, caption etc.</li>
+      </ul>
+    </p>
+    <p>Each <b>Showcase Element</b> act like slide and <b>Showcase</b> act like container that glue slides together.</p>
+  </div>
+
+  <div class="section clearfix">
+    <h3>- Showcase block form</h3>
+    <p><img src="images/pic_59.jpg" class="framed"></p>
+    <p>
+      <ul>
+        <li>Title</li>
+        <li>General Setting
+          <ul>
+            <li>Showcase Type: three type of Showcases. Gallery reveal showcase depend on Gallery showcase. See below for detail.</li>
+            <li>Effect: auto play, fading and speed</li>
+            <li>Adding Slide: adding at least three slides
+              <ul>
+                <li>Block description</li>
+                <li>Title</li>
+                <li>Body</li>
+                <li>Image: act as background.</li>
+                <li>Filter: color on top of background image act as filter.</li>
+                <li>Pattern: provide different style & layout options.</li>
+                <li>URL: full url with <b>http://</b> which point to destination node</li>
+                <li>Button: link to anywhere with variety of button styles. Can have two buttons side by side.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>          
+        <li>Specific Setting: only needed for <b>Gallery</b> showcase type. When checked, Gallery showcase expecting Gallery Reveal showcase setup accordingly with each Gallery showcase slices.
+        </li>
+      </ul>
+    </p>
+  </div>
+  
+  <div class="section">
+    <div class="section">
+      <h3>1. Slider</h3>
+      <p><img src="images/pic_60.jpg" class="framed"></p>
+      <p>
+        <ul>
+          <li>Requirement:
+            <ul>
+              <li>Complete <b>General</b> setting.</li>
+              <li>Images size normally 1920px X 1000px as background.</li>
+            </ul>
+          </li>
+          <li>Optional:
+            <ul>
+              <li>Link</li>
+              <li>Button</li>
+            </ul>
+          </li>
+          <li>Skip:
+            <ul>
+              <li><b>Specific</b> setting</li>
+            </ul>
+          </li>
+          <li>Suitable regions: Showcase region only</li>
+        </ul>
+      </p>
+     </div>
+    <div class="section">
+      <h3>2. Gallery</h3>
+      <p><img src="images/pic_61.jpg" class="framed"></p>
+      <p>Gallery showcase can be set to with or without Gallery reveal.</p>
+      <p>With Gallery reveal: check with reveal at Specific Setting (default). With reveal, each image will have a link button that link to Gallery reveal slice which show more detail along with larger image.</p>
+      <p>Without Gallery reveal: uncheck with reveal at Specific Setting. Without reveal, Gallery will show as simple Gallery slider.</p>
+      <p>
+        <ul>
+          <li>Requirement:
+            <ul>
+              <li>Complete <b>General</b> setting</li>
+              <li>Complete <b>Specific</b> setting</li>
+              <li>Same height and width images</li>
+            </ul>
+          </li>
+          <li>Optional:
+            <ul>
+              <li>Link</li>
+              <li>Section</li>
+            </ul>
+          </li>
+          <li>Skip:
+            <ul>
+              <li>Body</li>
+              <li>Filter</li>
+              <li>Button</li>
+            </ul>
+          </li>          
+        </ul>
+      </p>    
+    </div>
+    <div class="section">
+      <h3>3. Gallery Reveal</h3>
+      <p><img src="images/pic_62.jpg" class="framed"></p>
+      <p>Similar to Gallery showcase with more detail and larger image. It require Gallery showcase and can't be showing alone.
+        <ul>
+          <li>Requirement:
+            <ul>
+              <li>Complete Gallery showcase first.</li>
+              <li>Complete <b>General</b> setting.</li>
+              <li>Need to be setup images order according to Gallery showcase.</li>
+              <li>Need to be published below Gallery showcase at same region.</li>
+              <li>Body field.</li>
+              <li>Same height and width images.</li>
+            </ul>
+          </li>
+          <li>Optional:
+            <ul>
+              <li>Button</li>
+            </ul>
+          </li>
+          <li>Skip:
+            <ul>
+              <li>Link</li>
+              <li>Filter</li>
+            </ul>
+          </li>
+        </ul>
+      </p>   
+    </div>
+  </div>
+</div>
+
+<!-- Custom Block
+--------------------------------> 
+<div class="divider"></div>
+<div id="omni-feature-custom" class="content clearfix">
+  <h2>Custom Block</h2>
+  <p><div class="typo-alert"><b>It is very important for user to understand how Omni Agency's Custom Block work. A lot of features depend on Custom Block</b></div></p>
+  <p>In Omni Agency there are two types of block:</p>
+  <ol>
+    <li>Custom Block type</li>
+    <li>Non-Custom Block type (system block, menu block, basic block etc.)</li>
+  </ol>
+  <p>Omni Agency using Custom Block's merging feature to merge up to six other Custom Blocks's content together to get flexible layouts and styles.</p>
+  <p>
+    <div class="typo-alert">
+      <b>Custom Block can only merge other Custom Block's content.<br>
+      Custom Block use Attachment feature turn Non-Custom Block into Custom Block.<br>
+      To use Attachment feature, Non-Custom Block must be published/placed first.<br>
+      </b>
+    </div>
+  </p>
+  <p>For example, User account menu is a Drupal 8 menus block which is a Non-Custom Block. If user want to merge User account menu block with other blocks. First it need to be published then attached to a Custom Block, last step to merge with others.
+  </p>
+  <p><img src="images/pic_63.jpg" class="framed"></p>
+  <div class="section">
+    <div class="section">
+      <h3>- Title</h3>
+      <p>
+        <ul>
+          <li>Title</li>
+          <li>Size: change title size.</li>
+          <li>Align: change title align position.</li>
+          <li>Color: change title color. Input color code without #.</li>          
+          <li>Border: adding bottom border for title.</li>
+        </ul>
+      </p>
+     </div>
+    <div class="section">
+      <h3>- Media</h3>
+      <p>
+        <ol>
+          <li>Image
+            <ul>
+              <li>with padding: checked as default, very useful when creating blocks.</li>
+            </ul>
+          </li>
+          <li>Icon: using <a href="http://fontawesome.io/icons/" target="_blank">fontawesome</a> icon set. Fill in icon code into Icon field only.
+          <p><img src="images/pic_64.jpg" class="framed"></p>
+          </li>
+        </ol>
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Body</h3>
+      <p>
+        <ul>
+          <li>Add body content</li>
+          <li>Setting
+            <ul>
+              <li>Text Color: change body text color. Input color code without #.</li>
+              <li>with padding: checked as default, very useful when creating blocks.</li>
+              <li>with bottom margin: unchecked as default.</li>
+            </ul>
+          </li>
+          <li>Background:
+            <ul>
+              <li>Color: change body background color. Input color code without #.</li>
+              <li>Image: adding background image.</li>
+              <li>Filter: adding filter for background image.</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Link</h3>
+      <p>It adds links or buttons to the block</p>
+      <p>
+        <ul>
+          <li>URL: require full url with <b>http://</b>. When filled in, custom block's title and image will become linkable.</li>
+          <li>Button Align</li>
+          <li>Adding Button element blocks</li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Merging</h3>
+      <p>The idea is to merge several blocks into one block by horizontal, vertical, tab, slider. Use it only when you want to merge blocks.</p>
+      <p>
+        <ul>
+          <li>Type: select a merging type</li>
+          <li>Horizontal Specific Setting
+            <ul>
+              <li>width: box width or full width</li>
+              <li>same height: force all merging blocks into same height. Required each individual block checked with this options.</li>
+              <li>collapse: by default each merging blocks will have space in-between. Checking this box will collapse the gap.</li>
+            </ul>
+          </li>
+          <li>Add one or more existing custom blocks to merge.<div class="typo-alert"><b>Merging field can ONLY pick up <span class="pink-raspberry">Custom Block type</span> created content, it can't pick up Non-Custom Block type's content.</b></div></li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Attachment</h3>
+      <p>The idea is to attach any blocks that have been published/placed into Block layout and turn it into Custom block so other Custom block can use it to merge.</p>
+      <p><div class="typo-alert"><b>Attachment field can ONLY pick up the block has been published/placed.</b></div></p>  
+    </div>
+    <div class="section">
+      <h3>- Pattern & Reveal</h3>
+      <p> 
+        <ul>
+          <li>Pattern allow user to change the block layout & styles
+            <ul>
+              <li>pattern 1.0 (title/image/body)</li>
+              <li>pattern 2.0 (title/body/image)</li>
+              <li>pattern 3.0 (image/title/body)</li>
+              <li>pattern 4.0 (image/body/title)</li>
+              <li>pattern 5.0 (body/title/image)</li>
+              <li>pattern 6.0 (body/image/title)</li>
+              <li>pattern x.1: allow image show on the left</li>
+              <li>pattern x.2: allow image show on the right</li>
+              <li>pattern x.3: allow image show as it is, in the center</li>
+            </ul>
+          </li>
+          <li>Reveal: scroll & reveal feature. It allows blocks to appear on screen while scrolling.
+            <ul>
+              <li>Enable</li>
+              <li>Origin</li>
+              <li>Speed</li>
+              <li>Delay</li>
+              <li>Distance</li>
+              <li>Reset: replay when re-appear</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+    </div>    
+  </div>
+  <br><br>
+  <h2>Why Merging</h2>
+  <div class="section">
+    <div class="section">
+      <h3>Layout & style</h3>
+      <p>To use Drupal 8 bartik theme as example, there are Featured bottom first, Featured bottom second, Featured bottom third, three Featured bottom regions. If we fill in all three Featured bottom regions then Featured bottom will always show as three columns layout. Unlike bartik, in Omni Agency there is one <b>Main bottom</b> region with Main bottom one, Main bottom two, Main bottom three and Main bottom four. If user only use <b>Main bottom</b> region with merging feature then Omni Agency can have one stack as three columns and put another merging stack below as four columns and so on. Each stack can have its' own background colors, background image, title, styles etc. Result Omni Agency can use much less block regions with more layout options and styles.</p>
+    </div>
+  </div>
+  <br><br>
+  <h2>Why Attachment</h2>
+  <div class="section">
+    <div class="section">
+      <h3>Turn any block into Custom Block</h3>
+      <p>Because Custom Block can only merging other Custom Block's content. For example, in order for a system menu block to be merged, it must be attach to a Custom block first. To attach any blocks, Drupal require block to be published first. User can use <b>Usable</b> region to hold these blocks. It will not show on site.</p>
+    </div>
+  </div>
+  <br><br>
+  <h2>Use Case</h2>
+  <div class="section">
+    <div class="section">
+      <h3>Demo menu footer</h3>
+      <p>
+        <ol>
+          <li>Create menu News & Events at Structure > Menus</li>
+          <li>Publish it at Usable region</li>
+          <li>Create a Custom block that use attachment field to attach News & Events menu block</li>
+          <li>Create menu Service at Structure > Menus</li>
+          <li>Publish it at Usable region</li>
+          <li>Create a Custom block that use attachment field to attach Service menu block</li>
+          <li>Create another Custom block and use vertical merging that merge News & Events, Service block together</li>
+          <li>Do the same for Focus & Solution, Career & About the Agency, International</li>
+          <li>Then horizontal merge all four Custom blocks into one.</li>
+          <li>Publish it into a region</li>
+        </ol>
+      </p>
+      <p><img src="images/pic_65.jpg" class="framed"></p>
+      <h3>Contact form & info</h3>
+      <p>
+        <ol>
+          <li>Publish Contact form into Usable region</li>
+          <li>Create a Custom block that use attachment field to attach Contact form block</li>
+          <li>Create a Custom block Phone & Email</li>
+          <li>Create a Custom block Address</li>
+          <li>Publish Social Media Links into Usable region</li>
+          <li>Create a Custom block that use attachment field to attach Social Media Links block and call it Follow Us</li>
+          <li>Create another Custom block and use vertical merging that merge Phone & Email, Address, Follow Us blocks together</li>          
+          <li>Then horizontal merge all blocks into one.</li>
+          <li>Publish it into a region</li>
+        </ol>
+      </p>
+      <p><img src="images/pic_66.jpg" class="framed"></p>
+    </div>
+  </div>
+  <br><br>
+  <h2>Special Case</h2>
+  <div class="section">
+    <div class="section">
+      <h3>Equal height merging</h3>
+      <p><img src="images/pic_67.jpg" class="framed"></p>
+      <p>
+        <ol>
+          <li>Create four Custom blocks, block 1 & 3 with background image only, block 2 & 4 with content only. When creating these blocks <b><span class="pink-raspberry">be sure to check same height option for each one.</span></b></li>
+          <li>Create another Custom block and use horizontal merging that merge block 1, 2, 3, 4 together and again <b><span class="pink-raspberry">be sure to check same height option for this block.</span></b></li>
+          <li>Publish it into a region.</li>
+        </ol>
+      </p>
+      <h3>Tab Merging</h3>
+      <p><img src="images/pic_68.jpg" class="framed"></p>
+      <p>
+        <ol>
+          <li>Create three Custom blocks.</li>
+          <li>Since each tab has its' own tab title & icon, user need to attach these blocks into another Custom block that provide the title & icon.</li>
+          <li>Remember before attach any block that block need to be published.</li>
+          <li>Publish those three Custom blocks into Usable region.</li>
+          <li>Create a Custom block that use attachment field to attach one of the Custom block that been published and fill in the icon code.</li>
+          <li>Do the same for other two published Custom blocks.</li>          
+          <li>Then Tab merging all blocks into one. Tab merging can have background image or background color.</li>
+          <li>Publish it into a region.</li>
+        </ol>
+      </p>
+    </div>
+  </div>  
+</div>
+	  
+<!-- Views
+--------------------------------> 
+<div class="divider"></div>
+<div id="omni-feature-views" class="content clearfix">
+  <h2>Views</h2>
+  <p>There are two built-in views that come with Omni Agency.</p>
+  <div class="section">
+    <div class="section">
+      <h3>- Omni custom block library</h3>
+      <p>Omni custom block library provide an alternative view to Drupal 8 built-in Custom block library view. User can disable the Drupal original Custom block library view.</p>
+      <img src="images/pic_56.jpg" class="framed">
+      <p>Omni custom block library view allow user to select block type and only display the specific block type content.</p>
+    </div>
+    <div class="section">
+      <h3>- Omni library</h3>
+      <p>Omni library contain 5 block displays:
+        <ol>
+          <li>Page (article): display all article nodes, path as /article</li>
+          <li>Page (blog): display all blog nodes, path as /blog</li>
+          <li>Page (FAQ): display article nodes with tag as <b>FAQ</b>, path as /FAQ. To display articles with FAQ tag, first user need to adding FAQ tag when creating article:
+          <p><img src="images/pic_57.jpg" class="framed"></p>
+          <p>Then user need to modify Page (FAQ) display and adding Tags (field_tags) as FILTER CRITERIA and set it to FAQ</p>
+          <p><img src="images/pic_58.jpg" class="framed"></p>
+          </li>
+          <li>Block (article): display a list of articles as block, can be placed at Block layout.</li>
+          <li>Block (blog): display a list of blogs as block, can be placed at Block layout.</li>
+        </ol>
+      </p>    
+    </div>    
+  </div>
+</div>
+    
+<!-- Search Block
+--------------------------------> 
+<div class="divider"></div>
+<div class="content clearfix">
+  <h2>Contact Form</h2>
+  <div id="omni-feature-search" class="section">    
+    <div class="section">
+      <h3>- Contact Form Page</h3>
+      <p>User need to set default contact form first. Go to Home > Administration > Structure > Contact forms > Edit Custom contact form and check Make this the default form</p>
+      <p>It can be access at path /contact.</p>
+    </div>
+    <div class="section">
+      <h3>- Contact Form Block</h3>
+      <p>Contact Form Block require Contact Block module installed & enabled. Go to Structure > Block Layout and click Place block button then search for Contact block and select Omni Custom contact form as Contact form option.</p>
+    </div>
+  </div>
+</div>
+	  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- COPYRIGHT REGION 
+---------------------------------------------------------------->
+
+<div class="divider"></div>
+<div class="content clearfix">
+<h2>Copyright</h2>
+  <p>The content of this document is copyrighted by ESORS.com. &copy; 2008-2016 All rights reserved. No portion of the content may be directly or indirectly copied, published, reproduced, modified, performed, displayed, sold, transmitted, broadcast, rewritten for broadcast or publication or redistributed in any medium.</p> 
+</div>
+<div class="divider"></div>
+
+<!-- ENDREGION
+---------------------------------------------------------------->	  
+    </div>
+  </div>
+</body>
+</html>

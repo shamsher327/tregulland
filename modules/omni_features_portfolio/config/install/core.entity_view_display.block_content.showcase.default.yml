@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.showcase
+    - field.field.block_content.showcase.field_showcase_autoplay
+    - field.field.block_content.showcase.field_showcase_fade
+    - field.field.block_content.showcase.field_showcase_slide
+    - field.field.block_content.showcase.field_showcase_speed
+    - field.field.block_content.showcase.field_showcase_type
+id: block_content.showcase.default
+targetEntityType: block_content
+bundle: showcase
+mode: default
+content:
+  field_showcase_slide:
+    weight: 0
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+hidden:
+  field_showcase_autoplay: true
+  field_showcase_fade: true
+  field_showcase_speed: true
+  field_showcase_type: true

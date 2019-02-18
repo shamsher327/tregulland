@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature
+    - node.type.blog
+  module:
+    - options
+id: node.blog.field_feature
+field_name: field_feature
+entity_type: node
+bundle: blog
+label: 'Featured in'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

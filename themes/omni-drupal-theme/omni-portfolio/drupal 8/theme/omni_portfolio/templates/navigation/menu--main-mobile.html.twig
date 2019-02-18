@@ -1,0 +1,53 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+  {% set size = items|length %}
+    <div class="menu-table size-{{ size }}">
+      {% for item in items %}
+        {%
+          set classes = [
+            'menu-item',
+          ]
+        %}        
+        {% if loop.index % 3 == 1 %}
+          <div class="menu-row">
+        {% endif %}
+          <div class="menu-column"> 
+            {% if '|' in item.title %}
+              {% set title = item.title|split('|') %}  
+              <a href="{{ item.url }}" class="menu-item"><span class='{{ title.1 }}'></span>{{ title.0 }}</a>            
+            {% else %}
+              {{ link(item.title, item.url, item.attributes.addClass(classes)) }}
+            {% endif %}      
+          </div>
+        {% if loop.index % 3 == 0 or loop.last %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>    
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,207 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMENT POST
+----------------------------------------------------------------*/
+#comment {
+  padding: 1.875rem;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#comment-post h3.title {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#comment .tabs-content {
+  border: 0;
+  padding-top: 1.875rem;
+  background-color: transparent;
+}
+
+.comment h4.title {
+  display: none;
+  font-size: 1.125rem;
+  font-weight: 900;
+}
+
+#comment ul.tabs { 
+  text-transform: uppercase;
+  border: 0;
+  background-color: transparent;
+}
+
+#comment .tabs-title:first-child {
+  padding-right: 1.875rem;
+}
+
+#comment .tabs-title > a {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0 0 1.875rem 0;  
+}
+
+#comment .tabs-title.is-active {
+  background-color: transparent;  
+}
+
+#comment .tabs-title.is-active a {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;  
+}
+
+#comment ul.tabs li a {
+  background-color: transparent;
+}
+
+#comment #comment-post {
+  padding: 0;
+}
+
+.comment,
+.comments .indented {
+  margin-bottom: 1.25rem;
+}
+
+.comment:last-child {
+  margin-bottom: 0;
+}
+
+.comment .content {
+  position: relative;
+  padding: 1.25rem;
+  border-radius: 3px;
+}
+
+.comment .content .arrow::before {
+  position: absolute;
+  left: 10px;
+  top: -23px;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-family: FontAwesome; 
+  font-size: 1.5rem;
+  content: '\f0d8';
+  text-align: center;
+}
+
+.comment:first-child {
+  border-radius: 5px 5px 5px 0;
+}
+
+.comment .media-object-section:first-child {
+  padding-right: 1.25rem;
+}
+
+.comment .media-object-section:last-child {
+  width: 100%;
+}
+
+.comment .user-picture {
+  text-align: center;
+}
+
+.comment .meta {
+  width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 0.3125rem;
+}
+
+.comment .meta .links {
+  float: right;
+}
+
+.comment .content {
+  position: relative;
+}
+
+.comment .content p:last-child {
+  margin: 0;
+}
+
+.comment .links {
+  list-style: none;
+}
+
+.comment .links li {
+  display: inline-block;
+}
+
+.comment .links li a {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 0.3125rem;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  .indented .comment {
+    margin-left: 1.875rem;
+  }
+
+  #comment .tabs-title > a {
+    font-size: 1.25rem;
+    letter-spacing: 0.1875rem;
+  }
+}
+
+/* COMMENT BOX
+----------------------------------------------------------------*/
+#comment-box {
+  padding: 0;
+}
+
+#comment-box h3.title {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.comment-form .filter-wrapper {
+  display: none;
+  margin-top: -1rem;
+  margin-bottom: 1.25rem;
+}
+
+#comment-box .filter-guidelines {
+  font-size: 0.875rem;
+}
+
+#comment-box textarea,
+#comment-box input[type="text"] {
+  color: inherit;
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  background-color: transparent;
+}
+
+#comment-box textarea:focus,
+#comment-box input[type="text"]:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+}

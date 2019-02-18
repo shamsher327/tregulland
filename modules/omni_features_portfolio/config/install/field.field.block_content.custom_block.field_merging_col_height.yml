@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_merging_col_height
+id: block_content.custom_block.field_merging_col_height
+field_name: field_merging_col_height
+entity_type: block_content
+bundle: custom_block
+label: 'Equal Height'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'equal height columns'
+  off_label: 'Off'
+field_type: boolean

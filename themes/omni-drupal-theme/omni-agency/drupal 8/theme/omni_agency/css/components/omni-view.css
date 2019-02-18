@@ -1,0 +1,71 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                           
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* BLOCK(ARTICLE & BLOG)
+----------------------------------------------------------------*/
+.view-block-article,
+.view-block-blog {
+  text-transform: uppercase;
+}
+
+.view-block-article li,
+.view-block-blog li {
+  margin-bottom: 1.25rem;
+}
+
+.view-block-article .meta,
+.view-block-blog .meta {
+  padding-bottom: 0.3125rem;
+  margin-bottom: 0.9375rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.view-block-article img,
+.view-block-blog img {
+  margin-bottom: 0.9375rem;
+}
+
+/* PAGE(ARTICLE)
+----------------------------------------------------------------*/
+.page-article #content-title {
+  text-align: center;
+}
+
+/* PAGE(FAQ)
+----------------------------------------------------------------*/
+.view-page-faq .accordion-title {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  border-left: 0;
+  border-right: 0;
+}
+
+.view-page-faq .accordion-title::before {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.view-page-faq .accordion-content {
+  position: relative;
+  padding-left: 2.625rem;
+  border-left: 0;
+  border-right: 0;
+}
+
+.view-page-faq .accordion-content .answer { 
+  position: absolute;
+  left: 1rem;
+  font-size: 1.25rem;
+}

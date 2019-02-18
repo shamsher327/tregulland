@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title> Omni User Guide </title>
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/typography.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="page">
+    <div id="main">
+	  <h1>3. Omni 8.x Feature Setup</h1> 
+
+<!-- INTRO REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	  
+<div class="content clearfix">
+  <h2>Introduction</h2>
+  <p>Thank you for purchasing ESORS's Drupal theme - Omni. Omni Feature Setup guide will cover some key features of Omni theme. 
+  <p>If you are a Drupal beginner, we wrote a <a href='1. Drupal 8 Quick Start.html'>short tutorial</a> to help you find your way around Drupal. If you already know Drupal, please complete <a href="2. Omni 8.x Basic Setup.html">Basic Setup</a> first before start with this Feature Setup.</p>
+  <div class="typo-alert"><b>We strongly suggest user install <a href='4. Omni 8.x Sample Content Setup.html'>Sample Content(demo replica)</a> and use it as reference.</b> It will help user understand how everything setup together and speedup the process.
+  <p>After install <a href='4. Omni 8.x Sample Content Setup.html'>Sample Content</a>, user can click on Edit button on top right corner. It will show edit option for each individual block, user can quickly see how each block being setup.</p>
+  <p><img src="images/pic_10.gif" class="framed"></p>
+  </div>
+  <p>For <b>support</b>, you can contact us through themeforest.net. We will respond within 24hrs.</p>
+</div>
+      
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- TABLE OF CONTENT REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	 
+<div class="content clearfix">
+  <h2>Table of Content</h1>
+  <div>
+    <p>
+      <ul>
+        <li>
+          <a href="#omni-feature-type">New Content Type</a>
+          <ol>
+            <li>Post</li>
+          </ol>
+        </li>
+        <li>
+          <a href="#omni-feature-menu">Menu</a>
+          <ol>
+            <li>Main navigation</li>
+            <li>Main navigation mobile</li>
+            <li>Mega menu</li>
+          </ol>
+        </li>
+        <li>
+          <a href="#omni-feature-showcase">Showcases</a>
+          <ol>
+            <li>Main</li>
+          </ol>
+        </li>
+        <li>
+          <a href="#omni-feature-custom">Custom Block</a>
+        </li>
+        <li>
+          <a href="#omni-feature-views">Views</a>
+        </li>
+        <li>
+          <a href="#omni-feature-search">Contact Form</a>
+        </li>
+      </ul>
+    </p>
+  </div>
+</div>
+  
+<!-- ENDREGION
+---------------------------------------------------------------->
+<div class="divider"></div>   
+<div id="omni-feature-type" class="content clearfix">
+  <h2>New Content Type</h2>
+  <div class="section">
+    <div class="section">
+      <h3>1. Post</h3>
+      <p>The new content type Post is very important for Omni Expo. It has same process to create a Article node with a few extra setting options. <b>All nodes seen on demo created by Post</b>. Go to Add content > Click on Post.</p>
+      <p><img src="images/expo_5.gif" class="framed"></p>
+      <p>Post require thumbnail image (best size 460X400) uploaded for all teaser images and image field (best size 1920X600) for full node heading.</p>
+      <p><img src="images/expo_6.gif" class="framed"></p>
+      <p>At specific setting, user can set where this post node should appear. For example, mega menu, trending slider, highlight etc. Multiple choice!</p>
+      <p><img src="images/expo_7.gif" class="framed"></p>
+    </div>   
+  </div>
+</div>
+<div class="divider"></div>   
+<!-- Menu Options
+--------------------------------> 
+<div id="omni-feature-menu" class="content clearfix">
+  <h2>Menu</h2>
+  <div class="section">
+    <div class="section">
+      <h3>1. Main navigation</h3>
+      <p>Fairly simple, Go to Structure > Menus > Main navigation > list links and add new links for Main navigation. Go to Structure > Blocks find <b>Main navigation</b> block. Publish it at <b>Menu main</b> block region.</p>
+    </div>
+    <div class="section">
+      <h3>2. Main navigation mobile</h3>
+      <p>Omni Expo require menu set for mobile version so when mobile device viewing the website, Main navigation mobile menu will show instead of Main navigation menu.
+      <p>After basic setup steps, your site will have Main navigation mobile menu in place already. You only need to modify it to fit your needs.
+    </div>
+    <div class="section">
+      <h3>3. Mega menu</h3>
+      <p>To creat Mega menu:</p>
+      <p>
+        <ul>
+          <li>Go to Structure > Block Layout > Custom block library > Add custom block</li>
+          <li>Select Mega menu</li>
+          <li>Click add new custom block button</li>
+          <li>Fill in Block description, Link URL & text then attach a menu item</li>
+          <li><div class="typo-alert"><b>Menu item field can ONLY pick up the block has been published/placed.</b> Those blocks can be placed into <b>Usable</b> region. <b>Usable</b> region act like place holder and will not show on any pages.</div></li>
+        </ul>
+      </p>
+      <p><img src="images/expo_3.gif" class="framed"></p>
+      <p>For example, below screenshot is <b>Menu item</b>: Mega Menu item - Motor. Mega Menu item - Motor include two parts, Mega menu - motor (created by using Structure > Menus) and View Block: Mega menu 1 (created by Omni Expo views). Those two parts have been merged by Custom Block merging function. See Custom Block section below.</p>
+      <p><img src="images/expo_2.gif" class="framed"></p>
+      <p>Repeat above steps to creat more mega menu links.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Showcase
+--------------------------------> 
+<div class="divider"></div>
+<div id="omni-feature-showcase" class="content clearfix">
+  <h2>Showcase</h2>
+  <p>Omni Expo offer one Showcase style with easy setup steps. By using two new Block types: <b>Showcase</b> and <b>Showcase Element</b>, user can quickly create Showcase just like to create any other blocks. There is also a Showcase block region for placing showcase block.</p>
+  <div class="section clearfix">
+    <h3>- Understand Showcase and Showcase Element block type</h3>
+    <p>
+      <ul>
+        <li><b>Showcase</b>: contain basic Showcase setting. It also contain multiple <b>Showcase Element</b>.</li>
+        <li><b>Showcase Element</b>: contain actual image, slide title, link, caption etc.</li>
+      </ul>
+    </p>
+    <p>Each <b>Showcase Element</b> act like slide and <b>Showcase</b> act like container that glue slides together.</p>
+  </div>    
+  <div class="section">
+    <div class="section">
+      <h3>1. Main</h3>
+      <p><img src="images/expo_1.gif" class="framed"></p>
+      <p>
+        <ul>
+          <li>Requirement:
+            <ul>
+              <li>Complete <b>General</b> setting.</li>
+              <li>Images size normally 1920px X 1000px as background.</li>
+              <li>Position</li>
+              <li>Category</li>              
+              <li>Pattern</li>
+              <li>Link or Button</li>
+            </ul>
+          </li>
+          <li>Optional:
+            <ul>
+              <li>Filter</li>
+            </ul>
+          </li>
+          <li>Suitable regions: Showcase region only</li>
+        </ul>
+      </p>
+    </div>    
+  </div>
+</div>
+
+<!-- Custom Block
+--------------------------------> 
+<div class="divider"></div>
+<div id="omni-feature-custom" class="content clearfix">
+  <h2>Custom Block</h2>
+  <p><div class="typo-alert"><b>It is very important for user to understand how Omni Expo's Custom Block work. A lot of features depend on Custom Block</b></div></p>
+  <p>In Omni Expo there are two types of block:</p>
+  <ol>
+    <li>Custom Block type</li>
+    <li>Non-Custom Block type (system block, menu block, basic block etc.)</li>
+  </ol>
+  <p>Omni Expo using Custom Block's merging feature to merge up to six other blocks' content together to get flexible layouts and styles.</p>
+  <p>
+    <div class="typo-alert">
+      <b>Custom Block use Attachment feature turn Non-Custom Block into Custom Block.<br>
+      To use Merging or Attachment feature, All Block must be published/placed first.<br>
+      </b>
+    </div>
+  </p>
+  <p>For example, User account menu is a Drupal 8 menus block which is a Non-Custom Block. If user want to merge User account menu block with other blocks. First it need to be published then attached to a Custom Block, last step to merge with others.
+  </p>
+  <p><img src="images/pic_6.gif" class="framed"></p>
+  <div class="section">
+    <div class="section">
+      <h3>- Title</h3>
+     </div>
+    <div class="section">
+      <h3>- Media</h3>
+      <p>
+        <ul>
+          <li>Icon: using <a href="http://fontawesome.io/icons/" target="_blank">fontawesome</a> icon set. Fill in icon code into Icon field only.
+          <p><img src="images/pic_64.jpg" class="framed"></p>
+          </li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Body</h3>      
+    </div>
+    <div class="section">
+      <h3>- General Setting</h3>      
+    </div>
+    <div class="section">
+      <h3>- Specific Setting</h3>
+      <p><img src="images/pic_7.gif" class="framed"></p>
+      <p>Notes: Omni Expo Custom Block doesn't include Slider merging, Tab merging, Pattern & Reveal section</p>
+      <div class="section">
+        <h4>- Merging</h4>
+        <p>The idea is to merge several blocks into one block by horizontal. Use it only when you want to merge blocks.</p>
+        <p><img src="images/pic_8.gif" class="framed"></p>
+        <p>
+          <ul>
+            <li>Type: MUST select a correct merging type</li>
+            <li>Horizontal Setting
+              <ul>
+                <li>even width columns: checked by default or user can setup each column size by using <b>Size</b> option. All merged columns size in total should be 12. For example, four merged columns size can be 3+3+3+3 or 4+4+2+2</li>
+                <li>equal height columns: force all merging blocks into same height. Required each individual block checked with this options.</li>
+                <li>collapse: by default each merging blocks will have space in-between. Checking this box will collapse the gap.</li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+        <p><div class="typo-alert"><b>Merging field can ONLY pick up the block has been published/placed.</b> Those blocks can be placed into <b>Usable</b> region. <b>Usable</b> region act like place holder and will not show on any pages.</div></p> 
+      </div>
+      <div class="section">
+        <h4>- Attachment</h4>
+        <p>The idea is to attach any blocks that have been published/placed into Block layout and turn it into Custom block so other Custom block can use it to merge.</p>
+        <p><div class="typo-alert"><b>Attachment field can ONLY pick up the block has been published/placed.</b> Those blocks can be placed into <b>Usable</b> region. <b>Usable</b> region act like place holder and will not show on any pages.</div></p>  
+      </div>      
+    </div>    
+  </div>
+  <br><br>
+  <h2>Why Merging</h2>
+  <div class="section">
+    <div class="section">
+      <h3>Layout & style</h3>
+      <p>To use Drupal 8 bartik theme as example, there are Featured bottom first, Featured bottom second, Featured bottom third, three Featured bottom regions. If we fill in all three Featured bottom regions then Featured bottom will always show as three columns layout. Unlike bartik, in Omni Expo there is only one <b>Main bottom</b> region. If user use <b>Main bottom</b> region with merging feature then Omni Expo can have one stack as three columns and put another merging stack below as four columns and so on. Each stack can have its' own background colors, background image, title, styles etc. Result Omni Expo can use much less block regions with more layout options and styles.</p>
+    </div>
+  </div>
+  <br><br>
+  <h2>Why Attachment</h2>
+  <div class="section">
+    <div class="section">
+      <h3>Turn any block into Custom Block, So user can use Custom Block setting</h3>
+    </div>
+  </div> 
+</div>
+	  
+<!-- Views
+--------------------------------> 
+<div class="divider"></div>
+<div id="omni-feature-views" class="content clearfix">
+  <h2>Views</h2>
+  <div class="section">
+    <div class="section">
+      <h3>- Omni custom block library</h3>
+      <p>Omni custom block library provide an alternative view to Drupal 8 built-in Custom block library view. User can disable the Drupal original Custom block library view.</p>
+      <img src="images/pic_56.jpg" class="framed">
+      <p>Omni custom block library view allow user to select block type and only display the specific block type content.</p>
+    </div> 
+    <div class="section">
+      <h3>- Ready to use blocks</h3>
+      <p>Omni Expo has many ready to use blocks. It can be found after click Place Block button at Block Layout. Type <b>view</b> into search box.</p>
+      <img src="images/pic_9.gif" class="framed">
+    </div> 
+  </div>
+</div>
+    
+<!-- Search Block
+--------------------------------> 
+<div class="divider"></div>
+<div class="content clearfix">
+  <h2>Contact Form</h2>
+  <div id="omni-feature-search" class="section">    
+    <div class="section">
+      <h3>- Contact Form Block</h3>
+      <p>Contact Form Block require Contact Block module installed & enabled. Go to Structure > Block Layout and click Place block button then search for Contact block and select Omni Custom contact form as Contact form option.</p>
+    </div>
+  </div>
+</div>
+	  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- COPYRIGHT REGION 
+---------------------------------------------------------------->
+
+<div class="divider"></div>
+<div class="content clearfix">
+<h2>Copyright</h2>
+  <p>The content of this document is copyrighted by ESORS.com. &copy; 2008-2016 All rights reserved. No portion of the content may be directly or indirectly copied, published, reproduced, modified, performed, displayed, sold, transmitted, broadcast, rewritten for broadcast or publication or redistributed in any medium.</p> 
+</div>
+<div class="divider"></div>
+
+<!-- ENDREGION
+---------------------------------------------------------------->	  
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMON
+----------------------------------------------------------------*/
+#header.with-showcase > .inner {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+#header-top {
+  font-size: 0.75rem;
+  padding: 1.25rem;
+  height: 100px;
+}
+
+#header-top .title {
+  display: none;
+}
+
+#header-bottom {
+  height: 60px;
+}
+
+.site-name h1 {
+  font-size: 1.5625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.site-slogan {
+  display: none;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+#menu-mobile button {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: .85em 0;
+  margin: 0;
+  border-width: 3px 0;
+  border-radius: 0;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (max-width: 39.9375em) {
+  #site-info, #menu-mobile {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  #header-top {
+    padding: 1.875rem 1.875rem 1.25rem 1.875rem;
+  }
+
+  .site-name h1 {
+    font-size: 1.9375rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .site-slogan {
+    display: block;
+  }
+
+  .site-logo {
+    padding-top: 0.3125rem;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .site-name h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+  }
+}
+
+/* SOCIAL MEDIA
+----------------------------------------------------------------*/
+#social-media {
+  min-height: 0.625rem;
+}
+
+#social-media .inner {
+  padding: 0.85rem;
+}
+
+#social-media li {
+  position: relative;
+  padding: .2em .35em;
+}
+
+#social-media .fa-lg {
+  width: 2.5rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  background-color: transparent;
+}
+
+#social-media .fa-lg::after {
+  position: absolute;
+  content: '';
+  left: auto;
+  right: -1px;
+  top: 8px;
+  width: 1px;
+  height: 10px;
+}
+
+#social-media li:last-child .fa-lg::after {
+  display: none;
+}
+
+.back_link_container
+{
+  padding:13.6px;
+}

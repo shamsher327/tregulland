@@ -1,0 +1,33 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                           
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+<div{{ attributes.addClass('comment js-comment row') }}>     
+  <div class="medium-2 column">{{ user_picture }}</div>
+  <div class="medium-10 column">
+    <div class="content">
+      <div class="meta"><span class="author">{{ author }}</span> / <span class="date">{{ created }}</span></div>
+      {% if title %}
+        {{ title_prefix }}
+        <h4 class="title">{{ title }}</h3>
+        {{ title_suffix }}
+      {% endif %}
+      {{ content|without('links') }}
+      {% if content.links %}
+        {{ content.links }}
+      {% endif %}
+    </div>
+  </div>
+</div>

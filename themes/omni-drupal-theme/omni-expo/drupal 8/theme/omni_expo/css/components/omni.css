@@ -1,0 +1,447 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* GENERAL
+----------------------------------------------------------------*/
+body {
+  font-family: 'Open Sans', Arial, Helvetica, Sans-Serif;  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, Serif;  
+}
+
+.meta, .term, .date, .author {
+  font-size: 0.6875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+
+.term {
+  font-weight: 400;
+}
+
+a {
+  transition: color .25s ease-out;
+}
+
+p {
+  line-height: 1.8;
+}
+
+blockquote, blockquote p {
+  color: inherit;
+  border-color: inherit;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.user-picture img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transition: all .5s ease-in-out;
+}
+
+.user-picture img:hover {
+  filter: gray;
+  filter: grayscale(1); 
+  -webkit-filter: grayscale(1); 
+}
+
+.image-default {
+  margin-bottom: 1.875rem;
+}
+
+.image-default.float-left {
+  margin-right: 1.875rem;
+}
+
+.image-default.float-right {
+  margin-left: 1.875rem;
+}
+
+.status-message {
+  margin-bottom: 1.875rem; 
+}
+
+/* PAGE 
+----------------------------------------------------------------*/
+.off-canvas-wrapper, .off-canvas-wrapper-inner, .off-canvas-content {
+  min-height: 100%;
+}
+
+.off-canvas-content {
+  padding: 0;
+  box-shadow: none;
+}
+
+.off-canvas {
+  background-color: transparent;
+}
+
+.off-canvas.position-left {
+  left: -300px;
+  width: 300px;
+}
+
+.is-open-left {
+  -webkit-transform: translateX(300px);
+  transform: translateX(300px);
+}
+
+#page {
+  height: 100%;
+  overflow: hidden;
+}
+
+#main-middle {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+
+@media screen and (min-width: 40em) {
+  .off-canvas-content {
+    padding: 0 1.875rem;
+  }
+
+  #page-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 99;
+  }
+}
+
+/* CONTENT
+----------------------------------------------------------------*/
+/* Content Title
+---------------------------------*/
+#content-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  margin-bottom: 1.875rem; 
+}
+
+#content-title:first-letter {
+  text-transform: capitalize;
+}
+
+.page-user #content-title {
+  text-align: center;
+}
+
+/* Content Tab
+---------------------------------*/
+#content-tab {
+  margin-bottom: 1.875rem;
+}
+
+#content-tab ul {
+  display: inline-block;
+}
+
+#content-tab li a {
+  font-size: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  margin-right: 1px;
+}
+
+#content-tab li:first-child a {
+  border-radius: 0.1875rem 0 0 0.1875rem;
+}
+
+#content-tab li:last-child a {
+  margin: 0;
+  border-radius: 0 0.1875rem 0.1875rem 0;
+}
+
+@media screen and (min-width: 40em) {
+  #content-tab li a {
+    padding: 0.9375rem 1.875rem;
+  }
+}
+
+/* Content Main
+---------------------------------*/
+#content-main h2, #content-main h3, #content-main h4, #content-main h5 {
+  font-weight: 900;
+}
+
+#content-main {  
+  margin-bottom: 1.875rem;
+}
+
+#content-main .links,
+#content-main .tags {  
+  position: relative;
+  padding: 1.875rem;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+#content-main .links {  
+  margin-top: 3.75rem;
+}
+
+#content-main .links .title,
+#content-main .tags .title {  
+  position: absolute;
+  left: 1.875rem;
+  top: -0.75rem;
+}
+
+#content-main .links .title h3,
+#content-main .tags .title h3 {  
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 900;
+  padding: 0 1.25rem;
+  margin-bottom: 0;
+}
+
+#content-main .links li {
+  display: inline-block;
+  font-size: 0.625rem;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 0.625rem 0.875rem;
+  margin: 0.15625rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.02);
+  transition: all 0.5s ease-in-out;
+}
+
+#content-main .links li:hover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#content-main .links a {
+  line-height: 1;
+  padding: 0 0.3125rem;
+}
+
+#content-main .tags a {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+}
+
+@media screen and (min-width: 40em) {
+  #content-main p {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Node
+---------------------------------*/
+.meta {
+ margin-bottom: 0.9375rem;
+}
+
+.node.basic .button.link {
+  padding-left: 0;
+}
+
+/* Breadcrumb
+---------------------------------*/
+#breadcrumb {
+  margin-bottom: 1.875rem;
+}
+
+/* Pager
+---------------------------------*/
+.pager { 
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.pager ul {
+  margin-top: -1px;
+}
+
+.pager ul a {
+  font-size: 0.75rem;
+  padding: 0.625rem;
+  text-transform: uppercase;
+}
+
+.pager ul a:hover,
+.pager ul .current a {
+  border-top-width: 1px;
+  border-top-style: solid;
+  background-color: transparent;
+}
+
+.pager ul .current {
+  padding: 0;  
+  background-color: transparent;
+}
+
+.pager.load-more {  
+  border-top: 0;
+}
+
+/* FOOTER & CLOSURE
+----------------------------------------------------------------*/
+#footer .menu > li > a {
+  padding-left: 0;
+}
+
+#closure {
+  padding: 3.75rem 0;
+}
+
+#closure > div {
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#site-info-alter {
+  margin-top: -1.25rem;
+}
+
+#site-info-alter .site-name,
+#site-info-alter .site-logo {
+  display: inline-block;
+  padding: 0 1.875rem;
+}
+
+.design-by {
+  position: absolute;
+  top: 2.5rem;
+  right: 1.25rem;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  padding: 0.625rem 0;
+}
+
+/* SEARCH RESULT
+----------------------------------------------------------------*/
+.search-result ol li {
+  padding-bottom: 0.625rem;
+  margin-bottom: 1.25rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.search-result ol li:last-child {
+  border: none;
+}
+
+/* SHARE
+----------------------------------------------------------------*/
+.share h3.title {
+  font-size: 1.125rem;
+  font-weight: 900;
+  margin-bottom: 1.875rem;
+}
+
+.addtoany_list {
+  display: inline-block;
+  line-height: 1 !important;
+  border-width: 1px;
+  border-style: solid;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.addtoany_list a {
+  display: inline-block;
+  float: left;
+  width: 74px;
+  height: 74px;
+  line-height: 74px;
+  text-align: center;
+  padding: 0; 
+  margin: 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+.addtoany_list a:hover span {
+  opacity: 1;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .share {
+    width: 225px;
+    margin: 0 auto;
+  }
+}
+
+/* ASIDE
+----------------------------------------------------------------*/
+aside .block > .inner {
+  padding: 1.875rem 0;
+}
+
+aside .block > .inner .title h3 {
+  text-transform: none;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+/* FILTER
+----------------------------------------------------------------*/
+.with-filter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  transition: opacity .5s ease-out;
+  background-color: inherit;
+}
+
+.with-filter > div {
+  position: relative;
+}
+
+.with-filter a {
+  color: inherit;
+}
+
+.with-filter a.button {
+  position: relative;
+  z-index: 1;
+}
+
+a.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

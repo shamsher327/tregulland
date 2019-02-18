@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title> Omni Magazine User Guide </title>
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/typography.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="page">
+    <div id="main">
+	  <h1>4. Omni 7.x Sample Content Setup</h1> 
+
+<!-- INTRO REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	  
+<div class="content clearfix">
+  <h2>Introduction</h2>
+  <div class="typo-alert"><b><span class="pink-raspberry">WARNING: Omni Sample Content Setup only suitable for newly installed Drupal site. It shouldn't install on existing site as it will delete all existing data and cannot be undone.</span></b></div>
+  <p>Sample content help user understand how everything setup as in demo. It should install in a testing or development environment.</p>   
+  <p>Omni 7.x Sample Content Setup process is quite simple. It use Drupal <a href="https://www.drupal.org/project/backup_migrate" target="_blank">Backup and Migrate</a> module to install a replica of Omni demo content.</p>   
+</div>
+      
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	 
+<div class="content clearfix">
+  <h2>Simplify Steps: </h1>
+  <div>
+    <p>
+      <ol>
+        <li>Install Drupal</li>
+        <li>Install Required Modules</li>
+        <li>Install Omni Theme</li>
+        <li>Enable Backup and Migrate</li>
+        <li>Restore Database</li>
+        <li>Restore Public Files Directory</li>
+        <li>Change User Name & Password</li>
+      </ol>      
+    </p>
+  </div>
+</div>
+  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- DETAIL SETUP
+---------------------------------------------------------------->  
+   
+<div class="divider"></div>
+<div id="omni-feature-color" class="content clearfix">
+  <h2>In Detalis</h2>  
+  <div class="section">   
+    <div class="section">
+      <h3>- Install Drupal 7</h3>
+      <p>Download latest Drupal 7 and install it as usual. For how to install Drupal, you can check <a href="1. Drupal 7 Quick Start.html"> Drupal 7 Quick Start</a> user guide for detail.</p>
+    </div>
+    <div class="section">
+      <h3>- Install Required Modules</h3>
+      <p>Unzip & upload all modules in <b>modules</b> folder that come with Omni Drupal 7. Not need to enable it. For how to install Drupal module, you can check <a href="2. Omni 7.x Basic Setup.html">Omni 7.x Basic Setup</a> user guide for detail.</p>
+    </div>
+    <div class="section">
+      <h3>- Install Omni Theme</h3>
+      <p>Upload <b>omni_magazine</b> theme files. Not need to enable it. For how to install Drupal theme, you can check <a href="1. Drupal 7 Quick Start.html">Drupal 7 Quick Start</a> user guide for detail.</p>
+    </div>
+    <div class="section">
+      <h3>- Enable Backup and Migrate</h3>
+      <p>Go to Drupal Modules section and enable Backup and Migrate module <b>ONLY</b>. Then go to Configuration > Media > File system and setup <b>Private file system path</b> as <b>sites/default/files/private</b> then save configuration. The path must be exact, you can change the path later if you wish.</p>
+    </div>
+    <div class="section">
+      <h3>- Restore Database</h3>
+      <p>Now go to Configuration > System > Backup and Migrate, click on Restore tab. </p>
+      <p><img src="images/pic_36.jpg" class="framed"></p>
+      <p>
+        <ol>
+          <li>Notice the warning!</li>
+          <li>Select <b>Restore from an uploaded file</b></li>
+          <li><b>Upload a Backup File</b> > Choose file from drupal 7/document/sample content/omni-magazine-7.mysql.gz</li>
+          <li>Make sure <b>Restore to</b> as Default Databse.</li>
+          <li>Click Restore Now, it will take few minutes to restore.</li>
+        </ol>
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Restore Public Files Directory</h3>
+      <p><img src="images/pic_37.jpg" class="framed"></p>
+      <p>
+        <ol>
+          <li>Select <b>Restore from an uploaded file</b> again</li>
+          <li><b>Upload a Backup File</b> > Choose file from drupal 7/document/sample content/omni-magazine-7-public-files.tar.gz</li>
+          <li>Make sure <b>Restore to</b> as <b>Public Files Directory</b>.</li>         
+          <li>Click Restore Now.</li>
+          <li>After Restore complete, it might show 4 warning messages. Those warning can be ignored, it simply tell that we don't have permission to overwrite.</li>
+        </ol>
+      </p>
+    </div>
+    <div class="section">
+      <h3>- Check Sample Content</h3>
+      <p>Now you can check your sample content site. It should have Omni theme and required modules enabled with all features setup.</p>
+    </div>
+    <div class="section">
+      <h3>- Change User Name & Password</h3>
+      <p>You will notice that there is only one user now, name as demo with admin right. You should change his password(<b>demo</b>) and email to something else immediately.</p>
+    </div>
+    <div class="section">
+      <h3>- Setup Complete!</h3>
+    </div>
+  </div>
+</body>
+</html>

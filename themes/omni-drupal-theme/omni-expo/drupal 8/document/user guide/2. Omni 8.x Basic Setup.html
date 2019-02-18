@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Omni Basic Setup</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/typography.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div id="page">
+    <div id="main">
+	  <h1>2. Omni 8.x Basic Setup</h1> 
+
+<!-- INTRO REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	  
+<div class="content clearfix">
+  <h2>Introduction</h2>
+  <p>Thank you for purchasing ESORS's Drupal theme - Omni. Omni theme build for Drupal natively, not repack from other CMS platform. We reduce third party modules usage by using Drupal Content Type, Block Type and Views so you can have a clean and less stress start.</p>
+  <p>For Drupal beginner, we wrote a <a href='1. Drupal 8 Quick Start.html'>short tutorial</a> to help you find your way around Drupal and quickly pass Drupal learning curve. If you already know Drupal, you can continue with following section.</p>
+  <div class="typo-alert"><b>We strongly suggest user install <a href='4. Omni 8.x Sample Content Setup.html'>Sample Content(demo replica)</a> and use it as reference.</b> It will help user to understand how everything setup together and speedup the process.</div>
+  <div class="typo-alert"><b>To setup from scratch, you need to complete the following <a href="#omni-basic-intro">Basic Configuration</a> (<span class="pink-raspberry"><i>10 minutes</i></span>) section.</b></div>
+  <p>For <b>support</b>, you can contact us through themeforest.net. We will respond within 24hrs.</p>
+</div>
+      
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- TABLE OF CONTENT REGION 
+---------------------------------------------------------------->
+      
+<div class="divider"></div>	 
+<div class="content clearfix">
+  <h2>Table of Content</h2>
+  <div>
+    <p>
+      <ul>
+        <li><a href="#omni-basic-intro">Introduction</a></li>
+        <li><a href="#omni-basic-file">Theme Pack Folder Structure</a></li>
+        <li><a href="#omni-basic-install">Installation</a></li>
+        <li>
+          <a href="#omni-basic-config">Basic Configuration</a>
+          <ol>
+            <li>Enable Omni Expo theme</li>   
+            <li>Enable required modules</li>                     
+            <li>Setup avatar</li>
+          </ol>
+        </li>        
+      </ul>
+    </p>
+  </div>
+</div>
+  
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- BASIC SETUP REGION 
+---------------------------------------------------------------->
+<div class="divider"></div>
+<div class="content clearfix">
+  <h2>Omni Basic Setup</h2>
+
+<!-- Introduction
+-------------------------------->
+
+  <div id="omni-basic-intro" class="section">
+    <h3>- Introduction</h3>
+    <p>In this section, we will show you some basic setup steps that Omni theme need. By using this guide, we assume you have basic knowledge of Drupal and have Drupal 8.x installed on your system.
+    </p>		  
+  </div>
+
+<!-- File Structure
+-------------------------------->
+  
+  <div id="omni-basic-file" class="section">
+    <h3>- Theme Pack Folder Structure</h3>
+    <p>
+      <ul class="typo-arrow-alter">
+        <li>document
+          <ul>
+            <li>user guide</li>
+            <li>views: importable view files</li>
+            <li>sample content: demo SQL files & demo image files</li>
+          </ul>
+        </li>
+        <li>licensing</li>
+        <li>modules: all required modules for Omni Drupal theme.</li>
+        <li>theme: theme files folder
+          <ul>
+            <li>omni_expo: this is the actual theme, please upload this folder to into drupal 8 root's <b>themes/custom</b> folder.</li>
+          </ul>
+        </li>
+        <li>README.txt</li>
+      </ul>
+    </p> 
+  </div>
+
+<!-- Installation
+-------------------------------->  
+
+  <div id="omni-basic-install" class="section">
+    <h3>- Installation</h3>
+    <p>There is a modules folder within the download package which include all necessary modules for this theme. Only package included version of modules were tested for compatibility. If new version released please backup before upgrade since it might not be compatible.</p>
+    <p>Please install Omni Expo theme and following Modules (If you don't know how to install Drupal theme, please check our <a href='1. Drupal 8 Quick Start.html'>Drupal Quick Start</a> guide):
+      <ul class="typo-checklist">
+        <li><a href="https://www.drupal.org/project/admin_toolbar" target="_blank">Admin Toolbar 8.x-1.17</a></li>
+        <li><a href="https://www.drupal.org/project/config_update" target="_blank">Configuration Update Manager 8.x-1.1</a></li>
+        <li><a href="https://www.drupal.org/project/contact_block" target="_blank">Contact Block 8.x-1.2</a></li>
+        <li><a href="http://drupal.org/project/features" target="_blank">Features 8.x-3.0-rc1</a></li>
+        <li><a href="http://drupal.org/project/field_group" target="_blank">Field Group 8.x-1.0-rc4</a></li>
+        <li><a href="http://drupal.org/project/inline_entity_form" target="_blank">Inline Entity Form 8.x-1.0-alpha6</a></li>
+        <li><a href="https://www.drupal.org/project/prev_next" target="_blank">Previous/Next API 8.x-2.x-dev</a></li>
+        <li><a href="http://drupal.org/project/addtoany" target="_blank">Share Buttons by AddToAny 8.x-1.14</a></li>
+        <li><a href="https://www.drupal.org/project/social_media_links" target="_blank">Social Media Links Block 8.x-2.1</a></li>
+        <li><a href="https://www.drupal.org/project/simplenews" target="_blank">Simplenews 8.x-1.0-alpha2</a></li>
+        <li><a href="https://www.drupal.org/project/views_infinite_scroll" target="_blank">Views Infinite Scroll 8.x-1.2</a>
+        </li>
+        <li>Omni Custom</li>
+        <li>Omni Feature: simply import all content type & block type for Omni theme. Available within download files.</li>
+      </ul>
+    </p>		 
+  </div>
+
+<!-- Basic Configuration
+-------------------------------->
+
+  <div id="omni-basic-config" class="section">
+    <h3>- Basic Configuration</h3>
+    <div class="section">
+      <div class="typo-alert"><p>You need to do <b>ALL</b> the following steps <span class="red-alizarin">by order</span>, even if you think you might not need it for now.</p></div>  
+    </div>
+    <div class="section">
+      <h3>1. Enable Omni Expo theme</h3>
+      <p>Go to Appearance</p>
+      <p>
+        <ul>
+          <li>Enable and set Omni Expo as Default theme</li>
+          <li>Make sure administration theme set to <b>Seven</b></li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>2. Enable required modules <span class="red-alizarin">by order!</span></h3>
+      <p>Go to Extend page:</p>
+      <p>
+        <ol>
+          <li>Enable modules <b>Statistics</b>, <b>Update Manager</b>, <b>Admin Toolbar</b>, <b>Contact Block</b>, <b>Field Group</b>, <b>Inline Entity Form</b>, <b>Simplenews</b>, <b>AddToAny</b>, <b>Previous/Next</b>, <b>Social Media Links Block</b>, <b>Views Infinite Scroll</b> then click <b>Save Configuration</b></li>
+          <li>Enable modules <b>Features</b>, <b>Features UI</b>, <b>Configuration Update Base</b> and <b>Omni Custom</b> then click <b>Save Configuration</b></li>
+          <li>Enable <b>Omni Feature</b> then click <b>Save Configuration</b> (might take longer).</li>
+        </ol>
+      </p>
+    </div>   
+    <div class="section">
+      <h3>3. Setup avatar & author block</h3>
+      <p>Go to Configuration > Account setting > Manage fields</p>
+      <p>
+        <ul>
+          <li>Edit Picture field</li>
+          <li>Upload images/avatar.png file as default image</li>
+          <li>Click <b>Save Configuration</b></li>
+        </ul>
+      </p>
+      <p>Go to Configuration > Account setting > Manage form display</p>
+      <p>
+        <ul>
+          <li>Enable Title & Profile for default display then Save.</li>
+          <li>Edit Admin profile and input some sample data for Title & Profile fields then Save.</li>
+        </ul>
+      </p>
+      <p>Go to Structure > Block layout</p>
+      <p>
+        <ul>
+          <li>At Author region, click Place block button and select View Block: About author.</li>
+          <li>Make sure it only display on Post content type.</li>
+        </ul>
+      </p>
+    </div> 
+    <div class="section">
+      <h3>4. Change front page path</h3>
+      <p>Go to Configuration > Basic site settings > Front Page</p>
+      <p>
+        <ul>
+          <li>Change default front page field from /node to /post</li>
+          <li>Click <b>Save Configuration</b></li>
+        </ul>
+      </p>
+    </div> 
+    <div class="section">
+      <h3>5. Adding taxonomy terms for Category</h3>
+      <p>Go to Structure > Taxonomy > Category</p>
+      <p>
+        <ul>
+          <li>Click list terms button and adding some sample terms. For example: city, life, style etc.</li>
+        </ul>
+      </p>
+    </div>
+    <div class="section">
+      <h3>6. Views</h3>
+      <p>Go to Structure > Views</p>
+      <p>
+        <ul>
+          <li>Disable Custom block library</li>
+          <li>Edit Taxonomy term view and remove Header (Global: Rendered entity - Taxonomy term (Global: Rendered entity - Taxonomy term)) then save it.</li>
+        </ul>
+      </p>
+    </div> 
+    <div class="section">
+      <div class="typo-tip">
+        For live site, you should enable <b>Aggregate for JavaScript and CSS files.</b> <b>Now you have completed the basic setup! You can continue on <a href="3. Omni 8.x Feature Setup.html">Omni Feature Setup</a></b>.</p>
+      </div>
+    </div> 
+  </div>
+
+<!-- ENDREGION
+---------------------------------------------------------------->
+
+<!-- COPYRIGHT REGION 
+---------------------------------------------------------------->
+
+<div class="divider"></div>
+<div class="content clearfix">
+<h2>Copyright</h2>
+  <p>The content of this document is copyrighted by ESORS.com. &copy; 2008-2016 All rights reserved. No portion of the content may be directly or indirectly copied, published, reproduced, modified, performed, displayed, sold, transmitted, broadcast, rewritten for broadcast or publication or redistributed in any medium.</p> 
+</div>
+<div class="divider"></div>
+
+<!-- ENDREGION
+---------------------------------------------------------------->	  
+    </div>
+  </div>
+</body>
+</html>

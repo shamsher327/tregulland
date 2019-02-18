@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.custom_block
+    - field.storage.block_content.field_block_reveal_speed
+  module:
+    - options
+id: block_content.custom_block.field_block_reveal_speed
+field_name: field_block_reveal_speed
+entity_type: block_content
+bundle: custom_block
+label: Speed
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: speed-default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

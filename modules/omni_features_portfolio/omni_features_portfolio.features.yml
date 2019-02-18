@@ -1,0 +1,12 @@
+bundle: omni_features
+excluded:
+  - block.block.omni_portfolio_content
+  - block.block.omni_portfolio_help
+  - block.block.omni_portfolio_local_actions
+  - block.block.omni_portfolio_local_tasks
+  - block.block.portfolio
+  - block.block.bartik_footer
+  - block_content.type.basic
+  - core.entity_form_display.block_content.basic.default
+  - core.entity_view_display.block_content.basic.default
+required: true

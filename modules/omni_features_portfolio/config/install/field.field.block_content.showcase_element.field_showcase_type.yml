@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.showcase_element
+    - field.storage.block_content.field_showcase_type
+  module:
+    - options
+id: block_content.showcase_element.field_showcase_type
+field_name: field_showcase_type
+entity_type: block_content
+bundle: showcase_element
+label: 'Showcase Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,6 @@
+name: Omni Custom
+description: Custom module for Omni
+package: Custom
+type: module
+version: 8.0
+core: 8.x

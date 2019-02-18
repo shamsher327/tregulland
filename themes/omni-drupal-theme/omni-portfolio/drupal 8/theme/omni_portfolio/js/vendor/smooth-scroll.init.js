@@ -1,0 +1,1 @@
+smoothScroll.init({offset: 60});

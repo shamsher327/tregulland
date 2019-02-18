@@ -1,0 +1,260 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* TEASER
+----------------------------------------------------------------*/
+.article.teaser {
+  padding: 1.875rem 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.article.teaser .title {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.article.teaser .term {
+  padding-right: 0.625rem;
+}
+
+.article.teaser .term a {
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+
+.article.teaser .content {
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+
+.article.teaser .read-more {
+  text-align: center;
+}
+
+.article.teaser .button.hollow {
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  margin: 0;
+  overflow: hidden;
+}
+
+.article.teaser .button.hollow:before {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0;
+  z-index: 1;
+  content: '\f101';
+  font-family: FontAwesome; 
+  font-size: 1rem; 
+  line-height: 34px;
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.article.teaser .button.hollow:hover:before {
+  left: 0%;
+  right: auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  .article.teaser .title {
+    font-size: 2.5rem;
+  }
+
+  .article.teaser .read-more {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .article.teaser .title {
+    font-size: 3rem;
+  }
+
+  .article.teaser .content {
+    font-size: 1.125rem;
+    margin-bottom: 1.875rem;
+  }
+
+  .article.teaser .term a {
+    font-size: 1.25rem;
+  }
+}
+
+/* FULL
+----------------------------------------------------------------*/
+.article-header {
+  margin-bottom: 3.75rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;  
+}
+
+.article-header .title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.article-header .meta.submit {
+  padding-left: 1.25rem;
+  margin-bottom: -2.125rem;
+  text-align: left;
+}
+
+.article-header .meta.submit .wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 1.25rem;
+}
+
+.article-header .summary {
+  font-weight: 300;
+  margin-bottom: 1.875rem;
+}
+
+.article-header .user-picture {
+  display: inline-block;
+  padding-right: 1.25rem;
+}
+
+.article-header .user-picture img {
+  width: 80px;
+  height: 80px;
+  padding: 0.9375rem;
+}
+
+.article-header .term .inner {
+  position: relative;
+  display: inline-block;
+  padding: 0 1.875rem;
+}
+
+.article-header .term .inner:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  transition: background-color .25s ease-in-out;
+}
+
+.article-header .term .inner:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  transition: background-color .25s ease-in-out;
+}
+
+.article-body .body-left {
+  margin-bottom: 1.875rem;
+}
+
+#article-content {  
+  margin-bottom: 1.875rem;
+}
+
+#article-content > .inner {  
+  margin-bottom: 3.75rem;
+}
+
+#article-content .image-default img {
+  width: 100%;
+}
+
+#article-content .links {  
+  position: relative;
+  padding: 1.875rem;
+  margin: 1.875rem 0;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#article-content .links .title {  
+  position: absolute;
+  left: 1.875rem;
+  top: -0.625rem;
+}
+
+#article-content .links .title h3 {  
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  padding: 0 1.25rem;
+}
+
+#article-content .links li {
+  display: inline-block;
+  padding: 0.3125rem 0.625rem;
+  margin: 0.15625rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+#article-content .links a {
+  line-height: 1.6;
+  padding: 0 0.3125rem;
+}
+
+/* Media Query
+---------------------------------*/
+@media screen and (min-width: 40em) {
+  .article-body .body-left > .inner {
+    padding: 0 1.875rem;
+  }
+
+  #article-content > .inner {
+    font-size: 1.125rem;
+  }
+
+  #article-content > .inner p {
+    margin-bottom: 1.875rem;
+  }
+
+  .article-header .title {
+    font-size: 3rem;
+  }
+
+  .article-header .summary {
+    font-size: 1.125rem;
+  }
+
+  .article-header .user-picture img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .article-header .title {
+    font-size: 4rem;
+  }
+
+  .article-header .summary {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_button_color
+field_name: field_button_color
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: default
+    -
+      value: primary
+      label: primary
+    -
+      value: secondary
+      label: secondary
+    -
+      value: success
+      label: success
+    -
+      value: alert
+      label: alert
+    -
+      value: warning
+      label: warning
+    -
+      value: ghost
+      label: ghost
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

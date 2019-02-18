@@ -1,0 +1,6 @@
+global-styling:
+  js:
+    'https://booking.tregullandandco.co.uk/scripts/iframe/iframe.js' : { type: external } 
+  css:
+    component:
+      css/style.css: {}

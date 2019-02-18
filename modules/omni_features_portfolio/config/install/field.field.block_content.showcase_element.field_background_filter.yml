@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.showcase_element
+    - field.storage.block_content.field_background_filter
+  module:
+    - options
+id: block_content.showcase_element.field_background_filter
+field_name: field_background_filter
+entity_type: block_content
+bundle: showcase_element
+label: Filter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

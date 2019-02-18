@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: button
+label: 'Button element'
+revision: 0
+description: 'Button element used by other block types.'

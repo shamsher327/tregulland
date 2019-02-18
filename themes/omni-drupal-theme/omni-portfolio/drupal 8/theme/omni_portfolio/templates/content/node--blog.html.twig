@@ -1,0 +1,113 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% if not page %} 
+  {% if content.field_image_thumbnail|render == false %}
+    {% set image_thumbnail %} without-image{% endset %}
+  {% endif %}
+  {% set classes %}node blog teaser blog-item {{ content.field_width }}{{ image_thumbnail }} clearfix{% endset %}
+  <article{{ attributes.addClass(classes) }}>
+    <div class="inner">
+      {% if content.field_image_thumbnail|render %}
+        <div class="image-default">
+          {{ content.field_image_thumbnail }}
+        </div>
+      {% endif %}
+      <div class="meta submit text-center">
+        <span class="day">{{ node.createdtime|date("d") }}</span><span class="suffix">{{ node.createdtime|date("S") }}</span>
+        <span class="month">{{ node.createdtime|date("/ M / Y") }}</span> <span class="lowercase">{{ '-'|t }}</span>
+        <span class="author">{{ author_name }}</span>
+      </div>  
+      {{ title_prefix }}
+      <h2 class="title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>        
+      {{ title_suffix }}
+      {% if summary %}
+        <div class="content"><p>{{ summary }}</p></div>
+      {% else %}
+        <div class="content">{{ content|without('comment', 'links', 'field_tags', 'field_width', 'field_image_thumbnail', 'addtoany') }}</div>
+      {% endif %}  
+    </div>    
+  </article>
+{% else %}
+  <article{{ attributes.addClass('node blog full clearfix') }}>
+    <header class="blog-header text-center">
+      <div class="row">
+        <div class="small-centered large-11 column">
+          <div class="meta author">           
+            {{ 'Posted'|t }} <span class="lowercase">{{ 'by'|t }}</span> {{ author_name }} {% if content.field_tags|render %}<span class="lowercase">{{ 'in'|t }}</span> {{ content.field_tags }}{% endif %}                              
+          </div>
+          <h1 class="title">{{ label }}</h1>
+          {% if summary %}
+            <div class="summary">{{ summary }}</div>
+          {% endif %}
+          {% if content.addtoany %}
+            <div class="share text-center">{{ content.addtoany }}</div>
+          {% endif %}          
+        </div>
+      </div>
+    </header>
+    {% if content.field_image|render %}
+      <div class="image-default">
+        {{ content.field_image }}
+      </div>
+    {% endif %} 
+    <div class="blog-body">
+      <div class="row collapse">
+        {% if sidebar_secondary %}
+          <div class="body-left large-8 column">
+        {% else %}
+          <div class="body-left small-centered large-8 column">
+        {% endif %}
+          <div class="inner">
+            <div id="blog-content">
+              <div class="meta">
+                <div class="date text-center">
+                  <span class="day">{{ node.createdtime|date("d") }}</span><span class="suffix">{{ node.createdtime|date("S") }}</span>  
+                  <span class="month">{{ node.createdtime|date("M / Y") }}</span>                 
+                </div>
+              </div>
+              <div class="inner">
+                {{ content|without('comment', 'links', 'field_tags', 'field_image', 'addtoany') }}
+              </div>
+                {% if content.links %}
+                  <div class="links"> 
+                    <div class="title"><h3>{{ 'links'|t }}</h3></div>                       
+                    {{ content.links }}            
+                  </div>
+                {% endif %}
+              {% if author %}
+                <section id="author">{{ author }}</section>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% if sidebar_secondary %}
+          <div class="body-right large-4 columns">
+            <div class="inner" data-sticky-container>
+              <div class="sticky" data-sticky data-sticky-on="large" data-anchor="blog-content">
+                {{ sidebar_secondary }}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <section id="related">   
+      {{ related }}
+    </section>
+    {{ content.comment }}
+  </article>
+{% endif %}

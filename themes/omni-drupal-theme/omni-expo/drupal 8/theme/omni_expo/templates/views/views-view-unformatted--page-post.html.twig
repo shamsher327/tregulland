@@ -1,0 +1,26 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#} 
+{% if title %}
+  <h2>{{title}}</h2>
+{% endif %}
+<div class="row small-up-1 medium-up-2 large-up-2 xxlarge-up-3">
+  {% for row in rows %}
+    <div class="column">
+      {{ row.content }}
+    </div>
+  {% endfor %}
+</div>

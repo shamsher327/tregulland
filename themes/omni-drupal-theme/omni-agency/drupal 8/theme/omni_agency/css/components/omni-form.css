@@ -1,0 +1,65 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                            
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMON
+----------------------------------------------------------------*/
+.form-item, .form-actions {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+form .description {
+  margin: 0 0 1rem;
+}
+
+details {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+details > .form-item {
+  padding: 0 1.5rem;
+}
+
+/* CUSTOM CONTACT FORM
+----------------------------------------------------------------*/
+.custom-contact label {
+  color: inherit;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+}
+
+.custom-contact textarea,
+.custom-contact input[type="text"] {
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-width: 0;
+  border-bottom-width: 2px;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.custom-contact textarea:focus,
+.custom-contact input[type="text"]:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.block-contact-block .form-actions {
+  text-align: center;
+  padding: 0 0.9375rem;
+}

@@ -1,0 +1,6 @@
+enable_override: 1
+view: omni_library_page
+view_display: page_blog_term
+inherit_settings: 1
+pass_arguments: 1
+uuid: a5177e2b-521e-4408-9e85-d8e51b451bcf

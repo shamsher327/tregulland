@@ -1,0 +1,8 @@
+------------------------------------------------------------------
+2016/3/27
+------------------------------------------------------------------	
+Changed
+  - file: omni/omni_magazine/templates/views-view-unformatted--block-category.tpl.php (adding limitation when over 9 nodes)
+  - file: omni/omni_magazine/templates/views-view-unformatted--block-category-grid.tpl.php (adding limitation to 5 nodes)
+  - file: omni/omni_magazine/templates/views-view-unformatted--page-category.tpl.php (adding limitation when over 9 nodes)
+  - file: omni/omni_magazine/templates/views-view-unformatted--page-category-grid.tpl.php (adding limitation to 5 nodes)

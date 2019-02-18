@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.showcase_element
+    - field.storage.block_content.field_showcase_pattern
+  module:
+    - options
+id: block_content.showcase_element.field_showcase_pattern
+field_name: field_showcase_pattern
+entity_type: block_content
+bundle: showcase_element
+label: Pattern
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'pattern-1 a-0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

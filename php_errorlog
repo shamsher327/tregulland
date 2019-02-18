@@ -1,0 +1,151 @@
+[26-Oct-2018 14:15:10 CST6CDT] PDOException: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/tregulla/public_html/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php on line 83
+[26-Oct-2018 14:15:13 CST6CDT] PDOException: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/tregulla/public_html/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php on line 83
+[09-Jan-2019 12:40:12 CST6CDT] PDOException: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/tregulla/public_html/core/lib/Drupal/Component/DependencyInjection/PhpArrayContainer.php on line 83
+[18-Jan-2019 13:18:08 UTC] Uncaught PHP Exception Drupal\Core\Extension\InfoParserException: "Unable to parse temporary://update-extraction-ea5ff3b4/officialfacebookpixel/official_facebook_pixel.info.yml Unable to parse at line 5 (near "  Pixel on your Drupal site.")." at /home/tregulla/public_html/core/lib/Drupal/Core/Extension/InfoParserDynamic.php line 30
+[18-Jan-2019 13:20:39 UTC] Uncaught PHP Exception Drupal\Core\Extension\InfoParserException: "Unable to parse temporary://update-extraction-ea5ff3b4/officialfacebookpixel/official_facebook_pixel.info.yml Unable to parse at line 5 (near "  Pixel on your Drupal site.")." at /home/tregulla/public_html/core/lib/Drupal/Core/Extension/InfoParserDynamic.php line 30
+[19-Jan-2019 14:25:21 UTC] Failed to log error: Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\x8B\xD8\xC6Ck' for column 'location' at row 1: INSERT INTO {watchdog} (uid, type, message, variables, severity, link, location, referer, hostname, timestamp) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9); Array
+(
+    [:db_insert_placeholder_0] => 0
+    [:db_insert_placeholder_1] => php
+    [:db_insert_placeholder_2] => %type: @message in %function (line %line of %file).
+    [:db_insert_placeholder_3] => a:5:{s:5:"%type";s:45:"Drupal\Core\Database\DatabaseExceptionWrapper";s:8:"@message";s:517:"SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (utf8_general_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation 'like': SELECT url_alias.source AS source
+FROM 
+{url_alias} url_alias
+WHERE  (alias LIKE :db_condition_placeholder_0 ESCAPE '\\') AND (langcode IN  (:db_condition_placeholder_1, :db_condition_placeholder_2)) 
+ORDER BY langcode ASC, pid DESC; Array
+(
+    [:db_condition_placeholder_0] => /S‹ØÆCk
+    [:db_condition_placeholder_1] => en
+    [:db_condition_placeholder_2] => und
+)
+";s:9:"%function";s:49:"Drupal\Core\Path\AliasStorage->lookupPathSource()";s:5:"%file";s:69:"/home/tregulla/public_html/core/lib/Drupal/Core/Path/AliasStorage.php";s:5:"%line";i:230;}
+    [:db_insert_placeholder_4] => 3
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => http://tregullandandco.co.uk/S‹ØÆCk
+    [:db_insert_placeholder_7] => 
+    [:db_insert_placeholder_8] => 83.240.186.238
+    [:db_insert_placeholder_9] => 1547907921
+)
+ in Drupal\dblog\Logger\DbLog->log() (line 84 of /home/tregulla/public_html/core/modules/dblog/src/Logger/DbLog.php).
+[19-Jan-2019 14:25:21 UTC] Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\x8B\xD8\xC6Ck' for column 'location' at row 1: INSERT INTO {watchdog} (uid, type, message, variables, severity, link, location, referer, hostname, timestamp) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9); Array
+(
+    [:db_insert_placeholder_0] => 0
+    [:db_insert_placeholder_1] => php
+    [:db_insert_placeholder_2] => %type: @message in %function (line %line of %file).
+    [:db_insert_placeholder_3] => a:5:{s:5:"%type";s:45:"Drupal\Core\Database\DatabaseExceptionWrapper";s:8:"@message";s:517:"SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (utf8_general_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation 'like': SELECT url_alias.source AS source
+FROM 
+{url_alias} url_alias
+WHERE  (alias LIKE :db_condition_placeholder_0 ESCAPE '\\') AND (langcode IN  (:db_condition_placeholder_1, :db_condition_placeholder_2)) 
+ORDER BY langcode ASC, pid DESC; Array
+(
+    [:db_condition_placeholder_0] => /S‹ØÆCk
+    [:db_condition_placeholder_1] => en
+    [:db_condition_placeholder_2] => und
+)
+";s:9:"%function";s:49:"Drupal\Core\Path\AliasStorage->lookupPathSource()";s:5:"%file";s:69:"/home/tregulla/public_html/core/lib/Drupal/Core/Path/AliasStorage.php";s:5:"%line";i:230;}
+    [:db_insert_placeholder_4] => 3
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => http://tregullandandco.co.uk/S‹ØÆCk
+    [:db_insert_placeholder_7] => 
+    [:db_insert_placeholder_8] => 83.240.186.238
+    [:db_insert_placeholder_9] => 1547907921
+)
+ in /home/tregulla/public_html/core/modules/dblog/src/Logger/DbLog.php on line 84
+[19-Jan-2019 14:25:23 UTC] Failed to log error: Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\x8B\xD8\xC6Ck' for column 'location' at row 1: INSERT INTO {watchdog} (uid, type, message, variables, severity, link, location, referer, hostname, timestamp) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9); Array
+(
+    [:db_insert_placeholder_0] => 0
+    [:db_insert_placeholder_1] => php
+    [:db_insert_placeholder_2] => %type: @message in %function (line %line of %file).
+    [:db_insert_placeholder_3] => a:5:{s:5:"%type";s:45:"Drupal\Core\Database\DatabaseExceptionWrapper";s:8:"@message";s:517:"SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (utf8_general_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation 'like': SELECT url_alias.source AS source
+FROM 
+{url_alias} url_alias
+WHERE  (alias LIKE :db_condition_placeholder_0 ESCAPE '\\') AND (langcode IN  (:db_condition_placeholder_1, :db_condition_placeholder_2)) 
+ORDER BY langcode ASC, pid DESC; Array
+(
+    [:db_condition_placeholder_0] => /S‹ØÆCk
+    [:db_condition_placeholder_1] => en
+    [:db_condition_placeholder_2] => und
+)
+";s:9:"%function";s:49:"Drupal\Core\Path\AliasStorage->lookupPathSource()";s:5:"%file";s:69:"/home/tregulla/public_html/core/lib/Drupal/Core/Path/AliasStorage.php";s:5:"%line";i:230;}
+    [:db_insert_placeholder_4] => 3
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => http://tregullandandco.co.uk/S‹ØÆCk
+    [:db_insert_placeholder_7] => 
+    [:db_insert_placeholder_8] => 83.240.186.238
+    [:db_insert_placeholder_9] => 1547907923
+)
+ in Drupal\dblog\Logger\DbLog->log() (line 84 of /home/tregulla/public_html/core/modules/dblog/src/Logger/DbLog.php).
+[19-Jan-2019 14:25:23 UTC] Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\x8B\xD8\xC6Ck' for column 'location' at row 1: INSERT INTO {watchdog} (uid, type, message, variables, severity, link, location, referer, hostname, timestamp) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9); Array
+(
+    [:db_insert_placeholder_0] => 0
+    [:db_insert_placeholder_1] => php
+    [:db_insert_placeholder_2] => %type: @message in %function (line %line of %file).
+    [:db_insert_placeholder_3] => a:5:{s:5:"%type";s:45:"Drupal\Core\Database\DatabaseExceptionWrapper";s:8:"@message";s:517:"SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (utf8_general_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation 'like': SELECT url_alias.source AS source
+FROM 
+{url_alias} url_alias
+WHERE  (alias LIKE :db_condition_placeholder_0 ESCAPE '\\') AND (langcode IN  (:db_condition_placeholder_1, :db_condition_placeholder_2)) 
+ORDER BY langcode ASC, pid DESC; Array
+(
+    [:db_condition_placeholder_0] => /S‹ØÆCk
+    [:db_condition_placeholder_1] => en
+    [:db_condition_placeholder_2] => und
+)
+";s:9:"%function";s:49:"Drupal\Core\Path\AliasStorage->lookupPathSource()";s:5:"%file";s:69:"/home/tregulla/public_html/core/lib/Drupal/Core/Path/AliasStorage.php";s:5:"%line";i:230;}
+    [:db_insert_placeholder_4] => 3
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => http://tregullandandco.co.uk/S‹ØÆCk
+    [:db_insert_placeholder_7] => 
+    [:db_insert_placeholder_8] => 83.240.186.238
+    [:db_insert_placeholder_9] => 1547907923
+)
+ in /home/tregulla/public_html/core/modules/dblog/src/Logger/DbLog.php on line 84
+[19-Jan-2019 14:25:25 UTC] Failed to log error: Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\x8B\xD8\xC6Ck' for column 'location' at row 1: INSERT INTO {watchdog} (uid, type, message, variables, severity, link, location, referer, hostname, timestamp) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9); Array
+(
+    [:db_insert_placeholder_0] => 0
+    [:db_insert_placeholder_1] => php
+    [:db_insert_placeholder_2] => %type: @message in %function (line %line of %file).
+    [:db_insert_placeholder_3] => a:5:{s:5:"%type";s:45:"Drupal\Core\Database\DatabaseExceptionWrapper";s:8:"@message";s:517:"SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (utf8_general_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation 'like': SELECT url_alias.source AS source
+FROM 
+{url_alias} url_alias
+WHERE  (alias LIKE :db_condition_placeholder_0 ESCAPE '\\') AND (langcode IN  (:db_condition_placeholder_1, :db_condition_placeholder_2)) 
+ORDER BY langcode ASC, pid DESC; Array
+(
+    [:db_condition_placeholder_0] => /S‹ØÆCk
+    [:db_condition_placeholder_1] => en
+    [:db_condition_placeholder_2] => und
+)
+";s:9:"%function";s:49:"Drupal\Core\Path\AliasStorage->lookupPathSource()";s:5:"%file";s:69:"/home/tregulla/public_html/core/lib/Drupal/Core/Path/AliasStorage.php";s:5:"%line";i:230;}
+    [:db_insert_placeholder_4] => 3
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => http://tregullandandco.co.uk/S‹ØÆCk
+    [:db_insert_placeholder_7] => 
+    [:db_insert_placeholder_8] => 83.240.186.238
+    [:db_insert_placeholder_9] => 1547907925
+)
+ in Drupal\dblog\Logger\DbLog->log() (line 84 of /home/tregulla/public_html/core/modules/dblog/src/Logger/DbLog.php).
+[19-Jan-2019 14:25:25 UTC] Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\x8B\xD8\xC6Ck' for column 'location' at row 1: INSERT INTO {watchdog} (uid, type, message, variables, severity, link, location, referer, hostname, timestamp) VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6, :db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9); Array
+(
+    [:db_insert_placeholder_0] => 0
+    [:db_insert_placeholder_1] => php
+    [:db_insert_placeholder_2] => %type: @message in %function (line %line of %file).
+    [:db_insert_placeholder_3] => a:5:{s:5:"%type";s:45:"Drupal\Core\Database\DatabaseExceptionWrapper";s:8:"@message";s:517:"SQLSTATE[HY000]: General error: 1267 Illegal mix of collations (utf8_general_ci,IMPLICIT) and (utf8mb4_general_ci,COERCIBLE) for operation 'like': SELECT url_alias.source AS source
+FROM 
+{url_alias} url_alias
+WHERE  (alias LIKE :db_condition_placeholder_0 ESCAPE '\\') AND (langcode IN  (:db_condition_placeholder_1, :db_condition_placeholder_2)) 
+ORDER BY langcode ASC, pid DESC; Array
+(
+    [:db_condition_placeholder_0] => /S‹ØÆCk
+    [:db_condition_placeholder_1] => en
+    [:db_condition_placeholder_2] => und
+)
+";s:9:"%function";s:49:"Drupal\Core\Path\AliasStorage->lookupPathSource()";s:5:"%file";s:69:"/home/tregulla/public_html/core/lib/Drupal/Core/Path/AliasStorage.php";s:5:"%line";i:230;}
+    [:db_insert_placeholder_4] => 3
+    [:db_insert_placeholder_5] => 
+    [:db_insert_placeholder_6] => http://tregullandandco.co.uk/S‹ØÆCk
+    [:db_insert_placeholder_7] => 
+    [:db_insert_placeholder_8] => 83.240.186.238
+    [:db_insert_placeholder_9] => 1547907925
+)
+ in /home/tregulla/public_html/core/modules/dblog/src/Logger/DbLog.php on line 84
+[15-Feb-2019 15:30:56 UTC] PHP Fatal error:  Allowed memory size of 805306368 bytes exhausted (tried to allocate 602 bytes) in /home/tregulla/public_html/modules/backup_migrate/lib/backup_migrate_core/src/Source/FileDirectorySource.php on line 207
+[15-Feb-2019 15:33:38 UTC] PHP Fatal error:  Allowed memory size of 805306368 bytes exhausted (tried to allocate 584 bytes) in /home/tregulla/public_html/modules/backup_migrate/lib/backup_migrate_core/src/Source/FileDirectorySource.php on line 207

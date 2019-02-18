@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Omni Portfolio theme.
+
+omni_portfolio.settings:
+  type: theme_settings
+  label: 'Omni settings'

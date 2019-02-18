@@ -1,0 +1,335 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMON
+----------------------------------------------------------------*/
+#secondary .block-views > .inner,
+#related .block-views > .inner,
+.body-right .block-views > .inner {
+  margin-bottom: 1.875rem;
+}
+
+#secondary .block:last-child > .inner,
+.body-right .block:last-child > .inner {
+  margin-bottom: 0;
+}
+
+.block-views .title {
+  text-transform: uppercase;
+}
+
+.views-block-article-latest .inner,
+.views-block-article-most .inner,
+.views-block-article-tags .inner,
+.views-block-blog .inner,
+.views-block-blog-tags .inner,
+#article-content .views-block-about-author .inner {
+  border-width: 1px;
+  border-style: solid;
+}
+
+/* ARTICLE
+----------------------------------------------------------------*/
+.block.views-block-article > .inner {
+  padding: 0;
+}
+
+.views-block-article .title {
+  text-align: center;
+}
+
+.block-article .column .inner {
+  padding: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.block-article .image-default {
+  margin: 0 -1.875rem 1.875rem -1.875rem;
+}
+
+.block-article .term a {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.block-article .term a:last-child {
+  margin-right: 0.625rem;
+}
+
+.block-article h4 {
+  font-weight: 300;
+}
+
+.block-article .content {
+  margin-bottom: 1.875rem;
+}
+
+.block-article .button.hollow {
+  position: relative;
+  border-width: 1px;
+  border-style: solid;
+  margin: 0;
+  overflow: hidden;
+}
+
+.block-article .button.hollow:before {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0;
+  z-index: 1;
+  content: '\f101';
+  font-family: FontAwesome; 
+  font-size: 1rem; 
+  line-height: 34px;
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.block-article .button.hollow:hover:before {
+  left: 0%;
+  right: auto;
+  width: 100%;
+}
+
+.block-article-latest li,
+.block-article-most li  {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;  
+}
+
+.block-article-latest li:last-child,
+.block-article-most li:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.block-article-latest li .image-default,
+.block-article-most li .image-default {
+  margin-bottom: 0;
+}
+
+.block-article-latest li h4,
+.block-article-most li h4 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.block-article-most li h4 {
+  margin-left: 1.875rem;
+}
+
+.block-article-most ul {
+  counter-reset: section; 
+}
+
+.block-article-most ul li {
+  position: relative;
+}
+
+.block-article-most ul li:before {
+  position: absolute;
+  left: -0.9375rem;
+  top: 1.25rem;
+  width: 28px;
+  height: 28px;
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 50%;
+  counter-increment: section;
+  content: counter(section);
+}
+
+/* BLOG
+----------------------------------------------------------------*/
+.block-blog ul  {
+  margin-bottom: 0;
+}
+
+.block-blog li  {
+  margin-bottom: 1.25rem;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;  
+}
+
+.block-blog li:last-child  {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.block-blog li h4 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.block-blog .date {
+  float: left;
+  text-align: center;
+  width: 5rem;
+  padding-right: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.block-blog .date span {
+  display: block;
+}
+
+.block-blog .week-day {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.block-blog .day {
+  font-size: 2.125rem;
+  font-weight: 900;
+  line-height: 2.125rem;
+  padding: 0.3125rem 0;
+}
+
+.block-blog .month {
+  font-size: 0.625rem;
+  line-height: 1;
+}
+
+.views-block-blog-latest > .inner {
+  padding: 1.875rem 0 0 0;
+}
+
+.views-block-blog-latest .title {
+  text-align: center;
+}
+
+.block-blog-latest .column {
+  margin-bottom: 1.875rem;
+}
+
+.block-blog-latest .image-default {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: all .5s ease-in-out;
+}
+
+.block-blog-latest .image-default:hover {
+  background-position: 40% 40%;
+}
+
+.block-blog-latest h4 {
+  font-size: 1.5rem;  
+  font-weight: 900;
+  margin-bottom: 0.625rem;
+}
+
+.block-blog-latest .summary {
+  margin-bottom: 1.25rem;
+}
+
+.block-blog-latest .meta.submit {
+  margin-bottom: 0;
+}
+
+/* AUTHOR
+----------------------------------------------------------------*/
+.block-about-author .user-picture img {
+  width: 80px !important;
+  height: 80px;
+}
+
+.block-about-author .media-object-section > div {
+  margin-bottom: 0.625rem;
+}
+
+.block-about-author .user-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.block-about-author .user-title {
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.block-about-author .user-profile {
+  font-style: italic;
+  font-size: 0.9375rem;
+}
+
+/* RELATED
+----------------------------------------------------------------*/
+.block-related ul {
+  margin: 0;
+}
+
+.block-related li {
+  position: relative;
+  text-transform: uppercase;
+  padding: 1.25rem 0 1.25rem 6.25rem;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.block-related li:last-child {
+  padding-bottom: 0;
+}
+
+.block-related li .date {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 80px;
+  padding-top: 1.25rem;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.block-related li h4 {
+  font-weight: 300;
+}
+
+/* TAGS
+----------------------------------------------------------------*/
+.views-block-article-tags .title,
+.views-block-blog-tags .title {
+  text-align: center;
+}
+
+.block-tags li {
+  display: inline-block;
+  margin: 0.3125rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.block-tags li a {
+  display: block;
+  padding: 0.5rem 0.9375rem;
+  transition: background-color .25s ease-out;
+}
+
+/* PORTFOLIO
+----------------------------------------------------------------*/
+.views-block-portfolio > .inner {
+  padding: 0;
+}

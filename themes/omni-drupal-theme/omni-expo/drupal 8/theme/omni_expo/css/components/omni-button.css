@@ -1,0 +1,65 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Expo                                          
+  Author: ESORS                                           
+  Date: 1st October 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* COMMON
+----------------------------------------------------------------*/
+.button {
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0.9375rem 1.5rem;
+  letter-spacing: 0.0625rem;
+}
+
+.button.link,
+.button.link:hover, .button.link:focus {
+	background-color: transparent;
+}
+
+.button.pill {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 20px;
+}
+
+.button.pill.large {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 30px;
+}
+
+.button.rounded {
+  border-radius: 3px;
+}
+
+.button.large {
+  font-size: 0.75rem;
+  padding: 0.625rem 1.875rem;
+}
+
+.button.xlarge {
+  font-size: 0.75rem;
+  padding: 0.9375rem 2.5rem;
+}
+
+.button.hollow.pill {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.button.hollow.pill:hover, .button.hollow.pill:focus {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,29 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Portfolio                                           
+  Author: ESORS                                           
+  Date: 19th August 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% set image %}{{ fields['field_image_thumbnail'].content|raw }}{% endset %}
+
+<div class="inner">
+  <div class="image-default" style="{{ background_image(image) }}"></div>
+  <div class="content">
+	  {% if 'no result' not in fields['field_tags'].content|render  %}
+	  	<div class="meta term">{{ 'post'|t }} <span class="lowercase">{{ 'in'|t }}</span> {{ fields['field_tags'].content }}</div>
+	  {% endif %}
+	  <h4>{{ fields['title'].content }}</h4>
+	  <div class="summary">{{ fields['body'].content }}</div>		  
+	  <div class="meta submit"><div class="author"><span class="lowercase">{{ 'by'|t }}</span> {{ fields['uid'].content }}</div></div>  
+  </div>
+</div>

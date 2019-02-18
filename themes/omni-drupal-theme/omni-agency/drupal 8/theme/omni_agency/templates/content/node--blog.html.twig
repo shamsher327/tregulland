@@ -1,0 +1,101 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                           
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% if not page %}
+  <article{{ attributes.addClass('node blog teaser clearfix') }}>
+    <header>
+      <div class="comment-count float-right">
+        {% if comment_count == 0 or comment_count == 1 %}
+          {{comment_count}} {{ 'comment'|t }}
+        {% else %}
+          {{comment_count}} {{ 'comments'|t }}
+        {% endif %}          
+      </div>
+      {% if display_submitted %}    
+        <div class="meta">
+          <span class="author">{{ author_name }}</span> / 
+          <span class="month">{{ createdtime|date("F d") }}</span> /
+          <span class="year">{{ createdtime|date("Y") }}</span>
+        </div>
+      {% endif %}
+      {{ title_prefix }}
+      <h2 class="title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>        
+      {{ title_suffix }}
+      {% if display_submitted %}
+        {{ author_picture }}        
+      {% endif %}
+    </header>
+    {% if content.field_image|render %}
+      <div class="image-default">
+        {{ content.field_image }}
+      </div>
+    {% endif %}    
+    <div class="content clearfix">  
+      {{ content|without('comment', 'links', 'field_tags', 'field_image', 'addtoany') }} 
+    </div>
+    <a href="{{ url }}" class="link button">{{ 'CONTINUE READING ...'|t }}</a>
+    {% if content.addtoany %}
+      <div class="share">{{ content.addtoany }}</div>
+    {% endif %} 
+  </article>
+{% else %}
+  <article{{ attributes.addClass('node blog full clearfix') }}>
+    <header>
+      <div class="comment-count float-right">
+        {% if comment_count == 0 or comment_count == 1 %}
+          {{comment_count}} {{ 'comment'|t }}
+        {% else %}
+          {{comment_count}} {{ 'comments'|t }}
+        {% endif %}          
+      </div>
+      {% if display_submitted %} 
+        <div class="meta date">        
+          <span class="month">{{ createdtime|date("F d") }}</span> / 
+          <span class="year">{{ createdtime|date("Y") }}</span>
+        </div>
+      {% endif %}
+      <h1 class="title">{{ label }}</h1>      
+    </header>        
+    <div class="row">
+      <div class="meta text-center medium-3 column" data-sticky-container> 
+        <div class="sticky" data-sticky data-anchor="blog-content">
+          {% if display_submitted %}
+            {{ author_picture }} 
+            <span class="author">{{ author_name }}</span>   
+          {% endif %} 
+          {% if content.links %}            
+            {{ content.links }}
+          {% endif %}
+          {% if content.field_tags|render %}
+            <div class="term">{{ content.field_tags }}</div>
+          {% endif %}
+          {% if content.addtoany %}
+            <div class="share">{{ content.addtoany }}</div>
+          {% endif %}
+        </div>
+      </div>
+      <div id="blog-content" class="content medium-9 column">      
+        {% if content.field_image|render %}
+          <div class="image-default">
+            {{ content.field_image }}
+          </div>
+        {% endif %}    
+        {{ content|without('comment', 'links', 'field_tags', 'field_image', 'addtoany') }}
+      </div>
+    </div>
+  </article>
+  {{ content.comment }}
+{% endif %}

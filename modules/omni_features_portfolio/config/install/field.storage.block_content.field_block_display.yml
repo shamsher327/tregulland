@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_block_display
+field_name: field_block_display
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: display-1
+      label: Title/Media/Body
+    -
+      value: display-2
+      label: Title/Body/Media
+    -
+      value: display-3
+      label: Media/Title/Body
+    -
+      value: display-4
+      label: Media/Body/Title
+    -
+      value: display-5
+      label: Body/Title/Media
+    -
+      value: display-6
+      label: Body/Media/Title
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

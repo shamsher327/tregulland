@@ -1,0 +1,121 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Agency                                           
+  Author: ESORS                                           
+  Date: 19th May 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% set run = false %}
+{% set type = '' %}
+{% for item in items if run == false %}
+  {% set block = item.content['#block_content'] %}
+  {% set type = block.field_showcase_type.value %}
+  {% set run = true %}
+{% endfor %}
+
+{% if type == 'basic' %}
+  {% for item in items %}  
+    {% set block = item.content['#block_content'] %}   
+    {% set url = block.field_link.uri %}    
+    {% set pattern = block.field_showcase_pattern.value %}  
+    {% set filter = block.field_background_filter.value %}
+    {% if filter %}
+      {% set filter %} with-filter {{ filter }}{% endset %}
+    {% endif %}
+    {% set image %}{{ item.content.field_background_image|raw }}{% endset %}
+
+    <div>
+      <div class="slide"> 
+        <div class="inner {{ pattern }}{{ filter }}" style="{{ background_image(image) }}">
+          <div class="row">
+            {% if pattern|slice(8,1) == 1 %}
+              <div class="slide-title element">
+                <h3 class="title">{{ item.content.field_title }}</h4>
+              </div>
+            {% endif %}
+            {% if item.content.body|render %}
+              <div class="slide-content element">                   
+                {{ item.content.body }}
+              </div>
+            {% endif %}
+            {% if pattern|slice(8,1) == 2 %}
+              <div class="slide-title element">
+                <h3>{{ item.content.field_title }}</h3>
+              </div>
+            {% endif %}
+            {% if item.content.field_button|render %}
+              <div class="slide-button element">
+              {{ item.content.field_button }}
+              </div>
+            {% endif %}
+          </div>
+          {% if url %}
+            <a href="{{ url }}" target="_blank" class="cover"></a>
+          {% endif %}
+        </div> 
+      </div>
+    </div>
+  {% endfor %}
+{% endif %}
+
+{% if type == 'gallery' %}
+  {% for item in items %}  
+    {% set block = item.content['#block_content'] %}
+    {% set url = block.field_link.uri %}  
+    <div>
+      <div class="slide"> 
+        <div class="inner">          
+          <div class="image-default with-filter black-midnight">
+            {{ item.content.field_background_image }}
+            <div class="link">
+              {% if url %}
+                <a href="{{ url }}" target="_blank" class="fa fa-link"></a>
+              {% endif %}
+              <a class="fa fa-arrows-alt" type="button" data-toggle="showcase-gallery-reveal"></a>              
+            </div>     
+          </div>          
+        </div>    
+      </div>
+    </div>
+  {% endfor %}
+{% endif %}
+
+{% if type == 'gallery-reveal' %}
+  {% for item in items %}  
+    {% set block = item.content['#block_content'] %}
+    {% set url = block.field_link.uri %}  
+    <div>
+      <div class="slide"> 
+        <div class="inner row">          
+          <div class="image-default large-8 column">
+            {{ item.content.field_background_image }}            
+          </div>
+          <div class="large-4 column">
+            {% if url %}
+              <h3 class="title"><a href="{{ url }}" target="_blank">{{ item.content.field_title }}</a></h3>
+            {% else %}
+              <h3 class="title">{{ item.content.field_title }}</h3>
+            {% endif %}
+            <div class="content">                   
+              {{ item.content.body }}
+              {% if item.content.field_button %}
+                <div class="content-button text-left">
+                  {{ item.content.field_button }}
+                </div>
+              {% endif %}   
+            </div>            
+          </div>              
+        </div>    
+      </div>
+    </div>
+  {% endfor %}
+{% endif %}
